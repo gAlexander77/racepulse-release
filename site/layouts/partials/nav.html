@@ -1,0 +1,37 @@
+<nav class="sticky top-0 z-50 bg-racing-darker/80 backdrop-blur-xl border-b border-racing-border">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="{{ "/" | relURL }}" class="flex items-center gap-2.5 group">
+      <div class="w-8 h-8 rounded-lg bg-racing-accent flex items-center justify-center">
+        <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <span class="text-lg font-bold tracking-tight group-hover:text-racing-accent transition-colors">RacePulse</span>
+    </a>
+    <div class="hidden md:flex items-center gap-1">
+      {{ range .Site.Menus.main }}
+        {{ if eq $.RelPermalink .URL }}
+          <a href="{{ .URL | relURL }}" class="px-3 py-2 text-sm font-medium text-racing-accent">{{ .Name }}</a>
+        {{ else }}
+          <a href="{{ .URL | relURL }}" class="px-3 py-2 text-sm font-medium text-racing-neutral hover:text-racing-text transition-colors">{{ .Name }}</a>
+        {{ end }}
+      {{ end }}
+      <a href="{{ .Site.Params.releaseURL }}" class="ml-4 px-4 py-2 bg-racing-accent hover:bg-racing-accent/90 text-white text-sm font-semibold rounded-lg transition-colors">
+        Download
+      </a>
+    </div>
+    <!-- Mobile menu button -->
+    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 text-racing-neutral hover:text-racing-text">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-racing-border bg-racing-darker px-6 py-4 space-y-2">
+    {{ range .Site.Menus.main }}
+      <a href="{{ .URL | relURL }}" class="block px-3 py-2 text-sm font-medium text-racing-neutral hover:text-racing-text">{{ .Name }}</a>
+    {{ end }}
+    <a href="{{ .Site.Params.releaseURL }}" class="block px-3 py-2 text-sm font-medium text-racing-accent">Download</a>
+  </div>
+</nav>

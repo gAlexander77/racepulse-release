@@ -47,7 +47,7 @@ RacePulse automatically detects which game is running and begins capturing telem
 - Modular widget system (speed, gear, RPM, delta, inputs, fuel, G-force, and more)
 - Per-widget customization with persistent settings
 - Drag-and-drop widget positioning with click-through overlay mode
-- Session recording and telemetry analysis
+- Session recording to local storage
 - Single executable distribution — no installer required
 
 ## System Requirements

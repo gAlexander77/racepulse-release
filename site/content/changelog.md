@@ -1,10 +1,12 @@
-# Changelog
+---
+title: "Changelog"
+subtitle: "Release history and notable changes."
+---
 
-All notable changes to RacePulse releases are documented here.
-
-## [Unreleased]
+## Unreleased
 
 ### Added
+
 - iRacing support via Windows shared memory (auto-detected)
 - F1 25 support via UDP telemetry (port 22025, auto-detected)
 - F1 24 support via UDP telemetry (port 22024, auto-detected)
@@ -20,6 +22,7 @@ All notable changes to RacePulse releases are documented here.
 - Live widget previews on dashboard
 
 ### Technical
+
 - Unified telemetry model supporting multiple games through plugin architecture
 - F1 provider handles both F1 24 and F1 25 via single codebase (packet format detection)
 - Auto port discovery for F1 games (scans common ports in parallel)

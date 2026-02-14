@@ -1,0 +1,33 @@
+baseURL = "https://galexander77.github.io/racepulse-release/"
+languageCode = "en-us"
+title = "RacePulse"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Real-time sim racing telemetry overlays for iRacing, F1 25, and F1 24"
+  repoURL = "https://github.com/gAlexander77/racepulse-release"
+  releaseURL = "https://github.com/gAlexander77/racepulse-release/releases"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Features"
+    url = "/features/"
+    weight = 2
+  [[menu.main]]
+    name = "Install"
+    url = "/install/"
+    weight = 3
+  [[menu.main]]
+    name = "Changelog"
+    url = "/changelog/"
+    weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

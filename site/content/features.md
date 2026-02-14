@@ -1,6 +1,7 @@
-# RacePulse Features
-
-RacePulse is a desktop telemetry overlay application designed for sim racing.
+---
+title: "Features"
+subtitle: "A detailed look at what RacePulse provides for your sim racing sessions."
+---
 
 ## Supported Games
 
@@ -17,23 +18,23 @@ RacePulse auto-detects the running game and begins capturing telemetry. Multiple
 - Real-time update pipeline for responsive overlays
 - Automatic game detection — no manual game selection required
 
-## Overlay Widgets
+## Core Widgets
 
 Standalone, always-on-top widget overlays that float over your game:
 
-**Core widgets:**
-- Speed display
-- Gear indicator
-- RPM bar with redline indicator
-- Lap timing (current, last, best)
-- Delta time to best lap
-- Input bars (throttle, brake, clutch)
-- Fuel remaining with estimated laps
-- G-force visualization
+- **Speed** — Live speed readout
+- **Gear** — Large, bold indicator visible in peripheral vision
+- **RPM** — Horizontal bar with redline indicator
+- **Lap Time** — Current lap, last lap, and personal best
+- **Delta** — Real-time delta to best lap (green = faster, red = slower)
+- **Inputs** — Throttle, brake, and clutch as vertical bars
+- **Fuel** — Fuel remaining with estimated laps of fuel
+- **G-Force** — 2D lateral and longitudinal G-force visualization
 
-**Advanced widgets:**
-- Telemetry Core — combines animated rev lights, gear, RPM, speed, position, track temp, elapsed time, and lap count with metric/imperial support
-- Inputs Telemetry — live scrolling input graph with pedal bars, optional steering wheel visualization, gear, and speed
+## Advanced Widgets
+
+- **Telemetry Core** — All-in-one display combining animated rev lights, gear indicator, RPM, speed, race position, track temperature, elapsed time, and lap count. Supports metric and imperial units. Includes pit limiter flash indicator.
+- **Inputs Telemetry** — Live scrolling graph of throttle and brake inputs over time with color-coded traces, combined with real-time pedal bars. Optional steering wheel visualization, gear, and speed readout.
 
 ## Widget Customization
 
@@ -46,7 +47,7 @@ Standalone, always-on-top widget overlays that float over your game:
 
 ## Session Recording
 
-- Telemetry sessions recorded to local storage automatically
+- Telemetry sessions are recorded to local storage automatically
 - Captures session metadata (game, track, car, duration)
 - Records lap times and validity
 - Stores full telemetry frame history

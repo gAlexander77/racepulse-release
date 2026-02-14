@@ -10,6 +10,10 @@ artifacts/
 # Logs
 *.log
 
+# Hugo output
+site/public/
+site/resources/
+
 # OS/editor
 .DS_Store
 Thumbs.db
