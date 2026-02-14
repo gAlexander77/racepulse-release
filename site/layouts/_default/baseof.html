@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+  <title>{{ if .IsHome }}{{ .Site.Title }} — Real-time Sim Racing Telemetry{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
-<body class="bg-racing-dark text-racing-text font-sans min-h-screen flex flex-col">
+<body class="bg-racing-dark text-racing-text font-sans min-h-screen flex flex-col bg-grid">
   {{ partial "nav.html" . }}
   <main class="flex-1">
     {{ block "main" . }}{{ end }}

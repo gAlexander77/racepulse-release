@@ -1,9 +1,19 @@
 {{ define "main" }}
-<section class="max-w-3xl mx-auto px-6 pt-20 pb-20">
-  <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4">{{ .Title }}</h1>
-  {{ with .Params.subtitle }}
-    <p class="text-lg text-racing-neutral mb-10">{{ . }}</p>
-  {{ end }}
+<!-- Page header with glow -->
+<section class="relative overflow-hidden hero-glow">
+  <div class="max-w-3xl mx-auto px-6 pt-20 pb-14 text-center">
+    <p class="text-xs font-semibold tracking-widest uppercase text-racing-accent mb-4">{{ .Site.Title }}</p>
+    <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}
+      <p class="text-lg text-racing-neutral max-w-xl mx-auto">{{ . }}</p>
+    {{ end }}
+  </div>
+</section>
+
+<div class="divider-gradient"></div>
+
+<!-- Content -->
+<section class="max-w-3xl mx-auto px-6 py-16">
   <div class="prose">
     {{ .Content }}
   </div>

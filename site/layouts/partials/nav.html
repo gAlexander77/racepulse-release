@@ -1,7 +1,7 @@
-<nav class="sticky top-0 z-50 bg-racing-darker/80 backdrop-blur-xl border-b border-racing-border">
+<nav class="sticky top-0 z-50 bg-racing-darker/70 nav-blur border-b border-racing-border/50">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
     <a href="{{ "/" | relURL }}" class="flex items-center gap-2.5 group">
-      <div class="w-8 h-8 rounded-lg bg-racing-accent flex items-center justify-center">
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-racing-accent to-rose-700 flex items-center justify-center shadow-lg shadow-racing-accent/20 group-hover:shadow-racing-accent/40 transition-shadow">
         <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
         </svg>
@@ -11,26 +11,27 @@
     <div class="hidden md:flex items-center gap-1">
       {{ range .Site.Menus.main }}
         {{ if eq $.RelPermalink .URL }}
-          <a href="{{ .URL | relURL }}" class="px-3 py-2 text-sm font-medium text-racing-accent">{{ .Name }}</a>
+          <a href="{{ .URL | relURL }}" class="px-3 py-2 text-sm font-medium text-racing-accent relative">
+            {{ .Name }}
+            <span class="absolute bottom-0 left-3 right-3 h-0.5 bg-racing-accent rounded-full"></span>
+          </a>
         {{ else }}
           <a href="{{ .URL | relURL }}" class="px-3 py-2 text-sm font-medium text-racing-neutral hover:text-racing-text transition-colors">{{ .Name }}</a>
         {{ end }}
       {{ end }}
-      <a href="{{ .Site.Params.releaseURL }}" class="ml-4 px-4 py-2 bg-racing-accent hover:bg-racing-accent/90 text-white text-sm font-semibold rounded-lg transition-colors">
+      <a href="{{ .Site.Params.releaseURL }}" class="ml-4 px-4 py-2 bg-gradient-to-r from-racing-accent to-rose-700 hover:from-rose-600 hover:to-rose-800 text-white text-sm font-semibold rounded-lg transition-all shadow-lg shadow-racing-accent/20 hover:shadow-racing-accent/30">
         Download
       </a>
     </div>
-    <!-- Mobile menu button -->
-    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 text-racing-neutral hover:text-racing-text">
+    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 text-racing-neutral hover:text-racing-text transition-colors">
       <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
   </div>
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-racing-border bg-racing-darker px-6 py-4 space-y-2">
+  <div id="mobile-menu" class="hidden md:hidden border-t border-racing-border/50 bg-racing-darker/95 nav-blur px-6 py-4 space-y-2">
     {{ range .Site.Menus.main }}
-      <a href="{{ .URL | relURL }}" class="block px-3 py-2 text-sm font-medium text-racing-neutral hover:text-racing-text">{{ .Name }}</a>
+      <a href="{{ .URL | relURL }}" class="block px-3 py-2 text-sm font-medium text-racing-neutral hover:text-racing-text transition-colors">{{ .Name }}</a>
     {{ end }}
     <a href="{{ .Site.Params.releaseURL }}" class="block px-3 py-2 text-sm font-medium text-racing-accent">Download</a>
   </div>
