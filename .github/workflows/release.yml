@@ -1,0 +1,94 @@
+name: Build & Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Version tag (e.g. v0.1.0)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout release repo
+        uses: actions/checkout@v4
+
+      - name: Clone private source
+        run: git clone https://x-access-token:${{ secrets.SOURCE_REPO_PAT }}@github.com/gAlexander77/race-pulse.git source
+        shell: bash
+
+      - name: Determine version tag
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "tag=${{ github.event.inputs.tag }}" >> $GITHUB_OUTPUT
+          else
+            echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          fi
+        shell: bash
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+          cache-dependency-path: source/application/go.sum
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: source/application/package-lock.json
+
+      - name: Install Wails CLI
+        run: go install github.com/wailsapp/wails/v2/cmd/wails@v2.10.1
+
+      - name: Install NSIS
+        run: choco install nsis -y
+
+      - name: Install npm dependencies
+        working-directory: source/application
+        run: npm install
+
+      - name: Build widget
+        working-directory: source/application
+        run: cd cmd/widget && wails build
+
+      - name: Prepare embedded widget
+        working-directory: source/application
+        run: |
+          mkdir -p internal/overlaymanager/embedded
+          cp cmd/widget/build/bin/racepulse-widget.exe internal/overlaymanager/embedded/
+        shell: bash
+
+      - name: Clear Go build cache
+        working-directory: source/application
+        run: go clean -cache
+
+      - name: Build single executable
+        working-directory: source/application
+        run: wails build -tags "embed_widget" -ldflags "-X 'main.version=${{ steps.version.outputs.tag }}'" -clean -f
+
+      - name: Generate checksum
+        working-directory: source/application/build/bin
+        run: sha256sum racepulse.exe > racepulse.exe.sha256
+        shell: bash
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: RacePulse ${{ steps.version.outputs.tag }}
+          files: |
+            source/application/build/bin/racepulse.exe
+            source/application/build/bin/racepulse.exe.sha256
+          generate_release_notes: true
+          draft: false
