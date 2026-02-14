@@ -1,0 +1,16 @@
+# Release artifacts
+dist/
+build/
+artifacts/
+
+# Checksums and temp files
+*.tmp
+*.bak
+
+# Logs
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
