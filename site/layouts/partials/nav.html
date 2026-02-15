@@ -1,7 +1,10 @@
 <nav class="sticky top-0 z-50 bg-racing-darker/70 nav-blur border-b border-racing-border/50">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="{{ .Site.BaseURL }}" class="flex items-center group">
+    <a href="{{ .Site.BaseURL }}" class="flex items-center gap-2 group">
       <span class="text-xl font-bold uppercase tracking-[0.1em]"><span class="text-racing-text group-hover:text-racing-text/80 transition-colors">RACE</span><span class="italic font-extrabold text-racing-accent group-hover:text-racing-accent/80 transition-colors">PULSE</span></span>
+      <svg class="w-5 h-5 text-racing-accent group-hover:text-racing-accent/80 transition-colors" viewBox="0 0 92 92" fill="currentColor" aria-hidden="true">
+        <path d="M92,57c0,2.2-1.8,4-4,4H69.2c-1.7,0-3.2-0.9-3.8-2.6l-3-8.4l-9.8,33.1c-0.5,1.7-2.1,2.9-3.8,2.9 c0,0-0.1,0-0.1,0c-1.8-0.1-3.4-1.3-3.8-3.1L32,27l-7.8,31.1c-0.4,1.8-2,2.9-3.9,2.9H4c-2.2,0-4-1.8-4-4s1.8-4,4-4h13.2L28.3,8.9 C28.7,7.1,30.4,6,32.2,6c1.8,0,3.4,1.3,3.9,3.1l13.2,57.2l9-30.4c0.5-1.7,2-2.9,3.7-2.9c1.7-0.1,3.3,1,3.9,2.6L72,53h16 C90.2,53,92,54.8,92,57z"></path>
+      </svg>
     </a>
     <div class="hidden md:flex items-center gap-1">
       {{ range .Site.Menus.main }}
