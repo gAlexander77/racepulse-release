@@ -76,22 +76,28 @@
     {{ partial "game-card.html" (dict "name" "F1 25" "transport" "UDP Telemetry" "desc" "Enable UDP telemetry in game settings. Default port 22025." "platform" "All Platforms") }}
     {{ partial "game-card.html" (dict "name" "F1 24" "transport" "UDP Telemetry" "desc" "Enable UDP telemetry in game settings. Default port 22024." "platform" "All Platforms") }}
   </div>
-  <div class="mt-8 max-w-3xl mx-auto rounded-xl overflow-hidden border border-racing-border/50 shadow-2xl shadow-black/30">
-    <img src="{{ "assets/iracing-input-telemetry-overlay-sebring.gif" | absURL }}" alt="RacePulse inputs telemetry overlay in iRacing at Sebring" class="w-full" loading="lazy">
-  </div>
 </section>
 
 <div class="divider-gradient"></div>
 
-<!-- Customization Preview -->
-<section class="max-w-6xl mx-auto px-6 py-16">
-  <div class="text-center mb-8">
-    <p class="text-xs font-semibold tracking-widest uppercase text-racing-accent mb-3">Customization</p>
-    <h2 class="text-2xl md:text-3xl font-bold mb-3">Widget Customization</h2>
-    <p class="text-racing-neutral max-w-lg mx-auto">Tune layout, style, and behavior per widget with settings that persist automatically.</p>
+<!-- In-Game Previews -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+  <div class="text-center mb-10">
+    <p class="text-xs font-semibold tracking-widest uppercase text-racing-accent mb-3">Preview</p>
+    <h2 class="text-2xl md:text-3xl font-bold mb-3">RacePulse In Action</h2>
+    <p class="text-racing-neutral max-w-2xl mx-auto">Watch real-time in-race telemetry and see how quickly you can tailor each widget to your setup.</p>
   </div>
-  <div class="max-w-4xl mx-auto rounded-xl overflow-hidden border border-racing-border/50 shadow-2xl shadow-black/30">
-    <img src="{{ "assets/widget-customization-preview.gif" | absURL }}" alt="RacePulse widget customization preview" class="w-full" loading="lazy">
+  <div class="grid md:grid-cols-2 gap-6">
+    <div>
+      <div class="rounded-xl overflow-hidden border border-racing-border/50 shadow-2xl shadow-black/30">
+        <img src="{{ "assets/iracing-input-telemetry-overlay-sebring.gif" | absURL }}" alt="RacePulse inputs telemetry overlay in iRacing at Sebring" class="w-full aspect-video object-contain bg-racing-darker" loading="lazy">
+      </div>
+    </div>
+    <div>
+      <div class="rounded-xl overflow-hidden border border-racing-border/50 shadow-2xl shadow-black/30">
+        <img src="{{ "assets/widget-customization-preview.gif" | absURL }}" alt="RacePulse widget customization preview" class="w-full aspect-video object-contain bg-racing-darker" loading="lazy">
+      </div>
+    </div>
   </div>
 </section>
 
