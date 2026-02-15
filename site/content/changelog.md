@@ -13,7 +13,7 @@ subtitle: "Release history and notable changes for RacePulse sim racing telemetr
 
 ---
 
-## v0.1.0-alpha
+## v0.1.0-alpha — 2026-02-14
 
 ### Added
 
