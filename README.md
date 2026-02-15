@@ -18,11 +18,6 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 **Download:** [Latest Release](https://github.com/gAlexander77/racepulse-release/releases)
 
-## Transparency
-
-RacePulse main application source code is closed source and is not included in this repository.
-This repository is for public releases, documentation, issue tracking, and the Hugo website content.
-
 ## Free Features (Current)
 
 - iRacing, F1 25, and F1 24 support with auto-detection
@@ -54,13 +49,13 @@ This repository is for public releases, documentation, issue tracking, and the H
 
 ## What this repository is for
 
-This repo is the public release and documentation home for RacePulse.
+This repo is the public release, documentation, issue tracking, and Hugo website home for RacePulse.
 
 - Download signed Windows executables
 - Read feature documentation and setup guides
 - Track release notes and known issues
 
-The main RacePulse application source code is not published in this repository.
+The main RacePulse application source code is closed source and not published in this repository.
 
 ## Download
 
