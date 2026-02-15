@@ -44,9 +44,9 @@ Standalone, always-on-top widget overlays that float over your game:
 - Persistent settings that survive app restarts
 - Live preview of advanced widgets on the dashboard before enabling overlays
 
-## Session Recording
+## Session Recording (Coming Soon)
 
-- Telemetry sessions recorded to local storage automatically
+- Telemetry sessions will be recorded to local storage automatically
 - Captures session metadata (game, track, car, duration)
 - Records lap times and validity
 - Stores full telemetry frame history

@@ -1,6 +1,6 @@
 ---
 title: "Features"
-subtitle: "10 overlay widgets, per-widget customization, multi-game support, and session recording for iRacing, F1 25, and F1 24."
+subtitle: "10 overlay widgets, per-widget customization, multi-game support, and session recording (coming soon) for iRacing, F1 25, and F1 24."
 ---
 
 ## Supported Games
@@ -45,9 +45,9 @@ Standalone, always-on-top widget overlays that float over your game:
 - Persistent settings that survive app restarts
 - Live preview of advanced widgets on the dashboard before enabling overlays
 
-## Session Recording
+## Session Recording (Coming Soon)
 
-- Telemetry sessions are recorded to local storage automatically
+- Telemetry sessions will be recorded to local storage automatically
 - Captures session metadata (game, track, car, duration)
 - Records lap times and validity
 - Stores full telemetry frame history
