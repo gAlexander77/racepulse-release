@@ -1,6 +1,8 @@
 ---
 title: "Features"
 subtitle: "10 overlay widgets, per-widget customization, multi-game support, and session recording (coming soon) for iRacing, F1 25, and F1 24."
+description: "Explore RacePulse features: 10 overlay widgets, per-widget customization, and unified telemetry support for iRacing, F1 25, and F1 24."
+ogImage: "assets/widget-customization-preview.gif"
 ---
 
 ## Supported Games

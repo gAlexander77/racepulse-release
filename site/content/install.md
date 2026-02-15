@@ -1,6 +1,8 @@
 ---
 title: "Installation"
 subtitle: "Download, launch, and configure RacePulse in under a minute. Setup guides for iRacing, F1 25, and F1 24."
+description: "Install RacePulse in under a minute with step-by-step setup for iRacing shared memory and F1 25/F1 24 UDP telemetry."
+ogImage: "assets/application-preview.gif"
 ---
 
 ## 1. Download

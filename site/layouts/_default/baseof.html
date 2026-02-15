@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="{{ .Site.LanguageCode | default "en" }}" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0A0B0D">
 
   {{- $title := cond .IsHome "RacePulse — Real-time Sim Racing Telemetry Overlays" (printf "%s — RacePulse" .Title) -}}
-  {{- $desc := cond (ne (.Params.subtitle | default "") "") .Params.subtitle .Site.Params.description -}}
+  {{- $descRaw := .Params.description | default .Params.subtitle | default .Site.Params.description -}}
+  {{- $desc := $descRaw | plainify | htmlUnescape | strings.TrimSpace -}}
   {{- $url := .Permalink -}}
+  {{- $metaImage := (.Params.ogImage | default .Site.Params.ogImage) | absURL -}}
+  {{- $is404 := eq .Kind "404" -}}
+  {{- $robots := cond $is404 "noindex,follow" "index,follow,max-image-preview:large" -}}
 
   <title>{{ $title }}</title>
   <meta name="description" content="{{ $desc }}">
+  <meta name="robots" content="{{ $robots }}">
   <link rel="canonical" href="{{ $url }}">
 
   <!-- Open Graph (link previews on Discord, Slack, Reddit, etc.) -->
-  <meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
+  <meta property="og:type" content="{{ cond .IsPage "article" "website" }}">
   <meta property="og:title" content="{{ $title }}">
   <meta property="og:description" content="{{ $desc }}">
   <meta property="og:url" content="{{ $url }}">
   <meta property="og:site_name" content="RacePulse">
   <meta property="og:locale" content="en_US">
-  {{- with .Site.Params.ogImage }}
-  <meta property="og:image" content="{{ . | absURL }}">
-  {{- end }}
+  <meta property="og:image" content="{{ $metaImage }}">
+  <meta property="og:image:alt" content="RacePulse telemetry overlay preview">
 
   <!-- Twitter/X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ $title }}">
   <meta name="twitter:description" content="{{ $desc }}">
-  {{- with .Site.Params.ogImage }}
-  <meta name="twitter:image" content="{{ . | absURL }}">
-  {{- end }}
+  <meta name="twitter:url" content="{{ $url }}">
+  <meta name="twitter:image" content="{{ $metaImage }}">
+  <meta name="twitter:image:alt" content="RacePulse telemetry overlay preview">
 
   <!-- Keywords -->
   <meta name="keywords" content="sim racing, telemetry, overlay, iRacing, F1 25, F1 24, widgets, HUD, racing telemetry, sim racing overlay">
@@ -39,17 +43,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "RacePulse",
-    "description": "{{ .Site.Params.description }}",
-    "url": "{{ .Site.BaseURL }}",
-    "applicationCategory": "GameApplication",
-    "operatingSystem": "Windows 10, Windows 11",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "RacePulse",
+        "description": {{ $desc | jsonify }},
+        "url": "{{ .Site.BaseURL }}",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11",
+        "image": "{{ $metaImage }}",
+        "screenshot": "{{ $metaImage }}",
+        "sameAs": [
+          "{{ .Site.Params.repoURL }}",
+          "{{ .Site.Params.releaseURL }}"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "RacePulse",
+        "url": "{{ .Site.BaseURL }}"
+      }
+    ]
   }
   </script>
 
