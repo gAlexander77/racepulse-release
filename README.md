@@ -14,6 +14,10 @@ Windows executable releases and feature documentation for the RacePulse telemetr
 ![Wails](https://img.shields.io/badge/Wails_v2-DF0000?style=for-the-badge&logo=webassembly&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)
 
+## Preview
+
+![RacePulse Preview](site/static/assets/application-preview.gif)
+
 ## What this repository is for
 
 This repo is the public release and documentation home for RacePulse.
