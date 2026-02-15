@@ -1,6 +1,6 @@
 ---
 title: "Features"
-subtitle: "A detailed look at what RacePulse provides for your sim racing sessions."
+subtitle: "10 overlay widgets, per-widget customization, multi-game support, and session recording for iRacing, F1 25, and F1 24."
 ---
 
 ## Supported Games

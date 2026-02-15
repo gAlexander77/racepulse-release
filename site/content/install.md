@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-subtitle: "Get RacePulse running in under a minute. No installer required."
+subtitle: "Download, launch, and configure RacePulse in under a minute. Setup guides for iRacing, F1 25, and F1 24."
 ---
 
 ## 1. Download

@@ -1,6 +1,6 @@
 ---
 title: "Changelog"
-subtitle: "Release history and notable changes."
+subtitle: "Release history and notable changes for RacePulse sim racing telemetry overlays."
 ---
 
 ## Unreleased
