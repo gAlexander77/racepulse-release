@@ -92,3 +92,4 @@ jobs:
             source/application/build/bin/racepulse.exe.sha256
           generate_release_notes: true
           draft: false
+          prerelease: ${{ contains(steps.version.outputs.tag, '-') }}
