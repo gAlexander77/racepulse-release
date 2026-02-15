@@ -2,7 +2,14 @@
 
 All notable changes to RacePulse releases are documented here.
 
-## [Unreleased]
+## [v0.1.1-alpha] — 2026-02-15
+
+### Added
+- Hover over any button or control to see what it does
+- Trying to enable a widget without a game connected now shows a warning message
+- Disabled toggles explain why they're disabled instead of silently ignoring clicks
+
+## [v0.1.0-alpha]
 
 ### Added
 - iRacing support via Windows shared memory (auto-detected)
