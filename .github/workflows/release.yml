@@ -29,10 +29,12 @@ jobs:
         id: version
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "tag=${{ github.event.inputs.tag }}" >> $GITHUB_OUTPUT
+            RAW_TAG="${{ github.event.inputs.tag }}"
           else
-            echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+            RAW_TAG="${GITHUB_REF#refs/tags/}"
           fi
+          echo "tag=${RAW_TAG}" >> $GITHUB_OUTPUT
+          echo "version=${RAW_TAG#v}" >> $GITHUB_OUTPUT
         shell: bash
 
       - name: Set up Go
@@ -75,7 +77,7 @@ jobs:
 
       - name: Build single executable
         working-directory: source/application
-        run: wails build -tags "embed_widget" -ldflags "-X 'main.version=${{ steps.version.outputs.tag }}'" -clean -f
+        run: wails build -tags "embed_widget" -ldflags "-X 'main.version=${{ steps.version.outputs.version }}'" -clean -f
 
       - name: Generate checksum
         working-directory: source/application/build/bin
