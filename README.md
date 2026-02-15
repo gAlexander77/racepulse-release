@@ -20,6 +20,10 @@ Real-time telemetry overlays for sim racing. Lightweight, modular widgets that f
 
 ![RacePulse Preview](site/static/assets/application-preview.gif)
 
+**Widget Customization**
+
+![Widget customization preview](site/static/assets/widget-customization-preview.gif)
+
 **Overlay Widget**
 
 ![iRacing inputs telemetry overlay at Sebring](site/static/assets/iracing-input-telemetry-overlay-sebring.gif)
