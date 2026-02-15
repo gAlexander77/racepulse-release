@@ -1,18 +1,37 @@
 # RacePulse
 
-Real-time telemetry overlays for sim racing. Lightweight, modular widgets that float over your game — speed, inputs, lap times, fuel, and more. Auto-detects iRacing, F1 25, and F1 24. Single .exe, no installer, no config.
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Wails](https://img.shields.io/badge/Wails_v2-DF0000?style=flat&logo=webassembly&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat&logo=windows&logoColor=white)
 
-**[racepulse.racing](https://racepulse.racing/)** — See all features, previews, and download the latest release.
+Real-time telemetry overlays for sim racing. Lightweight, modular widgets that float over your game for speed, throttle/brake inputs, lap times, fuel, and more. Auto-detects iRacing, F1 25, and F1 24. Single `.exe`, no installer, no config.
 
-## Tech Stack
+If RacePulse improves your setup, please consider giving this repo a star. It helps more sim racers discover the project.
 
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Wails](https://img.shields.io/badge/Wails_v2-DF0000?style=for-the-badge&logo=webassembly&logoColor=white)
-![Windows](https://img.shields.io/badge/Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)
+[![Star on GitHub](https://img.shields.io/badge/Star_on_GitHub-Support_RacePulse-111827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gAlexander77/racepulse-release/stargazers)
+
+**Website:** [racepulse.racing](https://racepulse.racing/) - full feature breakdown, live previews, and setup guides.
+
+**Download:** [Latest Release](https://github.com/gAlexander77/racepulse-release/releases)
+
+## Free Features (Current)
+
+- iRacing, F1 25, and F1 24 support with auto-detection
+- Core overlay widgets: speed, gear, RPM, lap time, delta, inputs, fuel, and G-force
+- Advanced widgets: Telemetry Core and Inputs Telemetry
+- Per-widget customization with persistent settings
+- Drag-and-drop positioning and click-through overlay mode
+- Single executable download (no installer)
+
+## Quick Start
+
+1. Download `racepulse.exe` from [Releases](../../releases)
+2. Launch it (no install required)
+3. Start iRacing, F1 25, or F1 24 and RacePulse auto-connects
 
 ## Preview
 
