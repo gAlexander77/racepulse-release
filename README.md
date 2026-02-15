@@ -1,8 +1,8 @@
 # RacePulse
 
-**[galexander77.github.io/racepulse-release](https://galexander77.github.io/racepulse-release/)**
+Real-time telemetry overlays for sim racing. Lightweight, modular widgets that float over your game — speed, inputs, lap times, fuel, and more. Auto-detects iRacing, F1 25, and F1 24. Single .exe, no installer, no config.
 
-Windows executable releases and feature documentation for the RacePulse telemetry overlay application.
+**[racepulse.racing](https://racepulse.racing/)** — See all features, previews, and download the latest release.
 
 ## Tech Stack
 

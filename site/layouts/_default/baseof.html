@@ -20,11 +20,17 @@
   <meta property="og:url" content="{{ $url }}">
   <meta property="og:site_name" content="RacePulse">
   <meta property="og:locale" content="en_US">
+  {{- with .Site.Params.ogImage }}
+  <meta property="og:image" content="{{ . | absURL }}">
+  {{- end }}
 
   <!-- Twitter/X -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ $title }}">
   <meta name="twitter:description" content="{{ $desc }}">
+  {{- with .Site.Params.ogImage }}
+  <meta name="twitter:image" content="{{ . | absURL }}">
+  {{- end }}
 
   <!-- Keywords -->
   <meta name="keywords" content="sim racing, telemetry, overlay, iRacing, F1 25, F1 24, widgets, HUD, racing telemetry, sim racing overlay">
