@@ -18,6 +18,8 @@ Real-time telemetry overlays for sim racing. Lightweight, modular widgets that f
 
 ![RacePulse Preview](site/static/assets/application-preview.gif)
 
+![iRacing inputs telemetry overlay at Sebring](site/static/assets/iracing-input-telemetry-overlay-sebring.gif)
+
 ## What this repository is for
 
 This repo is the public release and documentation home for RacePulse.
