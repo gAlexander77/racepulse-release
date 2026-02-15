@@ -1,5 +1,7 @@
 # RacePulse
 
+**[galexander77.github.io/racepulse-release](https://galexander77.github.io/racepulse-release/)**
+
 Windows executable releases and feature documentation for the RacePulse telemetry overlay application.
 
 ## Tech Stack
