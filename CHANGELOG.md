@@ -2,9 +2,18 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.1.2-alpha] — 2026-02-16
+
+### Added
+
+- Pulse icon branding across the app
+
+---
+
 ## [v0.1.1-alpha] — 2026-02-15
 
 ### Added
+
 - Hover over any button or control to see what it does
 - Trying to enable a widget without a game connected now shows a warning message
 - Disabled toggles explain why they're disabled instead of silently ignoring clicks
@@ -12,6 +21,7 @@ All notable changes to RacePulse releases are documented here.
 ## [v0.1.0-alpha] — 2026-02-14
 
 ### Added
+
 - iRacing support via Windows shared memory (auto-detected)
 - F1 25 support via UDP telemetry (port 22025, auto-detected)
 - F1 24 support via UDP telemetry (port 22024, auto-detected)
@@ -27,6 +37,7 @@ All notable changes to RacePulse releases are documented here.
 - Live widget previews on dashboard
 
 ### Technical
+
 - Unified telemetry model supporting multiple games through plugin architecture
 - F1 provider handles both F1 24 and F1 25 via single codebase (packet format detection)
 - Auto port discovery for F1 games (scans common ports in parallel)
