@@ -1,4 +1,4 @@
-# RacePulse
+![RacePulse Banner](site/static/assets/RacePulse-Banner.png)
 
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
 ![Wails](https://img.shields.io/badge/Wails-DF0000?style=flat-square)
