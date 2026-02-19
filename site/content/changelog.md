@@ -5,7 +5,7 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.gif"
 ---
 
-## v0.1.2-alpha — 2026-02-16
+## v0.1.2-alpha <span class="changelog-date">2026-02-16</span>
 
 ### Added
 
@@ -13,7 +13,7 @@ ogImage: "assets/application-preview.gif"
 
 ---
 
-## v0.1.1-alpha — 2026-02-15
+## v0.1.1-alpha <span class="changelog-date">2026-02-15</span>
 
 ### Added
 
@@ -23,7 +23,7 @@ ogImage: "assets/application-preview.gif"
 
 ---
 
-## v0.1.0-alpha — 2026-02-14
+## v0.1.0-alpha <span class="changelog-date">2026-02-14</span>
 
 ### Added
 

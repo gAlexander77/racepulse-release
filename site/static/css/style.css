@@ -203,6 +203,18 @@ body {
   padding-bottom: 0.75rem;
   border-bottom: 1px solid #2A2D3A;
   position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.changelog-date {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #6B7280;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .prose h2::after {
   content: '';
