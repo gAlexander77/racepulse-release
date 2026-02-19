@@ -8,7 +8,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white)
 
-Real-time telemetry overlays for sim racing. Lightweight, modular widgets that float over your game for speed, throttle/brake inputs, lap times, fuel, and more. Auto-detects iRacing, F1 25, and F1 24. Single `.exe`, no installer, no config.
+RacePulse gives you real-time telemetry overlays for sim racing. Lightweight, modular widgets that float over your game for speed, throttle/brake inputs, lap times, fuel, and more. Auto-detects iRacing, F1 25, and F1 24. Single `.exe`, no installer, no config.
 
 If RacePulse improves your setup, please consider giving this repo a star. It helps more sim racers discover the project.
 
