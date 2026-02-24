@@ -5,6 +5,17 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.gif"
 ---
 
+## v0.1.3-alpha <span class="changelog-date">2026-02-24</span>
+
+### Fixed
+
+- Fixed a crash that could happen when stopping iRacing telemetry capture
+- Fixed iRacing telemetry reader freezing under heavy load
+- Fixed widget processes not closing properly on app shutdown
+- Fixed game providers ignoring app shutdown, causing lingering background activity
+
+---
+
 ## v0.1.2-alpha <span class="changelog-date">2026-02-16</span>
 
 ### Added

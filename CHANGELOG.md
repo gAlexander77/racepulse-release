@@ -2,6 +2,17 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.1.3-alpha] — 2026-02-24
+
+### Fixed
+
+- Fixed a crash that could happen when stopping iRacing telemetry capture
+- Fixed iRacing telemetry reader freezing under heavy load
+- Fixed widget processes not closing properly on app shutdown
+- Fixed game providers ignoring app shutdown, causing lingering background activity
+
+---
+
 ## [v0.1.2-alpha] — 2026-02-16
 
 ### Added
