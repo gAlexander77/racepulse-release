@@ -19,6 +19,9 @@ On first launch, Windows may show a SmartScreen prompt since the app is unsigned
 ### iRacing
 No configuration needed. RacePulse automatically detects iRacing via shared memory when the sim is running.
 
+### Le Mans Ultimate
+No configuration needed. RacePulse automatically detects Le Mans Ultimate via the rFactor 2 shared memory plugin when the sim is running.
+
 ### F1 25
 1. In F1 25, go to **Settings > Telemetry Settings**
 2. Set **UDP Telemetry** to **On**
@@ -54,9 +57,9 @@ Download a newer release and replace the previous `racepulse.exe`. Your widget s
 - Check the UDP port matches the game year (F1 25 = 22025, F1 24 = 22024)
 - Allow RacePulse through Windows Firewall if prompted
 
-**No telemetry data (iRacing):**
-- Ensure iRacing is running and you are in a session (not the main menu)
-- iRacing shared memory is only available while on track or in replay
+**No telemetry data (iRacing / Le Mans Ultimate):**
+- Ensure the sim is running and you are in a session (not the main menu)
+- Shared memory is only available while on track or in replay
 
 **App won't start or crashes:**
 - Ensure you are on Windows 10 or 11 (64-bit)

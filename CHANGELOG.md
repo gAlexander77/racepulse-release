@@ -2,6 +2,21 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.1.4-alpha] — 2026-02-27
+
+### Added
+
+- Le Mans Ultimate support via rFactor 2 shared memory (auto-detected, no configuration needed)
+- Rounded corners setting for the Inputs Telemetry graph
+- New app icon
+
+### Fixed
+
+- More accurate delta-to-best using sector split comparisons instead of estimated lap time
+- Fuel now displays in consistent units across all games
+
+---
+
 ## [v0.1.3-alpha] — 2026-02-24
 
 ### Fixed

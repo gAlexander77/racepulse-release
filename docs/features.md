@@ -5,6 +5,7 @@ RacePulse is a desktop telemetry overlay application designed for sim racing.
 ## Supported Games
 
 - **iRacing** — Automatic detection via Windows shared memory. No configuration needed.
+- **Le Mans Ultimate** — Automatic detection via rFactor 2 shared memory plugin. No configuration needed.
 - **F1 25** — UDP telemetry on port 22025 (enable in game settings under Telemetry).
 - **F1 24** — UDP telemetry on port 22024 (enable in game settings under Telemetry).
 

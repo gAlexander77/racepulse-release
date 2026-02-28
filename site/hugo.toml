@@ -5,7 +5,7 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Real-time sim racing telemetry overlays for iRacing, F1 25, and F1 24"
+  description = "Real-time sim racing telemetry overlays for iRacing, Le Mans Ultimate, F1 25, and F1 24"
   ogImage = "assets/application-preview.gif"
   siteIcon = "favicon.svg"
   repoURL = "https://github.com/gAlexander77/racepulse-release"

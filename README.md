@@ -8,7 +8,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white)
 
-RacePulse gives you real-time telemetry overlays for sim racing. Lightweight, modular widgets that float over your game for speed, throttle/brake inputs, lap times, fuel, and more. Auto-detects iRacing, F1 25, and F1 24. Single `.exe`, no installer, no config.
+RacePulse gives you real-time telemetry overlays for sim racing. Lightweight, modular widgets that float over your game for speed, throttle/brake inputs, lap times, fuel, and more. Auto-detects iRacing, Le Mans Ultimate, F1 25, and F1 24. Single `.exe`, no installer, no config.
 
 If RacePulse improves your setup, please consider giving this repo a star. It helps more sim racers discover the project.
 
@@ -20,7 +20,7 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 ## Free Features (Current)
 
-- iRacing, F1 25, and F1 24 support with auto-detection
+- iRacing, Le Mans Ultimate, F1 25, and F1 24 support with auto-detection
 - Core overlay widgets: speed, gear, RPM, lap time, delta, inputs, fuel, and G-force
 - Advanced widgets: Telemetry Core and Inputs Telemetry
 - Per-widget customization with persistent settings
@@ -31,7 +31,7 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 1. Download `racepulse.exe` from [Releases](../../releases)
 2. Launch it (no install required)
-3. Start iRacing, F1 25, or F1 24 and RacePulse auto-connects
+3. Start iRacing, Le Mans Ultimate, F1 25, or F1 24 and RacePulse auto-connects
 
 ## Preview
 
@@ -71,6 +71,7 @@ Each release includes:
 | Game | Transport | Setup |
 |------|-----------|-------|
 | **iRacing** | Shared memory | No configuration needed — detected automatically when iRacing is running |
+| **Le Mans Ultimate** | Shared memory | No configuration needed — detected automatically via rFactor 2 shared memory plugin |
 | **F1 25** | UDP | Enable UDP telemetry in game settings (default port 22025) |
 | **F1 24** | UDP | Enable UDP telemetry in game settings (default port 22024) |
 
@@ -78,7 +79,7 @@ RacePulse automatically detects which game is running and begins capturing telem
 
 ## Core Features
 
-- Real-time racing telemetry overlays for iRacing, F1 25, and F1 24
+- Real-time racing telemetry overlays for iRacing, Le Mans Ultimate, F1 25, and F1 24
 - Modular widget system (speed, gear, RPM, delta, inputs, fuel, G-force, and more)
 - Per-widget customization with persistent settings
 - Drag-and-drop widget positioning with click-through overlay mode

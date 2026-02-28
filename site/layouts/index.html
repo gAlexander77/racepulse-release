@@ -5,7 +5,7 @@
     <!-- Status badge -->
     <div class="animate-fade-up inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-racing-card/80 border border-racing-border/50 text-xs text-racing-neutral mb-8 badge-shimmer">
       <span class="w-2 h-2 rounded-full bg-racing-positive pulse-dot"></span>
-      Now supporting iRacing, F1 25, and F1 24
+      Now supporting iRacing, Le Mans Ultimate, F1 25, and F1 24
     </div>
 
     <!-- Headline -->
@@ -71,8 +71,9 @@
     <h2 class="text-3xl md:text-4xl font-bold mb-4">Supported Games</h2>
     <p class="text-racing-neutral max-w-lg mx-auto">Auto-detects the running sim and starts capturing telemetry instantly.</p>
   </div>
-  <div class="grid md:grid-cols-3 gap-5">
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
     {{ partial "game-card.html" (dict "name" "iRacing" "transport" "Shared Memory" "desc" "Auto-detected when iRacing is running. No configuration needed." "platform" "Windows") }}
+    {{ partial "game-card.html" (dict "name" "Le Mans Ultimate" "transport" "Shared Memory" "desc" "Auto-detected via rFactor 2 shared memory plugin. No configuration needed." "platform" "Windows") }}
     {{ partial "game-card.html" (dict "name" "F1 25" "transport" "UDP Telemetry" "desc" "Enable UDP telemetry in game settings. Default port 22025." "platform" "All Platforms") }}
     {{ partial "game-card.html" (dict "name" "F1 24" "transport" "UDP Telemetry" "desc" "Enable UDP telemetry in game settings. Default port 22024." "platform" "All Platforms") }}
   </div>
@@ -113,7 +114,7 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
       {{ partial "feature-card.html" (dict "title" "Modular Widgets" "desc" "Speed, gear, RPM, delta, inputs, fuel, G-force, and more. Each widget is an independent overlay window." "icon" "grid") }}
       {{ partial "feature-card.html" (dict "title" "Per-Widget Customization" "desc" "Choose units, toggle visibility, adjust display options. Settings persist across sessions automatically." "icon" "settings") }}
-      {{ partial "feature-card.html" (dict "title" "Multi-Game Support" "desc" "iRacing, F1 25, and F1 24. Auto-detects the running sim and all widgets work across every supported game." "icon" "flag") }}
+      {{ partial "feature-card.html" (dict "title" "Multi-Game Support" "desc" "iRacing, Le Mans Ultimate, F1 25, and F1 24. Auto-detects the running sim and all widgets work across every supported game." "icon" "flag") }}
       {{ partial "feature-card.html" (dict "title" "Advanced Widgets" "desc" "Telemetry Core combines rev lights, gear, speed, and position. Inputs Telemetry shows a live scrolling input graph." "icon" "bolt") }}
       {{ partial "feature-card.html" (dict "title" "Single Executable" "desc" "~21MB download, no installer, no dependencies. Drop it anywhere and run. Widget settings survive updates." "icon" "package") }}
       {{ partial "feature-card.html" (dict "title" "Session Recording" "desc" "Telemetry sessions saved to local storage with lap times, session metadata, and full frame history." "icon" "chart" "badge" "Coming Soon") }}
@@ -196,6 +197,7 @@
       (dict "label" "OS" "value" "Windows 10 / 11 (64-bit)")
       (dict "label" "Graphics" "value" "Desktop composition enabled")
       (dict "label" "iRacing" "value" "No extra config needed")
+      (dict "label" "LMU" "value" "No extra config needed")
       (dict "label" "F1 Games" "value" "UDP telemetry enabled in settings")
     ) }}
       <div class="flex items-center justify-between py-3 border-b border-racing-border/30 last:border-0">

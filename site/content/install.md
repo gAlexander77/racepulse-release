@@ -1,7 +1,7 @@
 ---
 title: "Installation"
-subtitle: "Download, launch, and configure RacePulse in under a minute. Setup guides for iRacing, F1 25, and F1 24."
-description: "Install RacePulse in under a minute with step-by-step setup for iRacing shared memory and F1 25/F1 24 UDP telemetry."
+subtitle: "Download, launch, and configure RacePulse in under a minute. Setup guides for iRacing, Le Mans Ultimate, F1 25, and F1 24."
+description: "Install RacePulse in under a minute with step-by-step setup for iRacing and Le Mans Ultimate shared memory and F1 25/F1 24 UDP telemetry."
 ogImage: "assets/application-preview.gif"
 ---
 
@@ -22,6 +22,10 @@ Run `racepulse.exe`. No installation required.
 ### iRacing
 
 No configuration needed. RacePulse automatically detects iRacing via shared memory when the sim is running.
+
+### Le Mans Ultimate
+
+No configuration needed. RacePulse automatically detects Le Mans Ultimate via the rFactor 2 shared memory plugin when the sim is running.
 
 ### F1 25
 
@@ -64,10 +68,10 @@ Download a newer release and replace the previous `racepulse.exe`. Your widget s
 - Check the UDP port matches the game year (F1 25 = 22025, F1 24 = 22024)
 - Allow RacePulse through Windows Firewall if prompted
 
-### No telemetry data (iRacing)
+### No telemetry data (iRacing / Le Mans Ultimate)
 
-- Ensure iRacing is running and you are in a session (not the main menu)
-- iRacing shared memory is only available while on track or in replay
+- Ensure the sim is running and you are in a session (not the main menu)
+- Shared memory is only available while on track or in replay
 
 ### App won't start or crashes
 
