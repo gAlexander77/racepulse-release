@@ -2,6 +2,16 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.1.5-alpha] — 2026-03-01
+
+### Added
+
+- RacePulse now checks for updates on startup and notifies you when a new version is available
+- One-click update — download and install without leaving the app
+- Updates keep your exe in the same location, no reinstall needed
+
+---
+
 ## [v0.1.4-alpha] — 2026-02-27
 
 ### Added

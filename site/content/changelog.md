@@ -5,6 +5,16 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.gif"
 ---
 
+## v0.1.5-alpha <span class="changelog-date">2026-03-01</span>
+
+### Added
+
+- RacePulse now checks for updates on startup and notifies you when a new version is available
+- One-click update — download and install without leaving the app
+- Updates keep your exe in the same location, no reinstall needed
+
+---
+
 ## v0.1.4-alpha <span class="changelog-date">2026-02-27</span>
 
 ### Added
