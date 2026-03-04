@@ -1,7 +1,7 @@
 ---
 title: "Installation"
-subtitle: "Download, launch, and configure RacePulse in under a minute. Setup guides for iRacing, Le Mans Ultimate, F1 25, and F1 24."
-description: "Install RacePulse in under a minute with step-by-step setup for iRacing and Le Mans Ultimate shared memory and F1 25/F1 24 UDP telemetry."
+subtitle: "Download, launch, and configure RacePulse in under a minute. Setup guides for iRacing, ACC, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24."
+description: "Install RacePulse in under a minute with step-by-step setup for iRacing, ACC, Assetto Corsa, and Le Mans Ultimate shared memory and F1 25/F1 24 UDP telemetry."
 ogImage: "assets/application-preview.gif"
 ---
 
@@ -22,6 +22,14 @@ Run `racepulse.exe`. No installation required.
 ### iRacing
 
 No configuration needed. RacePulse automatically detects iRacing via shared memory when the sim is running.
+
+### Assetto Corsa Competizione
+
+No configuration needed. RacePulse automatically detects ACC via shared memory when the sim is running.
+
+### Assetto Corsa
+
+No configuration needed. RacePulse automatically detects Assetto Corsa via shared memory when the sim is running.
 
 ### Le Mans Ultimate
 
@@ -68,7 +76,7 @@ Download a newer release and replace the previous `racepulse.exe`. Your widget s
 - Check the UDP port matches the game year (F1 25 = 22025, F1 24 = 22024)
 - Allow RacePulse through Windows Firewall if prompted
 
-### No telemetry data (iRacing / Le Mans Ultimate)
+### No telemetry data (iRacing / ACC / Assetto Corsa / Le Mans Ultimate)
 
 - Ensure the sim is running and you are in a session (not the main menu)
 - Shared memory is only available while on track or in replay

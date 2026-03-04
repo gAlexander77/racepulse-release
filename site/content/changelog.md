@@ -5,6 +5,15 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.gif"
 ---
 
+## v0.1.6-alpha <span class="changelog-date">2026-03-03</span>
+
+### Added
+
+- Assetto Corsa Competizione support via shared memory (auto-detected, no configuration needed)
+- Assetto Corsa support via shared memory (auto-detected, no configuration needed)
+
+---
+
 ## v0.1.5-alpha <span class="changelog-date">2026-03-01</span>
 
 ### Added
