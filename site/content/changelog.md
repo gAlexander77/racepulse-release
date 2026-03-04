@@ -12,6 +12,10 @@ ogImage: "assets/application-preview.gif"
 - Assetto Corsa Competizione support via shared memory (auto-detected, no configuration needed)
 - Assetto Corsa support via shared memory (auto-detected, no configuration needed)
 
+### Fixed
+
+- Auto-update now correctly detects new pre-release versions
+
 ---
 
 ## v0.1.5-alpha <span class="changelog-date">2026-03-01</span>

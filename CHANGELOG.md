@@ -9,6 +9,10 @@ All notable changes to RacePulse releases are documented here.
 - Assetto Corsa Competizione support via shared memory (auto-detected, no configuration needed)
 - Assetto Corsa support via shared memory (auto-detected, no configuration needed)
 
+### Fixed
+
+- Auto-update now correctly detects new pre-release versions
+
 ---
 
 ## [v0.1.5-alpha] — 2026-03-01
