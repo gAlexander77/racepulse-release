@@ -5,6 +5,14 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.gif"
 ---
 
+## v0.1.7-alpha <span class="changelog-date">2026-03-04</span>
+
+### Improved
+
+- Redesigned home page layout — cleaner Telemetry Dashboard button and removed cluttered quick actions section
+
+---
+
 ## v0.1.6-alpha <span class="changelog-date">2026-03-03</span>
 
 ### Added

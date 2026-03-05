@@ -2,6 +2,14 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.1.7-alpha] — 2026-03-04
+
+### Improved
+
+- Redesigned home page layout — cleaner Telemetry Dashboard button and removed cluttered quick actions section
+
+---
+
 ## [v0.1.6-alpha] — 2026-03-03
 
 ### Added
