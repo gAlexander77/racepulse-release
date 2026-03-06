@@ -2,6 +2,19 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.1.8-alpha] — 2026-03-06
+
+### Added
+
+- App now prevents multiple instances from running at the same time
+
+### Improved
+
+- Telemetry Core widget no longer shifts when values change
+- Improved update process
+
+---
+
 ## [v0.1.7-alpha] — 2026-03-04
 
 ### Improved

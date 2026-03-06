@@ -5,6 +5,19 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.gif"
 ---
 
+## v0.1.8-alpha <span class="changelog-date">2026-03-06</span>
+
+### Added
+
+- App now prevents multiple instances from running at the same time
+
+### Improved
+
+- Telemetry Core widget no longer shifts when values change
+- Improved update process
+
+---
+
 ## v0.1.7-alpha <span class="changelog-date">2026-03-04</span>
 
 ### Improved
