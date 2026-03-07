@@ -5,6 +5,14 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.gif"
 ---
 
+## v0.1.9-alpha <span class="changelog-date">2026-03-06</span>
+
+### Fixed
+
+- Fixed telemetry provider not cleaning up properly on game disconnect
+
+---
+
 ## v0.1.8-alpha <span class="changelog-date">2026-03-06</span>
 
 ### Added

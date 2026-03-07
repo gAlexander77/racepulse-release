@@ -2,6 +2,14 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.1.9-alpha] — 2026-03-06
+
+### Fixed
+
+- Fixed telemetry provider not cleaning up properly on game disconnect
+
+---
+
 ## [v0.1.8-alpha] — 2026-03-06
 
 ### Added
