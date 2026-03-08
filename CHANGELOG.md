@@ -2,6 +2,22 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.2.0-alpha] — 2026-03-08
+
+### Fixed
+
+- Fixed false iRacing detection on app startup when iRacing is not running
+- Fixed LMU not reconnecting when joining a session after app is already open
+- Fixed LMU not auto-disconnecting when the game is closed
+- Fixed LMU input telemetry showing ECU-filtered values instead of actual pedal inputs
+
+### Improved
+
+- LMU throttle, brake, and clutch now show raw pedal inputs (no more phantom spikes from auto-blip, TC, or shift cuts)
+- Removed unnecessary debug log file (widget-embed.log) from production builds
+
+---
+
 ## [v0.1.9-alpha] — 2026-03-06
 
 ### Fixed
