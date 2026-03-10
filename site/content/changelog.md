@@ -5,6 +5,23 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.gif"
 ---
 
+## v0.2.1-alpha <span class="changelog-date">2026-03-09</span>
+
+### Added
+
+- Background opacity setting for all widgets
+- Graph background opacity setting for Inputs Telemetry widget
+- Reset-to-default button with tooltip on number slider settings
+
+### Improved
+
+- Widgets now start in edit mode by default so they're immediately movable
+- Revamped all basic widgets with new settings and polished styling
+- Simplified RPM widget display
+- Streamlined Fuel widget to focus on laps remaining estimation
+
+---
+
 ## v0.2.0-alpha <span class="changelog-date">2026-03-08</span>
 
 ### Fixed
