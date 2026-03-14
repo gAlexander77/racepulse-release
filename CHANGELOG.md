@@ -2,6 +2,22 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.2.2-alpha] — 2026-03-14
+
+### Added
+
+- Flat Track Map widget — horizontal bar showing all cars on track with class-colored dots, player highlight, and position label (supports iRacing, LMU, and F1)
+- iRacing competitor data support (car positions, classes, pit status via CarIdx arrays and session info YAML)
+- Live preview for Flat Track Map widget with multi-class mock competitors
+- Per-game widget support filtering — widgets can declare which games they support, with "Unsupported" badge and tooltip
+
+### Fixed
+
+- Fixed Flat Track Map preview glitch on initial load (state mismatch between simulation and initial telemetry)
+- Fixed track map dot bounce when cars complete a lap (CSS calc and section transition timing)
+
+---
+
 ## [v0.2.1-alpha] — 2026-03-09
 
 ### Added
