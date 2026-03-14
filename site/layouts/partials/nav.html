@@ -17,7 +17,10 @@
           <a href="{{ .URL | absURL }}" class="px-3 py-2 text-sm font-medium text-racing-neutral hover:text-racing-text transition-colors">{{ .Name }}</a>
         {{ end }}
       {{ end }}
-      <a href="{{ .Site.Params.releaseURL }}" class="ml-4 px-4 py-2 bg-gradient-to-r from-racing-accent to-rose-700 hover:from-rose-600 hover:to-rose-800 text-white text-sm font-semibold rounded-lg transition-all shadow-lg shadow-racing-accent/20 hover:shadow-racing-accent/30">
+      <a href="{{ .Site.Params.downloadURL }}" class="ml-4 px-4 py-2 bg-gradient-to-r from-racing-accent to-rose-700 hover:from-rose-600 hover:to-rose-800 text-white text-sm font-semibold rounded-lg transition-all shadow-lg shadow-racing-accent/20 hover:shadow-racing-accent/30 inline-flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3"/>
+        </svg>
         Download
       </a>
     </div>
@@ -31,6 +34,6 @@
     {{ range .Site.Menus.main }}
       <a href="{{ .URL | absURL }}" class="block px-3 py-2 text-sm font-medium text-racing-neutral hover:text-racing-text transition-colors">{{ .Name }}</a>
     {{ end }}
-    <a href="{{ .Site.Params.releaseURL }}" class="block px-3 py-2 text-sm font-medium text-racing-accent">Download</a>
+    <a href="{{ .Site.Params.downloadURL }}" class="block px-3 py-2 text-sm font-medium text-racing-accent">Download</a>
   </div>
 </nav>

@@ -23,7 +23,10 @@
 
     <!-- CTA buttons -->
     <div class="animate-fade-up animate-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="{{ .Site.Params.releaseURL }}" class="btn-glow px-8 py-3.5 bg-gradient-to-r from-racing-accent to-rose-700 text-white font-semibold rounded-xl transition-all text-base">
+      <a href="{{ .Site.Params.downloadURL }}" class="btn-glow px-8 py-3.5 bg-gradient-to-r from-racing-accent to-rose-700 text-white font-semibold rounded-xl transition-all text-base inline-flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3"/>
+        </svg>
         Download for Windows
       </a>
       <a href="{{ "features/" | absURL }}" class="px-8 py-3.5 bg-racing-card/80 hover:bg-racing-card border border-racing-border/50 hover:border-racing-border text-racing-text font-semibold rounded-xl transition-all text-base">
@@ -130,7 +133,7 @@
 <section class="max-w-6xl mx-auto px-6 py-24">
   <div class="text-center mb-14">
     <p class="text-xs font-semibold tracking-widest uppercase text-racing-accent mb-3">Widgets</p>
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">10 Overlay Widgets</h2>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">11 Overlay Widgets</h2>
     <p class="text-racing-neutral max-w-lg mx-auto">Each widget is a standalone, always-on-top window. Mix and match what you need.</p>
   </div>
   <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -150,7 +153,7 @@
       </div>
     {{ end }}
   </div>
-  <div class="grid md:grid-cols-2 gap-4 mt-4">
+  <div class="grid md:grid-cols-3 gap-4 mt-4">
     <div class="bg-racing-card/60 border border-racing-border/50 rounded-xl p-5 card-glow">
       <div class="flex items-center gap-2 mb-2">
         <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-racing-accent/10 text-racing-accent border border-racing-accent/20">Advanced</span>
@@ -164,6 +167,13 @@
         <h3 class="font-bold">Inputs Telemetry</h3>
       </div>
       <p class="text-sm text-racing-neutral leading-relaxed">Live scrolling input graph with color-coded traces, pedal bars, optional steering wheel visualization, gear, and speed.</p>
+    </div>
+    <div class="bg-racing-card/60 border border-racing-border/50 rounded-xl p-5 card-glow">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-racing-accent/10 text-racing-accent border border-racing-accent/20">Advanced</span>
+        <h3 class="font-bold">Flat Track Map</h3>
+      </div>
+      <p class="text-sm text-racing-neutral leading-relaxed">Horizontal bar showing all cars on track with class-colored dots, player highlight, and position label. Supports iRacing, LMU, and F1.</p>
     </div>
   </div>
 </section>
@@ -219,9 +229,20 @@
   <div class="relative max-w-6xl mx-auto px-6 py-24 text-center">
     <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to drive?</h2>
     <p class="text-racing-neutral mb-10 max-w-lg mx-auto">Download RacePulse and have telemetry overlays running in under a minute.</p>
-    <a href="{{ .Site.Params.releaseURL }}" class="btn-glow inline-block px-8 py-3.5 bg-gradient-to-r from-racing-accent to-rose-700 text-white font-semibold rounded-xl transition-all text-base">
-      Get the Latest Release
-    </a>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="{{ .Site.Params.downloadURL }}" class="btn-glow px-8 py-3.5 bg-gradient-to-r from-racing-accent to-rose-700 text-white font-semibold rounded-xl transition-all text-base inline-flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3"/>
+        </svg>
+        Download Latest
+      </a>
+      <a href="{{ .Site.Params.releaseURL }}" class="px-8 py-3.5 bg-racing-card/80 hover:bg-racing-card border border-racing-border/50 hover:border-racing-border text-racing-text font-semibold rounded-xl transition-all text-base inline-flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+        </svg>
+        All Releases
+      </a>
+    </div>
   </div>
 </section>
 {{ end }}
