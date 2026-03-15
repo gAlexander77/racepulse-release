@@ -2,6 +2,15 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.2.3-alpha] — 2026-03-14
+
+### Added
+
+- Edit mode indicator on each widget overlay — yellow badge shows "Edit Mode Enabled", changes to "Disable Edit Mode" on hover to disable edit mode globally
+- Flat Track Map live preview in widget customization panel
+
+---
+
 ## [v0.2.2-alpha] — 2026-03-14
 
 ### Added
