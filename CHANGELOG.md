@@ -2,6 +2,22 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.2.4-alpha] — 2026-03-16
+
+### Added
+
+- Game source selector replaced with visual icon grid showing colored badges for each supported game
+
+### Fixed
+
+- Edit mode banner no longer appears on startup when no widgets are open
+
+### Changed
+
+- Executable renamed from `racepulse.exe` to `RacePulse.exe`
+
+---
+
 ## [v0.2.3-alpha] — 2026-03-14
 
 ### Added

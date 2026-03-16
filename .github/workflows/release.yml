@@ -81,7 +81,7 @@ jobs:
 
       - name: Generate checksum
         working-directory: source/application/build/bin
-        run: sha256sum racepulse.exe > racepulse.exe.sha256
+        run: sha256sum RacePulse.exe > RacePulse.exe.sha256
         shell: bash
 
       - name: Create release
@@ -90,8 +90,8 @@ jobs:
           tag_name: ${{ steps.version.outputs.tag }}
           name: RacePulse ${{ steps.version.outputs.tag }}
           files: |
-            source/application/build/bin/racepulse.exe
-            source/application/build/bin/racepulse.exe.sha256
+            source/application/build/bin/RacePulse.exe
+            source/application/build/bin/RacePulse.exe.sha256
           generate_release_notes: true
           draft: false
           prerelease: ${{ contains(steps.version.outputs.tag, '-') }}

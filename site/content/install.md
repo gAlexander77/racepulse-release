@@ -7,13 +7,13 @@ ogImage: "assets/application-preview.gif"
 
 ## 1. Download
 
-Download the latest `racepulse.exe` from the [Releases](https://github.com/gAlexander77/racepulse-release/releases) page.
+Download the latest `RacePulse.exe` from the [Releases](https://github.com/gAlexander77/racepulse-release/releases) page.
 
 If a checksum file is included in the release, verify file integrity before running.
 
 ## 2. Launch
 
-Run `racepulse.exe`. No installation required.
+Run `RacePulse.exe`. No installation required.
 
 > **Note:** On first launch, Windows may show a SmartScreen prompt since the app is unsigned. Click "More info" then "Run anyway".
 
@@ -58,7 +58,7 @@ No configuration needed. RacePulse automatically detects Le Mans Ultimate via th
 
 ## 5. Updating
 
-Download a newer release and replace the previous `racepulse.exe`. Your widget settings and positions are stored separately and will be preserved.
+Download a newer release and replace the previous `RacePulse.exe`. Your widget settings and positions are stored separately and will be preserved.
 
 ---
 

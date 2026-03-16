@@ -29,7 +29,7 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 ## Quick Start
 
-1. Download `racepulse.exe` from [Releases](../../releases)
+1. Download `RacePulse.exe` from [Releases](../../releases)
 2. Launch it (no install required)
 3. Start your sim (iRacing, ACC, AC, LMU, F1 25, or F1 24) and RacePulse auto-connects
 
@@ -63,7 +63,7 @@ Get the latest build from [Releases](../../releases).
 
 Each release includes:
 
-- `racepulse.exe` (main application)
+- `RacePulse.exe` (main application)
 - Optional release notes and checksums
 
 ## Supported Games
