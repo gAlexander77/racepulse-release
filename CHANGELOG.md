@@ -2,6 +2,21 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.2.5-alpha] — 2026-03-19
+
+### Added
+
+- Website link in the app footer for quick access to racepulse.racing
+- Widget icons for basic widgets
+- Toast notifications for connection and widget feedback
+
+### Fixed
+
+- Connection error banner persisting after successfully connecting to a game
+- Missing window icon in the Windows taskbar
+
+---
+
 ## [v0.2.4-alpha] — 2026-03-16
 
 ### Added

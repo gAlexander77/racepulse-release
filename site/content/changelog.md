@@ -5,6 +5,21 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.gif"
 ---
 
+## v0.2.5-alpha <span class="changelog-date">2026-03-19</span>
+
+### Added
+
+- Website link in the app footer for quick access to racepulse.racing
+- Widget icons for basic widgets
+- Toast notifications for connection and widget feedback
+
+### Fixed
+
+- Connection error banner persisting after successfully connecting to a game
+- Missing window icon in the Windows taskbar
+
+---
+
 ## v0.2.4-alpha <span class="changelog-date">2026-03-16</span>
 
 ### Added
