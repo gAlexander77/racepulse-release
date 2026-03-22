@@ -2,6 +2,17 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.2.6-alpha] — 2026-03-22
+
+### Added
+
+- Widget position and size persistence — widgets reopen exactly where you left them after restarting the app
+- Recenter button to move all open widgets to the center of the main app's screen
+- Reset Size button in the widget customization panel to restore default dimensions
+- Optional rev lights bar on the Inputs Telemetry widget
+
+---
+
 ## [v0.2.5-alpha] — 2026-03-19
 
 ### Added

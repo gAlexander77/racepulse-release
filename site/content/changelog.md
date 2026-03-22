@@ -5,6 +5,17 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.gif"
 ---
 
+## v0.2.6-alpha <span class="changelog-date">2026-03-22</span>
+
+### Added
+
+- Widget position and size persistence — widgets reopen exactly where you left them after restarting the app
+- Recenter button to move all open widgets to the center of the main app's screen
+- Reset Size button in the widget customization panel to restore default dimensions
+- Optional rev lights bar on the Inputs Telemetry widget
+
+---
+
 ## v0.2.5-alpha <span class="changelog-date">2026-03-19</span>
 
 ### Added
