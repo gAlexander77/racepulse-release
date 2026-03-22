@@ -21,11 +21,11 @@
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3"/>
         </svg>
-        Download
+        Download for Windows
       </a>
     </div>
-    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 text-racing-neutral hover:text-racing-text transition-colors">
-      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <button onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 text-racing-neutral hover:text-racing-text transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
@@ -34,6 +34,6 @@
     {{ range .Site.Menus.main }}
       <a href="{{ .URL | absURL }}" class="block px-3 py-2 text-sm font-medium text-racing-neutral hover:text-racing-text transition-colors">{{ .Name }}</a>
     {{ end }}
-    <a href="{{ .Site.Params.downloadURL }}" class="block px-3 py-2 text-sm font-medium text-racing-accent">Download</a>
+    <a href="{{ .Site.Params.downloadURL }}" class="block px-3 py-2 text-sm font-medium text-racing-accent">Download for Windows</a>
   </div>
 </nav>
