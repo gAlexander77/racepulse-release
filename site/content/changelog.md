@@ -5,6 +5,18 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.gif"
 ---
 
+## v0.2.7-alpha <span class="changelog-date">2026-03-27</span>
+
+### Improved
+
+- Website and support buttons on the home page for quick access
+
+### Fixed
+
+- Widget settings (unit preferences, colors, etc.) now survive application restarts
+
+---
+
 ## v0.2.6-alpha <span class="changelog-date">2026-03-22</span>
 
 ### Added

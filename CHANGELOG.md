@@ -2,6 +2,18 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.2.7-alpha] — 2026-03-27
+
+### Improved
+
+- Website and support buttons on the home page for quick access
+
+### Fixed
+
+- Widget settings (unit preferences, colors, etc.) now survive application restarts
+
+---
+
 ## [v0.2.6-alpha] — 2026-03-22
 
 ### Added
