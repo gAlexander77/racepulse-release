@@ -22,7 +22,7 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 - iRacing, Assetto Corsa Competizione, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24 support with auto-detection
 - Core overlay widgets: speed, gear, RPM, lap time, delta, inputs, fuel, and G-force
-- Advanced widgets: Telemetry Core and Inputs Telemetry
+- Advanced widgets: Telemetry Core, Inputs Telemetry, and Flat Map
 - Per-widget customization with persistent settings
 - Drag-and-drop positioning and click-through overlay mode
 - Single executable download (no installer)
