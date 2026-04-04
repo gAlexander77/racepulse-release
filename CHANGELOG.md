@@ -2,6 +2,19 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.2.8-alpha] — 2026-04-03
+
+### Added
+
+- **Relative widget** — see nearby drivers sorted by proximity on track with live gap times, iRating, safety rating, and license class (iRacing only)
+- OUT indicator shows when a driver is on their out lap
+- PIT indicator shows when a driver is in the pits
+- Projected iRating change display (beta, off by default)
+- Colored gap times option — enable green/red coloring with +/- signs in widget settings
+- Live widget preview on the home page
+
+---
+
 ## [v0.2.7-alpha] — 2026-03-27
 
 ### Improved
