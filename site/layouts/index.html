@@ -59,7 +59,7 @@
         <svg class="w-4 h-4 text-racing-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/>
         </svg>
-        <span>11 widgets</span>
+        <span>12 widgets</span>
       </div>
     </div>
   </div>
@@ -120,7 +120,7 @@
       {{ partial "feature-card.html" (dict "title" "Modular Widgets" "desc" "Speed, gear, RPM, delta, inputs, fuel, G-force, and more. Each widget is an independent overlay window." "icon" "grid") }}
       {{ partial "feature-card.html" (dict "title" "Per-Widget Customization" "desc" "Choose units, toggle visibility, adjust display options. Settings persist across sessions automatically." "icon" "settings") }}
       {{ partial "feature-card.html" (dict "title" "Multi-Game Support" "desc" "iRacing, ACC, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24. Auto-detects the running sim and all widgets work across every supported game." "icon" "flag") }}
-      {{ partial "feature-card.html" (dict "title" "Advanced Widgets" "desc" "Telemetry Core combines rev lights, gear, speed, and position. Inputs Telemetry shows a live scrolling input graph." "icon" "bolt") }}
+      {{ partial "feature-card.html" (dict "title" "Advanced Widgets" "desc" "Telemetry Core combines rev lights, gear, speed, and position. Inputs Telemetry shows a live scrolling input graph. Relative displays nearby drivers with live gaps." "icon" "bolt") }}
       {{ partial "feature-card.html" (dict "title" "Single Executable" "desc" "~21MB download, no installer, no dependencies. Drop it anywhere and run. Widget settings survive updates." "icon" "package") }}
       {{ partial "feature-card.html" (dict "title" "Session Recording" "desc" "Telemetry sessions saved to local storage with lap times, session metadata, and full frame history." "icon" "chart" "badge" "Coming Soon") }}
     </div>
@@ -133,7 +133,7 @@
 <section class="max-w-6xl mx-auto px-6 py-24">
   <div class="text-center mb-14">
     <p class="text-xs font-semibold tracking-widest uppercase text-racing-accent mb-3">Widgets</p>
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">11 Overlay Widgets</h2>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">12 Overlay Widgets</h2>
     <p class="text-racing-neutral max-w-lg mx-auto">Each widget is a standalone, always-on-top window. Mix and match what you need.</p>
   </div>
   <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -153,7 +153,7 @@
       </div>
     {{ end }}
   </div>
-  <div class="grid md:grid-cols-3 gap-4 mt-4">
+  <div class="grid md:grid-cols-2 gap-4 mt-4">
     <div class="bg-racing-card/60 border border-racing-border/50 rounded-xl p-5 card-glow">
       <div class="flex items-center gap-2 mb-2">
         <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-racing-accent/10 text-racing-accent border border-racing-accent/20">Advanced</span>
@@ -174,6 +174,13 @@
         <h3 class="font-bold">Flat Track Map</h3>
       </div>
       <p class="text-sm text-racing-neutral leading-relaxed">Horizontal bar showing all cars on track with class-colored dots, player highlight, and position label. Supports iRacing, LMU, and F1.</p>
+    </div>
+    <div class="bg-racing-card/60 border border-racing-border/50 rounded-xl p-5 card-glow">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-racing-accent/10 text-racing-accent border border-racing-accent/20">Advanced</span>
+        <h3 class="font-bold">Relative</h3>
+      </div>
+      <p class="text-sm text-racing-neutral leading-relaxed">Nearby drivers sorted by track proximity with live gap times, iRating, safety rating, license class, and pit/out lap indicators. <strong class="text-racing-text">iRacing only.</strong></p>
     </div>
   </div>
 </section>

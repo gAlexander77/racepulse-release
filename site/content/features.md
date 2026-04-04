@@ -1,7 +1,7 @@
 ---
 title: "Features"
-subtitle: "11 overlay widgets, per-widget customization, multi-game support, and session recording (coming soon) for iRacing, Assetto Corsa Competizione, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24."
-description: "Explore RacePulse features: 11 overlay widgets, per-widget customization, and unified telemetry support for iRacing, Assetto Corsa Competizione, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24."
+subtitle: "12 overlay widgets, per-widget customization, multi-game support, and session recording (coming soon) for iRacing, Assetto Corsa Competizione, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24."
+description: "Explore RacePulse features: 12 overlay widgets, per-widget customization, and unified telemetry support for iRacing, Assetto Corsa Competizione, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24."
 ogImage: "assets/widget-customization-preview.gif"
 ---
 
@@ -40,6 +40,8 @@ Standalone, always-on-top widget overlays that float over your game:
 
 - **Telemetry Core** — All-in-one display combining animated rev lights, gear indicator, RPM, speed, race position, track temperature, elapsed time, and lap count. Supports metric and imperial units. Includes pit limiter flash indicator.
 - **Inputs Telemetry** — Live scrolling graph of throttle and brake inputs over time with color-coded traces, combined with real-time pedal bars. Optional steering wheel visualization, gear, and speed readout.
+- **Flat Track Map** — Horizontal bar showing all cars on track with class-colored dots, player highlight, and position label. Supports iRacing, LMU, and F1.
+- **Relative** — Nearby drivers sorted by track proximity with live gap times, iRating, safety rating, license class, and pit/out lap indicators. iRacing only.
 
 ## Widget Customization
 
