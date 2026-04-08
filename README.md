@@ -47,15 +47,13 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 ![iRacing inputs telemetry overlay at Sebring](site/static/assets/iracing-input-telemetry-overlay-sebring.gif)
 
-## Latest In-Game
-
-**Relative Widget, Flat Map Widget, and Input Widget Active in iRacing**
-
-![Relative Widget, Flat Map Widget, and Input Widget Active in iRacing](site/static/assets/iracing-overlay-preview.gif)
-
-**Working in LMU**
+**Works accross multiple titles (LMU in preview below)**
 
 ![Working in LMU](site/static/assets/lmu-overlay-preview.gif)
+
+**Use Multiple widgets at once. Relative Widget, Flat Map Widget, and Input Widget Active in iRacing**
+
+![Relative Widget, Flat Map Widget, and Input Widget Active in iRacing](site/static/assets/iracing-overlay-preview.gif)
 
 ## What this repository is for
 
@@ -78,14 +76,14 @@ Each release includes:
 
 ## Supported Games
 
-| Game | Transport | Setup |
-|------|-----------|-------|
-| **iRacing** | Shared memory | No configuration needed — detected automatically when iRacing is running |
-| **Assetto Corsa Competizione** | Shared memory | No configuration needed — detected automatically when ACC is running |
-| **Assetto Corsa** | Shared memory | No configuration needed — detected automatically when AC is running |
-| **Le Mans Ultimate** | Shared memory | No configuration needed — detected automatically via rFactor 2 shared memory plugin |
-| **F1 25** | UDP | Enable UDP telemetry in game settings (default port 22025) |
-| **F1 24** | UDP | Enable UDP telemetry in game settings (default port 22024) |
+| Game                           | Transport     | Setup                                                                               |
+| ------------------------------ | ------------- | ----------------------------------------------------------------------------------- |
+| **iRacing**                    | Shared memory | No configuration needed — detected automatically when iRacing is running            |
+| **Assetto Corsa Competizione** | Shared memory | No configuration needed — detected automatically when ACC is running                |
+| **Assetto Corsa**              | Shared memory | No configuration needed — detected automatically when AC is running                 |
+| **Le Mans Ultimate**           | Shared memory | No configuration needed — detected automatically via rFactor 2 shared memory plugin |
+| **F1 25**                      | UDP           | Enable UDP telemetry in game settings (default port 22025)                          |
+| **F1 24**                      | UDP           | Enable UDP telemetry in game settings (default port 22024)                          |
 
 RacePulse automatically detects which game is running and begins capturing telemetry.
 
