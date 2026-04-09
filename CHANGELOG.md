@@ -2,6 +2,23 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.2.9-alpha] — 2026-04-08
+
+### Fixed
+
+- Fixed a crash in the Relative widget when iRating data was unavailable
+- Relative widget no longer flickers or jumps around during cautions and restarts
+- Safety rating now displays correctly for all license levels
+- Colored gap times now properly show negative signs for cars ahead of you
+- Relative gaps are more accurate during the first lap before anyone sets a time
+- iRating change column now only shows during race sessions, not practice or qualifying
+
+### Improved
+
+- Game-specific widgets now show a clear error instead of broken data when used with an unsupported game
+
+---
+
 ## [v0.2.8-alpha] — 2026-04-03
 
 ### Added
