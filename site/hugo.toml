@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "term"]
   siteIcon = "favicon.svg"
   repoURL = "https://github.com/gAlexander77/racepulse-release"
   releaseURL = "https://github.com/gAlexander77/racepulse-release/releases"
-  downloadURL = "https://github.com/gAlexander77/racepulse-release/releases/download/v0.2.9-alpha/RacePulse.exe"
+  downloadURL = "https://github.com/gAlexander77/racepulse-release/releases/download/v0.3.0/RacePulse.exe"
 
 [menu]
   [[menu.main]]
