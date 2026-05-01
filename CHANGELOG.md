@@ -2,6 +2,38 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.3.0] — 2026-05-01
+
+### Fixed
+
+- Mid-session crashes during long Le Mans Ultimate races — several edge cases that could take the app down are now caught and contained
+- A single slow widget can no longer freeze every other widget on screen
+- Telemetry no longer cuts out for a moment during loading screens and session transitions
+- F1 telemetry handles unexpected or partial UDP packets without crashing
+- Rare crashes when closing the application
+- Pit window warning now correctly fires when your fuel tank reaches empty
+- Negative fuel readings from sensor glitches no longer break the fuel display
+- Personal best laps are now correctly marked in the lap list and session export
+- Lap consistency stat is now accurate (it was slightly too generous before, especially with only a few laps recorded)
+- Leaderboard rows no longer flicker when two cars share the same position
+- Leaderboard gap to the car ahead is now calculated correctly in all cases
+- Track map widgets handle missing track data on loading screens — cars no longer fly off to "infinity"
+- Le Mans Ultimate: only your car is now identified as the player car (some sessions previously flagged multiple cars)
+- Cars sitting exactly on the start/finish line stay visible on the Flat Track Map widget
+- Fuel widget's low-fuel red color now triggers at the right moment when remaining laps include a decimal
+- Overlay opacity slider can no longer be broken by an invalid value (which previously made every widget invisible)
+
+### Improved
+
+- The auto-updater now only installs stable releases and skips beta/draft versions
+- Better error messages when an update fails to download (you'll see what actually went wrong instead of a confusing "checksum mismatch")
+
+### Compatibility
+
+- Existing widget layouts and per-widget settings carry over from earlier versions — no reconfiguration needed
+
+---
+
 ## [v0.2.9-alpha] — 2026-04-08
 
 ### Fixed
