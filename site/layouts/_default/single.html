@@ -1,21 +1,37 @@
 {{ define "main" }}
-<!-- Page header with glow -->
-<section class="relative overflow-hidden hero-glow">
-  <div class="max-w-3xl mx-auto px-6 pt-20 pb-14 text-center">
-    <p class="text-xs font-semibold tracking-widest uppercase text-racing-accent mb-4">{{ .Site.Title }}</p>
-    <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4">{{ .Title }}</h1>
+{{ $hasToc := gt (len .Fragments.Identifiers) 1 }}
+<header class="page-hero">
+  <div class="inner">
+    <div class="eyebrow">
+      <span class="red-bar"></span>
+      <span class="crumb">
+        <a class="home" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <span class="here">{{ .Title }}</span>
+      </span>
+    </div>
+    <h1>{{ .Title }}</h1>
     {{ with .Params.subtitle }}
-      <p class="text-lg text-racing-neutral max-w-xl mx-auto">{{ . }}</p>
+      <p class="subtitle">{{ . }}</p>
     {{ end }}
   </div>
-</section>
+</header>
 
-<div class="divider-gradient"></div>
-
-<!-- Content -->
-<section class="max-w-3xl mx-auto px-6 py-16">
-  <div class="prose">
-    {{ .Content }}
-  </div>
+<section class="dark-panel" style="padding-top: 80px;">
+  {{ if $hasToc }}
+    <div class="content-with-toc">
+      <div class="prose">{{ .Content }}</div>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          {{ .TableOfContents }}
+        </details>
+      </aside>
+    </div>
+  {{ else }}
+    <div class="shell-narrow">
+      <div class="prose">{{ .Content }}</div>
+    </div>
+  {{ end }}
 </section>
 {{ end }}

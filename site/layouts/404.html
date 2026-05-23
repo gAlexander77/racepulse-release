@@ -1,12 +1,16 @@
 {{ define "main" }}
-<section class="relative overflow-hidden hero-glow">
-  <div class="max-w-6xl mx-auto px-6 py-32 text-center">
-    <p class="text-[8rem] md:text-[12rem] font-black leading-none text-gradient opacity-20 select-none">404</p>
-    <h1 class="text-3xl md:text-4xl font-bold -mt-10 mb-4">Page not found</h1>
-    <p class="text-racing-neutral max-w-md mx-auto mb-10">The page you're looking for doesn't exist or has been moved.</p>
-    <a href="{{ .Site.BaseURL }}" class="btn-glow inline-block px-8 py-3.5 bg-gradient-to-r from-racing-accent to-rose-700 text-white font-semibold rounded-xl transition-all text-base">
-      Back to Home
-    </a>
-  </div>
+<section class="notfound">
+  <p class="big" aria-hidden="true"><em>4</em>0<em>4</em></p>
+  <h1>Page not found</h1>
+  <p>The page you're looking for doesn't exist or has been moved.</p>
+  <a href="{{ .Site.BaseURL }}" class="btn btn--primary">
+    Back to home <span class="arrow" aria-hidden="true">→</span>
+  </a>
+  <nav class="quick-links" aria-label="Quick links">
+    <a href="{{ "features/" | absURL }}">Features</a>
+    <a href="{{ "install/" | absURL }}">Install</a>
+    <a href="{{ "changelog/" | absURL }}">Changelog</a>
+    <a href="{{ "faq/" | absURL }}">FAQ</a>
+  </nav>
 </section>
 {{ end }}

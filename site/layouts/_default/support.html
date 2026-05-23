@@ -4,100 +4,126 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0B0B0B">
   <title>Support RacePulse</title>
   <link rel="icon" href="{{ "favicon.svg" | absURL }}" type="image/svg+xml">
   <link rel="shortcut icon" href="{{ "favicon.svg" | absURL }}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{{ "favicon.svg" | absURL }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="{{ "fonts/anton-latin.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "fonts/inter-tight-latin.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "fonts/jetbrains-mono-latin.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
   <style>
+    @font-face { font-family: 'Anton'; font-style: normal; font-weight: 400; font-display: swap; src: url('{{ "fonts/anton-latin.woff2" | absURL }}') format('woff2'); }
+    @font-face { font-family: 'Inter Tight'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('{{ "fonts/inter-tight-latin.woff2" | absURL }}') format('woff2'); }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('{{ "fonts/jetbrains-mono-latin.woff2" | absURL }}') format('woff2'); }
+  </style>
+  <style>
+    :root {
+      --black: #0B0B0B;
+      --paper: #F4F2EE;
+      --paper-2: #DCD8D1;
+      --ink-2: #C4C2BD;
+      --muted: #8A8682;
+      --rule: #232323;
+      --red: #E11D48;
+      --red-2: #B81138;
+      --display: 'Anton', 'Inter Tight', sans-serif;
+      --sans: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: #f8f9fa;
+      font-family: var(--sans);
+      background: var(--black);
+      color: var(--paper);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
+      padding: 60px 24px;
     }
-    .support-card {
-      max-width: 420px;
-      width: 100%;
-      text-align: center;
-    }
+    .support-card { max-width: 480px; width: 100%; text-align: center; }
     .logo {
-      display: inline-flex;
+      display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 24px;
+      gap: 10px;
+      margin-bottom: 32px;
       text-decoration: none;
     }
-    .logo-text {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+    .logo .word {
+      font-family: var(--display);
+      font-size: 24px;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      color: #1a1a1a;
+      color: var(--paper);
     }
-    .logo-text span {
-      font-style: italic;
-      color: #E11D48;
+    .logo .word i { font-style: normal; color: var(--red); }
+    .logo svg { width: 20px; height: 20px; color: var(--red); }
+    .eyebrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
     }
-    .logo svg {
-      width: 20px;
-      height: 20px;
-      color: #E11D48;
-    }
+    .eyebrow .red-bar { width: 28px; height: 3px; background: var(--red); }
     h1 {
-      font-size: 22px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 8px;
+      font-family: var(--display);
+      font-size: 48px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: -0.005em;
+      color: var(--paper);
+      line-height: 0.95;
+      margin-bottom: 16px;
     }
     .subtitle {
-      font-size: 14px;
-      color: #6b7280;
+      font-size: 15px;
+      color: var(--ink-2);
       line-height: 1.6;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
     .widget-wrapper {
-      border-radius: 16px;
+      border: 1px solid var(--rule);
+      background: var(--paper);
       overflow: hidden;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-      background: #fff;
     }
-    .widget-wrapper iframe {
-      display: block;
-    }
+    .widget-wrapper iframe { display: block; }
     .back-link {
-      padding-top: 48px;
-      font-size: 13px;
-      color: #9ca3af;
+      margin-top: 40px;
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.15s ease;
     }
-    .back-link:hover {
-      color: #6b7280;
-    }
+    .back-link:hover { color: var(--red); }
   </style>
 </head>
 <body>
   <div class="support-card">
     <a href="https://racepulse.racing" class="logo">
-      <span class="logo-text">RACE<span>PULSE</span></span>
-      <svg viewBox="0 0 92 92" fill="currentColor">
+      <span class="word">RACE<i>PULSE</i></span>
+      <svg viewBox="0 0 92 92" fill="currentColor" aria-hidden="true">
         <path d="M92,57c0,2.2-1.8,4-4,4H69.2c-1.7,0-3.2-0.9-3.8-2.6l-3-8.4l-9.8,33.1c-0.5,1.7-2.1,2.9-3.8,2.9 c0,0-0.1,0-0.1,0c-1.8-0.1-3.4-1.3-3.8-3.1L32,27l-7.8,31.1c-0.4,1.8-2,2.9-3.9,2.9H4c-2.2,0-4-1.8-4-4s1.8-4,4-4h13.2L28.3,8.9 C28.7,7.1,30.4,6,32.2,6c1.8,0,3.4,1.3,3.9,3.1l13.2,57.2l9-30.4c0.5-1.7,2-2.9,3.7-2.9c1.7-0.1,3.3,1,3.9,2.6L72,53h16 C90.2,53,92,54.8,92,57z"></path>
       </svg>
     </a>
-    <h1>Support RacePulse</h1>
+    <div class="eyebrow"><span class="red-bar"></span><span>Optional tip jar</span></div>
+    <h1>Support<br>RacePulse</h1>
     <p class="subtitle">RacePulse is built and maintained by one person. The app is completely free — if it's helped your racing, I'd really appreciate a coffee.</p>
     <div class="widget-wrapper">
-      <iframe id='kofiframe' src='https://ko-fi.com/galexander/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;' height='670' title='Support RacePulse on Ko-fi'></iframe>
+      <iframe id="kofiframe" src="https://ko-fi.com/galexander/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="500" title="Support RacePulse on Ko-fi"></iframe>
     </div>
-    <div style="height:48px;"></div>
     <a href="https://racepulse.racing" class="back-link">&larr; Back to racepulse.racing</a>
   </div>
 </body>

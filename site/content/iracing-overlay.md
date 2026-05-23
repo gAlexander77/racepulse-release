@@ -9,8 +9,11 @@ ogImage: "assets/iracing-overlay-preview.gif"
 
 RacePulse is a free, standalone telemetry overlay built for iRacing. It reads telemetry directly from iRacing's shared memory interface — no plugins, no configuration files, and no third-party dependencies. Download the single `.exe`, launch it alongside iRacing, and your overlays appear on screen automatically.
 
-<div style="margin: 2rem 0; border-radius: 0.75rem; overflow: hidden; border: 1px solid #2A2D3A;">
-  <img src="/assets/iracing-overlay-preview.gif" alt="RacePulse telemetry overlay running in iRacing showing speed, gear, RPM, inputs, and lap time widgets" style="width: 100%; display: block;">
+<div style="margin: 2rem 0; overflow: hidden; border: 1px solid #232323;">
+  <video playsinline autoplay muted loop preload="metadata" poster="/assets/iracing-overlay-preview.jpg" style="width: 100%; display: block;" aria-label="RacePulse telemetry overlay running in iRacing showing speed, gear, RPM, inputs, and lap time widgets">
+    <source src="/assets/iracing-overlay-preview.mp4" type="video/mp4">
+    <img src="/assets/iracing-overlay-preview.gif" alt="RacePulse telemetry overlay running in iRacing showing speed, gear, RPM, inputs, and lap time widgets" style="width: 100%; display: block; margin: 0; border: 0;">
+  </video>
 </div>
 
 Unlike SimHub-based overlays that require plugin installation and dashboard configuration, RacePulse works out of the box. There is nothing to configure inside iRacing — shared memory is always available when the sim is running.
@@ -60,8 +63,11 @@ Every widget is independently customizable:
 - Drag widgets to any position in Edit Mode
 - All settings persist across sessions automatically
 
-<div style="margin: 2rem 0; border-radius: 0.75rem; overflow: hidden; border: 1px solid #2A2D3A;">
-  <img src="/assets/widget-customization-preview.gif" alt="RacePulse widget customization panel showing per-widget settings for iRacing overlays" style="width: 100%; display: block;">
+<div style="margin: 2rem 0; overflow: hidden; border: 1px solid #232323;">
+  <video playsinline autoplay muted loop preload="metadata" poster="/assets/widget-customization-preview.jpg" style="width: 100%; display: block;" aria-label="RacePulse widget customization panel showing per-widget settings for iRacing overlays">
+    <source src="/assets/widget-customization-preview.mp4" type="video/mp4">
+    <img src="/assets/widget-customization-preview.gif" alt="RacePulse widget customization panel showing per-widget settings for iRacing overlays" style="width: 100%; display: block; margin: 0; border: 0;">
+  </video>
 </div>
 
 ## How It Works

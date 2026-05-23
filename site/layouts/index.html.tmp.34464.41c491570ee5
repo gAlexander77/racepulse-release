@@ -10,7 +10,7 @@
   <div class="hero-headline">
     <h1>
       <span class="line line-1">Real-time</span>
-      <span class="line line-2">sim&nbsp;racing</span>
+      <span class="line line-2">sim&nbsp;racing<span class="slash" aria-hidden="true">/</span></span>
       <span class="line line-3"><span class="accent">telemetry</span> overlays.</span>
     </h1>
     <div class="hero-headline-frame" aria-label="App preview">
@@ -77,53 +77,12 @@
   </div>
 </section>
 
-<!-- ═══ ON THE TRACK ═══ -->
-<section class="dark-panel">
-  <div class="sec-head">
-    <span class="num">In action</span>
-    <h2>On the Track</h2>
-  </div>
-
-  <div class="shell-narrow">
-    <div class="duo">
-      <figure>
-        <video playsinline autoplay muted loop preload="metadata" width="896" height="504"
-               poster="{{ "assets/iracing-overlay-preview.jpg" | absURL }}"
-               aria-label="RacePulse Relative Widget, Flat Map Widget, and Input Widget running simultaneously as overlays in iRacing">
-          <source src="{{ "assets/iracing-overlay-preview.mp4" | absURL }}" type="video/mp4">
-          <img src="{{ "assets/iracing-overlay-preview.gif" | absURL }}"
-               alt="RacePulse Relative Widget, Flat Map Widget, and Input Widget running simultaneously as overlays in iRacing"
-               width="896" height="504" loading="lazy">
-        </video>
-        <figcaption>
-          <span>Relative · Flat Map · Inputs</span>
-          <span class="ctx">iRacing</span>
-        </figcaption>
-      </figure>
-      <figure>
-        <video playsinline autoplay muted loop preload="metadata" width="896" height="504"
-               poster="{{ "assets/lmu-overlay-preview.jpg" | absURL }}"
-               aria-label="RacePulse overlay widgets running in Le Mans Ultimate">
-          <source src="{{ "assets/lmu-overlay-preview.mp4" | absURL }}" type="video/mp4">
-          <img src="{{ "assets/lmu-overlay-preview.gif" | absURL }}"
-               alt="RacePulse overlay widgets running in Le Mans Ultimate"
-               width="896" height="504" loading="lazy">
-        </video>
-        <figcaption>
-          <span>Multi-widget overlay</span>
-          <span class="ctx">Le Mans Ultimate</span>
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ HOW IT WORKS ═══ -->
 <section class="howto" aria-label="How it works">
   <div class="shell-narrow">
     <div class="howto-head">
       <span class="eyebrow">Get started</span>
-      <h2>Frictionless setup.</h2>
+      <h2>Up and running in a minute.</h2>
     </div>
     <ol class="steps">
       <li>
@@ -224,6 +183,75 @@
   </div>
 </section>
 
+<!-- ═══ ON THE TRACK ═══ -->
+<section class="dark-panel">
+  <div class="sec-head">
+    <span class="num">In action</span>
+    <h2>On the Track</h2>
+  </div>
+
+  <div class="shell-narrow">
+    <div class="duo">
+      <figure>
+        <video playsinline autoplay muted loop preload="metadata" width="896" height="504"
+               poster="{{ "assets/iracing-input-telemetry-overlay-sebring.jpg" | absURL }}"
+               aria-label="RacePulse live inputs telemetry overlay running on top of iRacing at Sebring International Raceway showing throttle, brake, and steering traces">
+          <source src="{{ "assets/iracing-input-telemetry-overlay-sebring.mp4" | absURL }}" type="video/mp4">
+          <img src="{{ "assets/iracing-input-telemetry-overlay-sebring.gif" | absURL }}"
+               alt="RacePulse live inputs telemetry overlay running on top of iRacing at Sebring International Raceway showing throttle, brake, and steering traces"
+               width="896" height="504" loading="lazy">
+        </video>
+        <figcaption>
+          <span>Inputs Telemetry · Sebring</span>
+          <span class="ctx">iRacing</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <video playsinline autoplay muted loop preload="metadata" width="896" height="504"
+               poster="{{ "assets/iracing-overlay-preview.jpg" | absURL }}"
+               aria-label="RacePulse Relative Widget, Flat Map Widget, and Input Widget running simultaneously as overlays in iRacing">
+          <source src="{{ "assets/iracing-overlay-preview.mp4" | absURL }}" type="video/mp4">
+          <img src="{{ "assets/iracing-overlay-preview.gif" | absURL }}"
+               alt="RacePulse Relative Widget, Flat Map Widget, and Input Widget running simultaneously as overlays in iRacing"
+               width="896" height="504" loading="lazy">
+        </video>
+        <figcaption>
+          <span>Relative · Flat Map · Inputs</span>
+          <span class="ctx">iRacing</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <video playsinline autoplay muted loop preload="metadata" width="896" height="504"
+               poster="{{ "assets/lmu-overlay-preview.jpg" | absURL }}"
+               aria-label="RacePulse overlay widgets running in Le Mans Ultimate">
+          <source src="{{ "assets/lmu-overlay-preview.mp4" | absURL }}" type="video/mp4">
+          <img src="{{ "assets/lmu-overlay-preview.gif" | absURL }}"
+               alt="RacePulse overlay widgets running in Le Mans Ultimate"
+               width="896" height="504" loading="lazy">
+        </video>
+        <figcaption>
+          <span>Multi-widget overlay</span>
+          <span class="ctx">Le Mans Ultimate</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <video playsinline autoplay muted loop preload="metadata" width="896" height="504"
+               poster="{{ "assets/widget-customization-preview.jpg" | absURL }}"
+               aria-label="RacePulse per-widget customization panel with unit toggles, display options, opacity controls, and live preview">
+          <source src="{{ "assets/widget-customization-preview.mp4" | absURL }}" type="video/mp4">
+          <img src="{{ "assets/widget-customization-preview.gif" | absURL }}"
+               alt="RacePulse per-widget customization panel with unit toggles, display options, opacity controls, and live preview"
+               width="896" height="504" loading="lazy">
+        </video>
+        <figcaption>
+          <span>Per-widget customization</span>
+          <span class="ctx">Settings</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ 12 WIDGETS ═══ -->
 <section class="panel">
   <div class="sec-head">
@@ -244,33 +272,6 @@
     <div class="cell"><span class="nm">Inputs<br>Telemetry</span><span class="desc">Scrolling graph of your pedal traces and steering.</span></div>
     <div class="cell"><span class="nm">Track<br>Map</span><span class="desc">See every car on track in one horizontal bar.</span></div>
     <div class="cell"><span class="nm">Relative</span><span class="desc">Nearby drivers, their gaps, and who's catching you.</span></div>
-  </div>
-</section>
-
-<!-- ═══ WIDGET CUSTOMIZATION ═══ -->
-<section class="dark-panel">
-  <div class="sec-head">
-    <span class="num">Make it yours</span>
-    <h2>Widget Customization</h2>
-  </div>
-
-  <div class="shell-narrow">
-    <div class="duo single">
-      <figure>
-        <video playsinline autoplay muted loop preload="metadata" width="896" height="504"
-               poster="{{ "assets/widget-customization-preview.jpg" | absURL }}"
-               aria-label="RacePulse per-widget customization panel with unit toggles, display options, opacity controls, and live preview">
-          <source src="{{ "assets/widget-customization-preview.mp4" | absURL }}" type="video/mp4">
-          <img src="{{ "assets/widget-customization-preview.gif" | absURL }}"
-               alt="RacePulse per-widget customization panel with unit toggles, display options, opacity controls, and live preview"
-               width="896" height="504" loading="lazy">
-        </video>
-        <figcaption>
-          <span>Per-widget customization</span>
-          <span class="ctx">Settings</span>
-        </figcaption>
-      </figure>
-    </div>
   </div>
 </section>
 

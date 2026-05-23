@@ -9,8 +9,11 @@ ogImage: "assets/lmu-overlay-preview.gif"
 
 RacePulse is a free telemetry overlay for Le Mans Ultimate. It reads telemetry directly from LMU's rFactor 2 shared memory plugin — the same interface used by the sim engine to expose physics, scoring, and vehicle data. No additional plugins, no web dashboards, no configuration files.
 
-<div style="margin: 2rem 0; border-radius: 0.75rem; overflow: hidden; border: 1px solid #2A2D3A;">
-  <img src="/assets/lmu-overlay-preview.gif" alt="RacePulse telemetry overlay running in Le Mans Ultimate showing speed, gear, RPM, inputs, and lap time widgets" style="width: 100%; display: block;">
+<div style="margin: 2rem 0; overflow: hidden; border: 1px solid #232323;">
+  <video playsinline autoplay muted loop preload="metadata" poster="/assets/lmu-overlay-preview.jpg" style="width: 100%; display: block;" aria-label="RacePulse telemetry overlay running in Le Mans Ultimate showing speed, gear, RPM, inputs, and lap time widgets">
+    <source src="/assets/lmu-overlay-preview.mp4" type="video/mp4">
+    <img src="/assets/lmu-overlay-preview.gif" alt="RacePulse telemetry overlay running in Le Mans Ultimate showing speed, gear, RPM, inputs, and lap time widgets" style="width: 100%; display: block; margin: 0; border: 0;">
+  </video>
 </div>
 
 Le Mans Ultimate is built on the rFactor 2 engine, which exposes telemetry through a shared memory plugin. RacePulse reads this data at up to 50Hz for physics and 5Hz for scoring, giving you real-time overlays with virtually zero setup.

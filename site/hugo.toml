@@ -29,6 +29,10 @@ disableKinds = ["taxonomy", "term"]
     name = "Changelog"
     url = "/changelog/"
     weight = 4
+  [[menu.main]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 5
 
 [markup]
   [markup.goldmark]
