@@ -1,4 +1,5 @@
 {{ define "main" }}
+<div class="scroll-progress" aria-hidden="true"></div>
 
 <!-- ═══ HERO ═══ -->
 <header class="hero">
@@ -54,38 +55,38 @@
 </header>
 
 <!-- ═══ STATS ═══ -->
-<section class="stats" aria-label="At a glance">
+<section class="stats reveal-stagger" aria-label="At a glance">
   <div>
     <div class="lbl">Games supported</div>
-    <div class="num tabular">6</div>
+    <div class="num tabular" data-count="6">6</div>
     <div class="sub">All your favourite sims</div>
   </div>
   <div>
     <div class="lbl">Overlay widgets</div>
-    <div class="num tabular">12</div>
+    <div class="num tabular" data-count="12">12</div>
     <div class="sub">Mix and match what you need</div>
   </div>
   <div>
     <div class="lbl">Download size</div>
-    <div class="num tabular">21<small>MB</small></div>
+    <div class="num tabular" data-count="21">21<small>MB</small></div>
     <div class="sub">One file, no installer</div>
   </div>
   <div>
     <div class="lbl">Price</div>
-    <div class="num tabular">$0</div>
+    <div class="num tabular" data-count="0" data-prefix="$">$0</div>
     <div class="sub">Free, no account</div>
   </div>
 </section>
 
 <!-- ═══ ON THE TRACK ═══ -->
 <section class="dark-panel">
-  <div class="sec-head">
+  <div class="sec-head reveal">
     <span class="num">In action</span>
     <h2>On the Track</h2>
   </div>
 
   <div class="shell-narrow">
-    <div class="duo">
+    <div class="duo reveal-stagger">
       <figure>
         <video playsinline autoplay muted loop preload="metadata" width="896" height="504"
                poster="{{ "assets/iracing-overlay-preview.jpg" | absURL }}"
@@ -121,11 +122,11 @@
 <!-- ═══ HOW IT WORKS ═══ -->
 <section class="howto" aria-label="How it works">
   <div class="shell-narrow">
-    <div class="howto-head">
+    <div class="howto-head reveal">
       <span class="eyebrow">Get started</span>
       <h2>Frictionless setup.</h2>
     </div>
-    <ol class="steps">
+    <ol class="steps reveal-stagger">
       <li>
         <span class="step-num" aria-hidden="true">01</span>
         <h3>Download</h3>
@@ -147,12 +148,12 @@
 
 <!-- ═══ SUPPORTED GAMES ═══ -->
 <section class="panel">
-  <div class="sec-head">
+  <div class="sec-head reveal">
     <span class="num">Compatibility</span>
     <h2>Supported Games</h2>
   </div>
 
-  <div class="sims-grid">
+  <div class="sims-grid reveal-stagger">
     <a class="sim" href="{{ "iracing-overlay/" | absURL }}">
       <span class="badge">Plug &amp; play</span>
       <span class="go" aria-hidden="true">→</span>
@@ -188,13 +189,13 @@
 
 <!-- ═══ CORE FEATURES ═══ -->
 <section class="dark-panel">
-  <div class="sec-head">
+  <div class="sec-head reveal">
     <span class="num">What you get</span>
     <h2>Core Features</h2>
   </div>
 
   <div class="shell-narrow">
-    <div class="feat-list">
+    <div class="feat-list reveal-stagger">
       <div class="row">
         <div class="ttl">Modular<br>widgets</div>
         <div class="desc">Speed, gear, RPM, delta, inputs, fuel, G-force, and more. Each one is an independent window you can move anywhere on screen.</div>
@@ -226,12 +227,12 @@
 
 <!-- ═══ 12 WIDGETS ═══ -->
 <section class="panel">
-  <div class="sec-head">
+  <div class="sec-head reveal">
     <span class="num">Every widget</span>
     <h2>12 Widgets</h2>
   </div>
 
-  <div class="widgets-grid">
+  <div class="widgets-grid reveal-stagger">
     <div class="cell"><span class="nm">Speed</span><span class="desc">Live speed readout in your choice of units.</span></div>
     <div class="cell"><span class="nm">Gear</span><span class="desc">Big, easy-to-read gear indicator.</span></div>
     <div class="cell"><span class="nm">RPM</span><span class="desc">Redline bar with a shift marker.</span></div>
@@ -249,13 +250,13 @@
 
 <!-- ═══ WIDGET CUSTOMIZATION ═══ -->
 <section class="dark-panel">
-  <div class="sec-head">
+  <div class="sec-head reveal">
     <span class="num">Make it yours</span>
     <h2>Widget Customization</h2>
   </div>
 
   <div class="shell-narrow">
-    <div class="duo single">
+    <div class="duo single reveal">
       <figure>
         <video playsinline autoplay muted loop preload="metadata" width="896" height="504"
                poster="{{ "assets/widget-customization-preview.jpg" | absURL }}"
@@ -276,13 +277,13 @@
 
 <!-- ═══ REQUIREMENTS ═══ -->
 <section class="dark-panel">
-  <div class="sec-head">
+  <div class="sec-head reveal">
     <span class="num">Setup</span>
     <h2>What you need</h2>
   </div>
 
   <div class="shell-narrow">
-    <div class="req-list">
+    <div class="req-list reveal-stagger">
       <div class="row">
         <div class="k">Operating system</div>
         <div class="v">Windows 10 / 11</div>
@@ -309,7 +310,7 @@
 
 <!-- ═══ CLOSER ═══ -->
 <section class="closer">
-  <div class="closer-grid">
+  <div class="closer-grid reveal-stagger">
     <h2>
       Ready<br>
       to&nbsp;<em>drive?</em>
@@ -328,4 +329,94 @@
   </div>
 </section>
 
+<script>
+  (function () {
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var supportsIO = 'IntersectionObserver' in window;
+
+    /* --- In-view reveals --- */
+    var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+    if (revealEls.length) {
+      if (!supportsIO || reduced) {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      } else {
+        var revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -80px 0px', threshold: 0.08 });
+        revealEls.forEach(function (el) { revealObserver.observe(el); });
+      }
+    }
+
+    /* --- Scroll progress bar --- */
+    var bar = document.querySelector('.scroll-progress');
+    if (bar && !reduced) {
+      var ticking = false;
+      function updateBar() {
+        var h = document.documentElement;
+        var max = h.scrollHeight - h.clientHeight;
+        var p = max > 0 ? h.scrollTop / max : 0;
+        bar.style.transform = 'scaleX(' + p + ')';
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { requestAnimationFrame(updateBar); ticking = true; }
+      }, { passive: true });
+      updateBar();
+    }
+
+    /* --- Stats counter --- */
+    var nums = document.querySelectorAll('.stats .num[data-count]');
+    if (nums.length && supportsIO && !reduced) {
+      function animateCount(el) {
+        var target = parseInt(el.dataset.count, 10);
+        if (isNaN(target)) return;
+        var prefix = el.dataset.prefix || '';
+        var suffix = el.dataset.suffix || '';
+        var smallEl = el.querySelector('small');
+        var smallHTML = smallEl ? smallEl.outerHTML : '';
+        var duration = 1500;
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min((now - start) / duration, 1);
+          var eased = 1 - Math.pow(1 - t, 3);
+          var value = Math.round(target * eased);
+          el.innerHTML = prefix + value + suffix + smallHTML;
+          if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+      var countObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            countObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      nums.forEach(function (n) { countObserver.observe(n); });
+    }
+
+    /* --- Sim card subtle 3D tilt --- */
+    var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (canHover && !reduced) {
+      document.querySelectorAll('.sims-grid .sim').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          var rect = card.getBoundingClientRect();
+          var x = (e.clientX - rect.left) / rect.width - 0.5;
+          var y = (e.clientY - rect.top) / rect.height - 0.5;
+          card.style.transform =
+            'perspective(900px) rotateY(' + (x * 4).toFixed(2) + 'deg) rotateX(' + (-y * 4).toFixed(2) + 'deg) translateZ(0)';
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+        });
+      });
+    }
+  })();
+</script>
 {{ end }}

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0B0B0B">
+  <script>document.documentElement.classList.add('js');</script>
 
   {{- $title := cond .IsHome "RacePulse — Real-time Sim Racing Telemetry Overlays" (printf "%s — RacePulse" .Title) -}}
   {{- $descRaw := .Params.description | default .Params.subtitle | default .Site.Params.description -}}
@@ -61,7 +62,7 @@
       {
         "@type": "SoftwareApplication",
         "name": "RacePulse",
-        "description": {{ $desc | jsonify }},
+        "description": {{ $desc | jsonify | safeJS }},
         "url": "{{ .Site.BaseURL }}",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Windows 10, Windows 11",

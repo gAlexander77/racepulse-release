@@ -86,8 +86,12 @@ img { display: block; max-width: 100%; }
   text-transform: uppercase;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease,
+              transform 0.22s cubic-bezier(0.2, 0.7, 0.2, 1);
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 .btn--primary { background: var(--red); color: #fff; border-color: var(--red); }
 .btn--primary:hover { background: var(--red-2); border-color: var(--red-2); }
@@ -95,7 +99,25 @@ img { display: block; max-width: 100%; }
 .btn--ghost:hover { background: var(--paper); color: var(--black); }
 .btn--invert-ghost { background: transparent; color: var(--black); border-color: var(--black); }
 .btn--invert-ghost:hover { background: var(--black); color: var(--paper); }
-.btn .arrow { font-family: var(--mono); font-weight: 500; }
+.btn .arrow {
+  font-family: var(--mono);
+  font-weight: 500;
+  transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+/* Premium shine sweep + lift on hover (JS-gated for SEO/no-JS safety) */
+html.js .btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%);
+  transform: translateX(-110%);
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+html.js .btn:hover::after { transform: translateX(110%); }
+html.js .btn:hover { transform: translateY(-1px); }
+html.js .btn:hover .arrow { transform: translateX(4px); }
 
 /* ───── NAV ───── */
 nav.bar {
@@ -129,9 +151,26 @@ nav.bar ul a {
   font-weight: 500;
   color: var(--ink-2);
   letter-spacing: 0.01em;
+  transition: color 0.18s ease;
 }
 nav.bar ul a:hover { color: var(--paper); }
 nav.bar ul a.is-active { color: var(--red); }
+/* Hover sweep underline (in addition to .is-active permanent bar) */
+html.js nav.bar ul a::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 0;
+  height: 2px;
+  background: var(--paper);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+html.js nav.bar ul a:hover::before { transform: scaleX(1); }
+html.js nav.bar ul a.is-active::before { display: none; }
 nav.bar ul a.is-active::after {
   content: '';
   position: absolute;
@@ -578,9 +617,11 @@ nav.bar ul a.is-active::after {
   gap: 18px;
   min-height: 240px;
   position: relative;
-  transition: background .15s ease;
+  transition: background .18s ease, transform .35s cubic-bezier(0.2, 0.7, 0.2, 1);
   text-decoration: none;
   color: inherit;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 .sims-grid .sim:last-child { border-right: 0; }
 .sims-grid .sim:hover { background: rgba(225,29,72,0.06); }
@@ -1276,6 +1317,70 @@ footer.foot .colophon {
   display: block;
 }
 
+/* ───── SCROLL PROGRESS BAR ───── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: 200;
+  pointer-events: none;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress { display: none; }
+}
+
+/* ───── IN-VIEW REVEALS ───── */
+/* Defaults: visible, in place. No-JS / crawler fallback (SEO-safe). */
+.reveal {
+  transition: opacity 0.7s cubic-bezier(0.2, 0.6, 0.2, 1),
+              transform 0.7s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.reveal-stagger > * {
+  transition: opacity 0.65s cubic-bezier(0.2, 0.6, 0.2, 1),
+              transform 0.65s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+/* JS-enhanced: start hidden, transition in when .is-visible is added */
+html.js .reveal:not(.is-visible),
+html.js .reveal-stagger:not(.is-visible) > * {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+}
+.reveal-stagger.is-visible > *:nth-child(1)  { transition-delay: 0s; }
+.reveal-stagger.is-visible > *:nth-child(2)  { transition-delay: 0.06s; }
+.reveal-stagger.is-visible > *:nth-child(3)  { transition-delay: 0.12s; }
+.reveal-stagger.is-visible > *:nth-child(4)  { transition-delay: 0.18s; }
+.reveal-stagger.is-visible > *:nth-child(5)  { transition-delay: 0.22s; }
+.reveal-stagger.is-visible > *:nth-child(6)  { transition-delay: 0.26s; }
+.reveal-stagger.is-visible > *:nth-child(7)  { transition-delay: 0.30s; }
+.reveal-stagger.is-visible > *:nth-child(8)  { transition-delay: 0.34s; }
+.reveal-stagger.is-visible > *:nth-child(9)  { transition-delay: 0.38s; }
+.reveal-stagger.is-visible > *:nth-child(10) { transition-delay: 0.42s; }
+.reveal-stagger.is-visible > *:nth-child(11) { transition-delay: 0.46s; }
+.reveal-stagger.is-visible > *:nth-child(12) { transition-delay: 0.50s; }
+
+/* ───── HERO LOAD ANIMATION (JS-gated for crawler safety) ───── */
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+html.js .hero .hero-eyebrow,
+html.js .hero h1,
+html.js .hero-headline-frame,
+html.js .hero-meta {
+  animation: hero-rise 0.8s cubic-bezier(0.2, 0.6, 0.2, 1) both;
+}
+html.js .hero .hero-eyebrow      { animation-delay: 0s; }
+html.js .hero h1                 { animation-delay: 0.08s; }
+html.js .hero-headline-frame     { animation-delay: 0.18s; }
+html.js .hero-meta               { animation-delay: 0.28s; }
+
 /* ───── REDUCED MOTION ───── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -1285,6 +1390,10 @@ footer.foot .colophon {
   }
   html { scroll-behavior: auto !important; }
   .back-top { transition: opacity 0.01ms !important; }
+  .reveal, .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* ───── RESPONSIVE ───── */
