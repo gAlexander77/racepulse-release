@@ -1,4 +1,21 @@
 {{ define "main" }}
+{{- $uploaded := cond .Lastmod.IsZero "2026-05-23" (.Lastmod.Format "2006-01-02") -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "RacePulse — real-time sim racing telemetry overlays",
+  "description": {{ .Site.Params.description | jsonify | safeJS }},
+  "thumbnailUrl": "{{ "assets/application-preview.jpg" | absURL }}",
+  "contentUrl": "{{ "assets/application-preview.mp4" | absURL }}",
+  "uploadDate": "{{ $uploaded }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RacePulse",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>
 <div class="scroll-progress" aria-hidden="true"></div>
 
 <!-- ═══ HERO ═══ -->

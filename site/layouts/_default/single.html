@@ -1,5 +1,48 @@
 {{ define "main" }}
 {{ $hasToc := gt (len .Fragments.Identifiers) 1 }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": {{ .Site.Title | jsonify | safeJS }},
+      "item": "{{ .Site.BaseURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Title | jsonify | safeJS }},
+      "item": "{{ .Permalink }}"
+    }
+  ]
+}
+</script>
+{{- $og := .Params.ogImage | default "" -}}
+{{- if and (strings.HasSuffix $og "-preview.gif") (in .RawContent "<video") -}}
+{{- $stem := strings.TrimSuffix ".gif" $og -}}
+{{- $mp4 := printf "%s.mp4" $stem | absURL -}}
+{{- $thumb := printf "%s.jpg" $stem | absURL -}}
+{{- $uploaded := cond .Lastmod.IsZero "2026-05-23" (.Lastmod.Format "2006-01-02") -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": {{ printf "%s — RacePulse telemetry overlay demo" .Title | jsonify | safeJS }},
+  "description": {{ (.Params.description | default .Params.subtitle) | jsonify | safeJS }},
+  "thumbnailUrl": "{{ $thumb }}",
+  "contentUrl": "{{ $mp4 }}",
+  "uploadDate": "{{ $uploaded }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RacePulse",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>
+{{- end -}}
 <header class="page-hero">
   <div class="inner">
     <div class="eyebrow">

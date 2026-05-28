@@ -2,6 +2,7 @@ baseURL = "https://racepulse.racing/"
 languageCode = "en-us"
 title = "RacePulse"
 enableRobotsTXT = true
+enableGitInfo = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
