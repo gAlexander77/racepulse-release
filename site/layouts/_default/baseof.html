@@ -6,6 +6,18 @@
   <meta name="theme-color" content="#0B0B0B">
   <script>document.documentElement.classList.add('js');</script>
 
+  {{- with .Site.Params.googleAnalytics }}
+  <!-- Google Analytics (GA4) — runs alongside GoatCounter (end of <body>) during the overlap.
+       Once GA numbers are trusted, delete the GoatCounter <script> line and this block can stay. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ . }}');
+  </script>
+  {{- end }}
+
   {{- $title := cond .IsHome "RacePulse — Real-time Sim Racing Telemetry Overlays" (printf "%s — RacePulse" .Title) -}}
   {{- $descRaw := .Params.description | default .Params.subtitle | default .Site.Params.description -}}
   {{- $desc := $descRaw | plainify | htmlUnescape | strings.TrimSpace -}}
@@ -131,6 +143,7 @@
       });
     })();
   </script>
+  <!-- GoatCounter — kept temporarily to validate Google Analytics (wired in <head>). Remove this line once GA is trusted. -->
   <script data-goatcounter="https://galexander.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

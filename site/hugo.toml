@@ -12,6 +12,11 @@ disableKinds = ["taxonomy", "term"]
   repoURL = "https://github.com/gAlexander77/racepulse-release"
   releaseURL = "https://github.com/gAlexander77/racepulse-release/releases"
   downloadURL = "https://github.com/gAlexander77/racepulse-release/releases/download/v0.3.0/RacePulse.exe"
+  # Google Analytics 4 Measurement ID. In production it is injected at build time from the
+  # GitHub Actions repo variable GA_MEASUREMENT_ID (via HUGO_PARAMS_GOOGLEANALYTICS, see pages.yml),
+  # so the ID intentionally lives in CI, not source. Set a value here only for local testing.
+  # Empty = GA disabled; GoatCounter still runs.
+  googleAnalytics = ""
 
 [menu]
   [[menu.main]]

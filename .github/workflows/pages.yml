@@ -35,6 +35,10 @@ jobs:
 
       - name: Build site
         working-directory: site
+        env:
+          # GA4 Measurement ID, kept in CI rather than source. Maps to params.googleAnalytics
+          # (used in layouts/_default/baseof.html). Unset -> empty -> GA stays off, build still passes.
+          HUGO_PARAMS_GOOGLEANALYTICS: ${{ vars.GA_MEASUREMENT_ID }}
         run: hugo --minify
 
       - name: Setup Pages
