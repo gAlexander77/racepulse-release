@@ -225,6 +225,7 @@ nav.bar ul a.is-active::after {
 .hero-headline h1 { margin: 0; }
 .hero-headline-frame {
   width: 100%;
+  max-width: 1000px;
   border: 1px solid var(--rule);
   background: #000;
   overflow: hidden;
