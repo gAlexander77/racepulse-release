@@ -2,6 +2,25 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.3.1] — 2026-06-02
+
+### Added
+
+- Help menu in the app header with quick-start steps and per-sim setup instructions (F1 UDP port, Le Mans Ultimate plugin, and more)
+
+### Fixed
+
+- Header tooltips no longer get cut off at the top edge of the window — they now open downward
+
+### Improved
+
+- Redesigned the main app header into a single unified control bar — game detection, connection status, and connect/disconnect now live in one cohesive control instead of separate status badges and buttons
+- Edit Mode and Click-Through are now clearly labeled toggle switches, so it's obvious what they control and whether they're currently on
+- The widget on/off switch is now screen-reader accessible and shows a brief spinner while a widget starts up or closes (and ignores accidental double-clicks)
+- Restyled the "reset to default settings" confirmation dialog to match the rest of the app
+
+---
+
 ## [v0.3.0] — 2026-05-01
 
 ### Fixed
