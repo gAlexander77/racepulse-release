@@ -64,10 +64,7 @@ Every widget is independently customizable:
 - All settings persist across sessions automatically
 
 <div style="margin: 2rem 0; overflow: hidden; border: 1px solid #232323;">
-  <video playsinline autoplay muted loop preload="metadata" poster="/assets/widget-customization-preview.jpg" style="width: 100%; display: block;" aria-label="RacePulse widget customization panel showing per-widget settings for iRacing overlays">
-    <source src="/assets/widget-customization-preview.mp4" type="video/mp4">
-    <img src="/assets/widget-customization-preview.gif" alt="RacePulse widget customization panel showing per-widget settings for iRacing overlays" style="width: 100%; display: block; margin: 0; border: 0;">
-  </video>
+  <img src="/assets/widget-customization-preview.gif" alt="RacePulse widget customization panel showing per-widget settings for iRacing overlays" width="1000" height="736" loading="lazy" style="width: 100%; height: auto; display: block; margin: 0; border: 0;">
 </div>
 
 ## How It Works
