@@ -544,7 +544,7 @@ nav.bar ul a.is-active::after {
   grid-template-columns: auto 1fr;
   gap: 32px;
   align-items: end;
-  margin: 0 auto 60px;
+  margin: 0 auto;
   max-width: 1360px;
   border-bottom: 2px solid var(--black);
   padding-bottom: 20px;
@@ -579,7 +579,7 @@ nav.bar ul a.is-active::after {
   grid-template-columns: auto 1fr;
   gap: 32px;
   align-items: end;
-  margin: 0 auto 60px;
+  margin: 0 auto;
   max-width: 1360px;
   border-bottom: 2px solid var(--paper);
   padding-bottom: 20px;
@@ -693,6 +693,7 @@ nav.bar ul a.is-active::after {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+  margin-top: 60px;
 }
 .duo.single {
   display: flex;
