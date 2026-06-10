@@ -34,9 +34,12 @@
   <meta name="description" content="{{ $desc }}">
   <meta name="robots" content="{{ $robots }}">
   <link rel="canonical" href="{{ $url }}">
+  {{- /* ICO listed alongside the SVG: Bing/DuckDuckGo and older crawlers don't render SVG
+         favicons (many also fetch /favicon.ico directly, which this file satisfies). */}}
+  <link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="16x16 32x32 48x48">
   <link rel="icon" href="{{ $siteIcon }}" type="image/svg+xml">
-  <link rel="shortcut icon" href="{{ $siteIcon }}" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="{{ $siteIcon }}">
+  <link rel="shortcut icon" href="{{ "favicon.ico" | absURL }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | absURL }}">
 
   <!-- Open Graph -->
   <meta property="og:type" content="{{ cond .IsPage "article" "website" }}">
@@ -76,7 +79,9 @@
         "url": "{{ .Site.BaseURL }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ $siteIcon }}"
+          "url": "{{ "logo.png" | absURL }}",
+          "width": 512,
+          "height": 512
         }
       },
       {
