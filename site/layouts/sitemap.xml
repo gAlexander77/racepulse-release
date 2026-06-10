@@ -20,10 +20,13 @@
   {{- else if in .RelPermalink "/faq" }}
     {{- $priority = "0.6" }}
   {{- end }}
+  {{- /* The homepage is built from layouts/index.html, so its content file's Lastmod never
+         moves; use the site-wide latest change as a closer proxy. */}}
+  {{- $lastmod := cond .IsHome .Site.Lastmod .Lastmod }}
   <url>
     <loc>{{ .Permalink }}</loc>
-    {{- if not .Lastmod.IsZero }}
-    <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
+    {{- if not $lastmod.IsZero }}
+    <lastmod>{{ safeHTML ( $lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
     {{- end }}
     <changefreq>{{ $changefreq }}</changefreq>
     <priority>{{ $priority }}</priority>
