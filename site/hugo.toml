@@ -7,11 +7,15 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "Real-time sim racing telemetry overlays for iRacing, Assetto Corsa Competizione, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24"
-  ogImage = "assets/application-preview.gif"
+  # og:image must be a small static image — social scrapers reject the multi-MB GIFs
+  # (X/Twitter caps cards at 5 MB), so point at the .jpg stills, not the .gif previews.
+  ogImage = "assets/application-preview.jpg"
   siteIcon = "favicon.svg"
   repoURL = "https://github.com/gAlexander77/racepulse-release"
   releaseURL = "https://github.com/gAlexander77/racepulse-release/releases"
   downloadURL = "https://github.com/gAlexander77/racepulse-release/releases/download/v0.3.1/RacePulse.exe"
+  # Date the preview MP4s referenced by VideoObject schema were last replaced.
+  videoUploadDate = "2026-05-23"
   # Google Analytics 4 Measurement ID. In production it is injected at build time from the
   # GitHub Actions repo variable GA_MEASUREMENT_ID (via HUGO_PARAMS_GOOGLEANALYTICS, see pages.yml),
   # so the ID intentionally lives in CI, not source. Set a value here only for local testing.

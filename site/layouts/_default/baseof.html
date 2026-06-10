@@ -22,7 +22,10 @@
   {{- $descRaw := .Params.description | default .Params.subtitle | default .Site.Params.description -}}
   {{- $desc := $descRaw | plainify | htmlUnescape | strings.TrimSpace -}}
   {{- $url := .Permalink -}}
-  {{- $metaImage := (.Params.ogImage | default .Site.Params.ogImage) | absURL -}}
+  {{- $metaImagePath := .Params.ogImage | default .Site.Params.ogImage -}}
+  {{- $metaImage := $metaImagePath | absURL -}}
+  {{- $metaImageDim := imageConfig (printf "static/%s" $metaImagePath) -}}
+  {{- $metaImageType := index (dict ".jpg" "image/jpeg" ".jpeg" "image/jpeg" ".png" "image/png" ".gif" "image/gif") (path.Ext $metaImagePath) -}}
   {{- $siteIcon := (.Site.Params.siteIcon | default "favicon.svg") | absURL -}}
   {{- $is404 := eq .Kind "404" -}}
   {{- $robots := cond $is404 "noindex,follow" "index,follow,max-image-preview:large" -}}
@@ -44,6 +47,11 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="{{ $metaImage }}">
   <meta property="og:image:alt" content="RacePulse sim racing telemetry overlay showing speed, RPM, inputs, and lap time widgets">
+  <meta property="og:image:width" content="{{ $metaImageDim.Width }}">
+  <meta property="og:image:height" content="{{ $metaImageDim.Height }}">
+  {{- with $metaImageType }}
+  <meta property="og:image:type" content="{{ . }}">
+  {{- end }}
 
   <!-- Twitter/X -->
   <meta name="twitter:card" content="summary_large_image">

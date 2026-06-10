@@ -2,7 +2,7 @@
 title: "Changelog"
 subtitle: "Release history and notable changes for RacePulse sim racing telemetry overlays."
 description: "Track RacePulse release history, feature additions, fixes, and telemetry overlay improvements."
-ogImage: "assets/application-preview.gif"
+ogImage: "assets/application-preview.jpg"
 ---
 
 ## v0.3.1 <span class="changelog-date">2026-06-02</span>

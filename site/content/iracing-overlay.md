@@ -2,7 +2,7 @@
 title: "Free iRacing Overlay"
 subtitle: "Lightweight telemetry overlay for iRacing with automatic shared memory detection, 12 customizable widgets, and zero configuration."
 description: "Free iRacing telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, relative, and track map widgets. No plugins, no configuration — just download and race."
-ogImage: "assets/iracing-overlay-preview.gif"
+ogImage: "assets/iracing-overlay-preview.jpg"
 ---
 
 ## Free Telemetry Overlay for iRacing

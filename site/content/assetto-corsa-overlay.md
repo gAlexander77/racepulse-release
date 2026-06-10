@@ -2,7 +2,7 @@
 title: "Free Assetto Corsa Overlay"
 subtitle: "Lightweight telemetry overlay for Assetto Corsa with automatic shared memory detection, customizable widgets, and zero configuration."
 description: "Free Assetto Corsa telemetry overlay with real-time speed, RPM, inputs, lap times, fuel, and G-force widgets. No plugins, no Content Manager setup — just download and drive."
-ogImage: "assets/application-preview.gif"
+ogImage: "assets/application-preview.jpg"
 ---
 
 ## Free Telemetry Overlay for Assetto Corsa

@@ -2,7 +2,7 @@
 title: "Free Le Mans Ultimate Overlay"
 subtitle: "Lightweight telemetry overlay for Le Mans Ultimate with automatic shared memory detection, 12 customizable widgets, and zero configuration."
 description: "Free Le Mans Ultimate telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, and track map widgets for LMU. No plugins to install."
-ogImage: "assets/lmu-overlay-preview.gif"
+ogImage: "assets/lmu-overlay-preview.jpg"
 ---
 
 ## Free Telemetry Overlay for Le Mans Ultimate

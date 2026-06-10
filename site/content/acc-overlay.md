@@ -2,7 +2,7 @@
 title: "Free ACC Overlay"
 subtitle: "Lightweight telemetry overlay for Assetto Corsa Competizione with automatic shared memory detection, 12 customizable widgets, and zero configuration."
 description: "Free ACC telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, and track map widgets for Assetto Corsa Competizione. No plugins needed."
-ogImage: "assets/application-preview.gif"
+ogImage: "assets/application-preview.jpg"
 ---
 
 ## Free Telemetry Overlay for Assetto Corsa Competizione

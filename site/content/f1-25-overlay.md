@@ -2,7 +2,7 @@
 title: "Free F1 25 Overlay"
 subtitle: "Lightweight telemetry overlay for F1 25 with automatic UDP detection, 11 customizable widgets, and simple one-time setup."
 description: "Free F1 25 telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, and track map widgets. Enable UDP telemetry and go."
-ogImage: "assets/application-preview.gif"
+ogImage: "assets/application-preview.jpg"
 ---
 
 ## Free Telemetry Overlay for F1 25

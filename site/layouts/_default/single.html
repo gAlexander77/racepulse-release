@@ -21,11 +21,10 @@
 }
 </script>
 {{- $og := .Params.ogImage | default "" -}}
-{{- if and (strings.HasSuffix $og "-preview.gif") (in .RawContent "<video") -}}
-{{- $stem := strings.TrimSuffix ".gif" $og -}}
+{{- if and (strings.HasSuffix $og "-preview.jpg") (in .RawContent "<video") -}}
+{{- $stem := strings.TrimSuffix ".jpg" $og -}}
 {{- $mp4 := printf "%s.mp4" $stem | absURL -}}
 {{- $thumb := printf "%s.jpg" $stem | absURL -}}
-{{- $uploaded := cond .Lastmod.IsZero "2026-05-23" (.Lastmod.Format "2006-01-02") -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,7 +33,7 @@
   "description": {{ (.Params.description | default .Params.subtitle) | jsonify | safeJS }},
   "thumbnailUrl": "{{ $thumb }}",
   "contentUrl": "{{ $mp4 }}",
-  "uploadDate": "{{ $uploaded }}",
+  "uploadDate": "{{ .Site.Params.videoUploadDate }}",
   "publisher": {
     "@type": "Organization",
     "name": "RacePulse",

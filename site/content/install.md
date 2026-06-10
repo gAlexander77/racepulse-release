@@ -2,7 +2,7 @@
 title: "Installation"
 subtitle: "Download, launch, and configure RacePulse in under a minute. Setup guides for iRacing, ACC, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24."
 description: "Install RacePulse in under a minute with step-by-step setup for iRacing, ACC, Assetto Corsa, and Le Mans Ultimate shared memory and F1 25/F1 24 UDP telemetry."
-ogImage: "assets/application-preview.gif"
+ogImage: "assets/application-preview.jpg"
 ---
 
 ## 1. Download

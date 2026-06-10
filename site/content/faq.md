@@ -2,7 +2,7 @@
 title: "FAQ"
 subtitle: "Frequently asked questions about RacePulse — setup, supported games, widgets, troubleshooting, and more."
 description: "Answers to common questions about RacePulse: free sim racing telemetry overlay for iRacing, ACC, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24."
-ogImage: "assets/application-preview.gif"
+ogImage: "assets/application-preview.jpg"
 ---
 
 <script type="application/ld+json">
