@@ -47,7 +47,7 @@
 
 /* ───── BASE ───── */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 html, body {
   margin: 0;
   padding: 0;
@@ -911,6 +911,7 @@ footer.foot .colophon {
 }
 .prose > *:first-child { margin-top: 0; }
 .prose > *:last-child { margin-bottom: 0; }
+.prose :is(h2, h3)[id] { scroll-margin-top: 96px; }
 
 .prose h2 {
   font-family: var(--display);
