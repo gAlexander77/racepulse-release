@@ -11,7 +11,7 @@
       <li><a href="{{ .URL | absURL }}"{{ if $active }} class="is-active" aria-current="page"{{ end }}>{{ .Name }}</a></li>
     {{ end }}
   </ul>
-  <a class="btn btn--primary" href="{{ .Site.Params.downloadURL }}">
+  <a class="btn btn--primary" href="{{ .Site.Params.downloadURL }}" data-download-location="nav_desktop">
     Download
   </a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="Toggle navigation menu">
@@ -25,7 +25,7 @@
     {{ $active := eq $.RelPermalink .URL }}
     <a href="{{ .URL | absURL }}"{{ if $active }} class="is-active" aria-current="page"{{ end }}>{{ .Name }}</a>
   {{ end }}
-  <a href="{{ .Site.Params.downloadURL }}">Download for Windows</a>
+  <a href="{{ .Site.Params.downloadURL }}" data-download-location="nav_mobile">Download for Windows</a>
 </div>
 <script>
   (function () {

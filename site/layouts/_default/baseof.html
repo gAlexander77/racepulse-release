@@ -156,6 +156,76 @@
       });
     })();
   </script>
+  <script>
+    (function () {
+      var appVersion = {{ .Site.Params.appVersion | jsonify | safeJS }};
+      var configuredDownloadUrl = {{ .Site.Params.downloadURL | jsonify | safeJS }};
+
+      function normalizeUrl(value) {
+        try {
+          return new URL(value, window.location.href);
+        } catch (err) {
+          return null;
+        }
+      }
+
+      function isRacePulseDownload(url) {
+        if (!url) return false;
+        var configured = normalizeUrl(configuredDownloadUrl);
+        var path = url.pathname.toLowerCase();
+        return (configured && url.href === configured.href) ||
+          (url.hostname === 'github.com' &&
+            path.indexOf('/galexander77/racepulse-release/releases/download/') !== -1 &&
+            path.endsWith('/racepulse.exe'));
+      }
+
+      function shouldDelayNavigation(event, link) {
+        return event.button === 0 &&
+          !event.defaultPrevented &&
+          !event.metaKey &&
+          !event.ctrlKey &&
+          !event.shiftKey &&
+          !event.altKey &&
+          (!link.target || link.target === '_self');
+      }
+
+      document.addEventListener('click', function (event) {
+        var target = event.target;
+        if (!target || !target.closest || typeof gtag !== 'function') return;
+
+        var link = target.closest('a[href]');
+        if (!link) return;
+
+        var url = normalizeUrl(link.getAttribute('href'));
+        if (!isRacePulseDownload(url)) return;
+
+        var delayNavigation = shouldDelayNavigation(event, link);
+        var didNavigate = false;
+        function continueNavigation() {
+          if (!delayNavigation || didNavigate) return;
+          didNavigate = true;
+          window.location.href = url.href;
+        }
+
+        if (delayNavigation) {
+          event.preventDefault();
+          window.setTimeout(continueNavigation, 1000);
+        }
+
+        gtag('event', 'racepulse_download_click', {
+          app_version: appVersion,
+          file_name: 'RacePulse.exe',
+          file_extension: 'exe',
+          link_url: url.href,
+          link_text: link.textContent.replace(/\s+/g, ' ').trim(),
+          download_location: link.dataset.downloadLocation || 'unlabeled',
+          page_path: window.location.pathname,
+          event_callback: continueNavigation,
+          event_timeout: 1000
+        });
+      });
+    })();
+  </script>
   <!-- GoatCounter — kept temporarily to validate Google Analytics (wired in <head>). Remove this line once GA is trusted. -->
   <script data-goatcounter="https://galexander.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
