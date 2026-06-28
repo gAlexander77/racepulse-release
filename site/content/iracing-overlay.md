@@ -75,7 +75,7 @@ Telemetry is captured at up to 60Hz and normalized into a unified format. Each w
 
 ## Why RacePulse for iRacing
 
-- **Free and open source** — No subscription, no trial period, no feature gates
+- **Free** — No subscription, no trial period, no feature gates
 - **Single executable** — One 21MB `.exe` file, no installer, no dependencies
 - **Zero configuration** — No plugins to install, no ports to open, no JSON files to edit
 - **Lightweight** — Minimal CPU and memory footprint designed for racing
