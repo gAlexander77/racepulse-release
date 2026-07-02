@@ -22,7 +22,7 @@ Setup takes less than a minute: enable UDP telemetry in F1 25's settings, launch
 
 > **First time only:** You need to enable UDP telemetry in F1 25 once. After that, the setting persists across game restarts. RacePulse scans for F1 25's telemetry broadcast on port 22025 automatically.
 
-If Windows Firewall prompts you to allow RacePulse network access, click Allow. RacePulse only listens for local UDP packets — it does not send data anywhere.
+If Windows Firewall prompts you to allow RacePulse network access, click Allow. RacePulse only listens for local UDP packets — it does not upload your racing data anywhere.
 
 ## Available Widgets for F1 25
 
@@ -66,7 +66,7 @@ F1 25 broadcasts multiple UDP packet types (motion, session, lap data, car telem
 
 F1 25 uses the same UDP telemetry system as previous Codemasters/EA F1 titles. When enabled, the game broadcasts telemetry packets to `localhost` on port **22025** (the port number matches the game year).
 
-RacePulse listens for these packets locally. The telemetry broadcast is one-way — the game sends data, and RacePulse receives it. No data is sent back to the game or to any external server.
+RacePulse listens for these packets locally. The telemetry broadcast is one-way — the game sends data, and RacePulse receives it. No racing telemetry is sent back to the game or uploaded to RacePulse servers.
 
 Each packet type arrives at different rates, and RacePulse normalizes them into a consistent stream. This means your overlays update smoothly even though different data fields arrive at different frequencies.
 

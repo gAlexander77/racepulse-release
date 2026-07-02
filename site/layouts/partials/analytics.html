@@ -1,0 +1,224 @@
+{{- /*
+  Website analytics for racepulse.racing — completely separate from the RacePulse desktop app,
+  which keeps racing telemetry local (racing data is not uploaded).
+
+  Two tools:
+    - GoatCounter: cookieless, aggregate, privacy-focused. Loads immediately, always. Query strings
+      are stripped from recorded paths so no accidental PII lands in the URL.
+    - Google Analytics 4 with Consent Mode v2 (Advanced). The Google tag loads immediately everywhere;
+      Consent Mode decides whether it may set analytics cookies:
+        * region "consent-free"  -> analytics_storage granted by default (full analytics, first load)
+        * region "consent-req."  -> analytics_storage DENIED by default (cookieless pings only) until
+                                     the visitor clicks "Accept analytics"
+      Ads/Signals/personalization are always off. No PII is ever sent.
+
+  REGION DETECTION (deployment note):
+    Hugo is static — it cannot know a visitor's region at request time, and GitHub Pages (this site's
+    host) exposes no geo headers and runs no edge code. So out of the box every visitor gets the SAFE
+    fallback: Consent Mode default-denied + banner. To grant full GA immediately to visitors OUTSIDE
+    consent-required regions (EU / UK / EEA / Switzerland), put the site behind an edge that knows the
+    country and have it add an attribute to the <html> tag for consent-FREE visitors only:
+
+        <html ... data-consent-required="false">
+
+    Cloudflare Worker example (request.cf.country, or the CF-IPCountry header):
+        const EEA = new Set(['GB','CH','AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR',
+          'HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE']);
+        const country = request.cf?.country || request.headers.get('CF-IPCountry') || 'XX';
+        const required = country === 'XX' || EEA.has(country);   // unknown => safe (required)
+        return new HTMLRewriter().on('html', { element(e){ e.setAttribute('data-consent-required', String(required)); }})
+          .transform(await fetch(request));
+    Netlify Edge Functions (context.geo.country.code) and Vercel Middleware (x-vercel-ip-country) can
+    set the same attribute. The client code below reads it; absent/"true" => safe default-denied.
+
+    ── CURRENT STATUS ─────────────────────────────────────────────────────────────────────────────
+    On GitHub Pages there is no edge/geo, so region-aware mode uses a BROWSER-TIMEZONE heuristic
+    (Europe/* => EU) — good-faith but not precise. TO ENABLE the accurate IP-based method when you
+    move OFF GitHub Pages (Cloudflare / Netlify / Vercel, or any host with country headers): deploy
+    one of the edge snippets above so it sets <html data-consent-required="true|false">. No code
+    change here is needed — the client already prefers that attribute over the timezone guess, so
+    IP-based detection takes over automatically the moment the attribute is present.
+*/ -}}
+{{- $gaID := .Site.Params.googleAnalytics | default "" -}}
+{{- $a := .Site.Params.analytics -}}
+{{- $gcOn := and $a $a.enableGoatCounter -}}
+{{- $gaOn := and $a $a.enableGoogleAnalytics (ne $gaID "") -}}
+{{- $bannerOn := and $a $a.enableAnalyticsConsentBanner -}}
+{{- $mode := cond (and $a (ne (string $a.googleAnalyticsMode) "")) (string $a.googleAnalyticsMode) "region-aware" -}}
+
+{{- if $gcOn }}
+<!-- GoatCounter — cookieless aggregate analytics, loaded immediately and independently of GA consent. -->
+<script>
+  window.goatcounter = window.goatcounter || {};
+  // Record the path only (strip query strings) so tracking params never carry PII. Explicit
+  // event paths (no leading slash) are left untouched.
+  window.goatcounter.path = function (p) { return (p && p.charAt(0) !== '/') ? p : location.pathname; };
+</script>
+<script data-goatcounter="https://galexander.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{{- end }}
+
+{{- if $gaOn }}
+  {{- if $bannerOn }}
+<!-- Analytics consent banner. Reject is exactly as easy as Accept (one click). -->
+<div class="consent-banner" id="consent-banner" role="dialog" aria-label="Analytics consent" aria-live="polite" hidden>
+  <div class="consent-inner">
+    <p class="consent-text">RacePulse uses analytics to understand site traffic, downloads, and product interest. GoatCounter provides privacy-focused aggregate analytics. Google Analytics is used where allowed, and in regions requiring consent it only uses full analytics if you accept. Website analytics are separate from the RacePulse desktop app and do not collect racing telemetry.</p>
+    <div class="consent-actions">
+      <button type="button" class="btn btn--primary" data-consent="accept">Accept analytics</button>
+      <button type="button" class="btn btn--ghost" data-consent="reject">Reject analytics</button>
+      <a class="consent-link" href="{{ "privacy/" | absURL }}">Privacy Policy</a>
+    </div>
+  </div>
+</div>
+  {{- end }}
+<script>
+  (function () {
+    var GA_ID = {{ $gaID | jsonify | safeJS }};
+    var MODE = {{ $mode | jsonify | safeJS }};          // region-aware | always-full | always-consent
+    var BANNER_ENABLED = {{ if $bannerOn }}true{{ else }}false{{ end }};
+    var HONOR_GPC = {{ if and $a $a.honorGlobalPrivacyControl }}true{{ else }}false{{ end }};
+    var DISABLE_SIGNALS = {{ if and $a $a.disableGoogleSignals }}true{{ else }}false{{ end }};
+    var DISABLE_AD_PERS = {{ if and $a $a.disableAdsPersonalization }}true{{ else }}false{{ end }};
+    var KEY = 'rp-analytics-consent';
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+
+    // Global Privacy Control — a browser-level opt-out. If set, force denied regardless of anything else.
+    var gpc = HONOR_GPC && (typeof navigator !== 'undefined' && navigator.globalPrivacyControl === true);
+
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+
+    // Region policy. An edge function may set data-consent-required on <html> (authoritative — see note
+    // above). With no edge signal, region-aware mode falls back to the visitor's browser timezone:
+    // European timezones are treated as consent-required (banner + denied); everywhere else gets full GA
+    // by default. ponytail: timezone is a heuristic (VPN/travel/misconfigured clocks fool it); swap in
+    // real edge geo via data-consent-required if you need precision.
+    function euLikeTimezone() {
+      try {
+        var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+        // EU/EEA/UK/CH all sit in Europe/*, plus a few EU territories on Atlantic/* zones.
+        return /^Europe\//.test(tz) ||
+          tz === 'Atlantic/Canary' || tz === 'Atlantic/Madeira' ||
+          tz === 'Atlantic/Azores' || tz === 'Atlantic/Reykjavik';
+      } catch (e) { return true; }   // can't tell => safe (consent-required)
+    }
+    var signal = document.documentElement.getAttribute('data-consent-required');
+    var consentRequired;
+    if (MODE === 'always-full') consentRequired = false;
+    else if (MODE === 'always-consent') consentRequired = true;
+    else if (signal === 'false') consentRequired = false;   // edge: consent-free region
+    else if (signal === 'true') consentRequired = true;      // edge: consent-required region
+    else consentRequired = euLikeTimezone();                 // no edge signal: timezone fallback
+
+    // Effective analytics consent for THIS page load.
+    var granted;
+    if (gpc) granted = false;
+    else if (stored === 'granted') granted = true;
+    else if (stored === 'denied') granted = false;
+    else granted = !consentRequired;               // undecided: full where allowed, denied where required
+
+    // Consent Mode v2 default — pushed BEFORE config so GA never sets analytics cookies while denied.
+    gtag('consent', 'default', {
+      analytics_storage: granted ? 'granted' : 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
+
+    // Load Google's tag immediately. Under default-denied it sends only cookieless, aggregate pings.
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);
+    document.head.appendChild(s);
+
+    gtag('js', new Date());
+    gtag('config', GA_ID, {
+      allow_google_signals: !DISABLE_SIGNALS,               // off => no remarketing/demographics/interests
+      allow_ad_personalization_signals: !DISABLE_AD_PERS,
+      page_location: location.origin + location.pathname    // path only — no query strings/hashes (no PII)
+    });
+
+    // Banner + preference changes.
+    var banner = document.getElementById('consent-banner');
+    function show() { if (banner) banner.hidden = false; }
+    function hide() { if (banner) banner.hidden = true; }
+
+    function apply(choice) {
+      try { localStorage.setItem(KEY, choice); } catch (e) {}
+      gtag('consent', 'update', { analytics_storage: choice === 'granted' ? 'granted' : 'denied' });
+      hide();
+    }
+
+    if (banner) {
+      banner.addEventListener('click', function (e) {
+        var b = e.target.closest && e.target.closest('[data-consent]');
+        if (!b) return;
+        apply(b.getAttribute('data-consent') === 'accept' ? 'granted' : 'denied');
+      });
+    }
+
+    // Exposed so the Analytics & Cookies page can let visitors change their choice anytime.
+    window.rpAnalytics = {
+      accept: function () { apply('granted'); },
+      reject: function () { apply('denied'); },
+      open: show,
+      clear: function () { try { localStorage.removeItem(KEY); } catch (e) {} show(); }
+    };
+    var changeLink = document.getElementById('change-analytics-prefs');
+    if (changeLink) {
+      changeLink.hidden = false;
+      changeLink.addEventListener('click', function (e) { e.preventDefault(); show(); });
+    }
+
+    // Show the banner only when consent is genuinely required and still undecided (never under GPC).
+    if (BANNER_ENABLED && banner && consentRequired && !gpc && stored !== 'granted' && stored !== 'denied') {
+      show();
+    }
+  })();
+</script>
+{{- end }}
+
+{{- if or $gaOn $gcOn }}
+<script>
+  // Outbound/download click tracking — GENERIC event names only, never any user-entered text,
+  // URLs with query strings, or other PII. Fires into GA (if present) and GoatCounter (if present).
+  (function () {
+    var DL = {{ .Site.Params.downloadURL | jsonify | safeJS }};
+    function toUrl(v) { try { return new URL(v, location.href); } catch (e) { return null; } }
+    var dl = toUrl(DL);
+
+    function classify(link) {
+      var url = toUrl(link.getAttribute('href'));
+      if (!url) return null;
+      var host = url.hostname.toLowerCase();
+      var path = url.pathname.toLowerCase();
+      var isExe = (dl && url.href === dl.href) ||
+        (host === 'github.com' && path.indexOf('/racepulse-release/releases/download/') !== -1 && path.slice(-13) === '/racepulse.exe');
+      if (isExe) return 'download_windows';
+      if (host === 'ko-fi.com' || path === '/support/') return 'support_kofi_click';
+      if (host === 'github.com') return 'external_github_click';
+      return null;
+    }
+
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      if (!t || !t.closest) return;
+      var link = t.closest('a[href]');
+      if (!link) return;
+      var name = classify(link);
+      if (!name) return;
+      if (typeof window.gtag === 'function') window.gtag('event', name);   // sent via beacon; survives navigation
+      if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+        window.goatcounter.count({ path: name, title: name, event: true });
+      }
+    });
+  })();
+</script>
+{{- end }}

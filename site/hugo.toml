@@ -24,6 +24,25 @@ disableKinds = ["taxonomy", "term"]
   # Empty = GA disabled; GoatCounter still runs.
   googleAnalytics = ""
 
+  # Website analytics behaviour — see layouts/partials/analytics.html for how each is used.
+  # Keep these as real TOML booleans; do NOT inject them via HUGO_PARAMS_* env vars (env values
+  # arrive as strings and "false" is truthy in Go templates). Only the GA ID above is env-injected.
+  [params.analytics]
+    enableGoatCounter = true              # false = never load GoatCounter (cookieless, aggregate)
+    enableGoogleAnalytics = true          # false = never load Google Analytics (also needs the ID above)
+    enableAnalyticsConsentBanner = true   # show the consent banner where consent is required
+    # region-aware | always-full | always-consent.
+    #   region-aware: non-EU visitors get full GA on by default; EU/EEA/UK/CH get the banner with
+    #                 Consent Mode default-denied. Region comes from an edge function if present
+    #                 (<html data-consent-required="true|false">), otherwise from the browser timezone.
+    #   always-full: GA granted by default everywhere (use only if you are sure consent isn't required).
+    #   always-consent: Consent Mode default-denied everywhere until the visitor accepts.
+    googleAnalyticsMode = "region-aware"
+    requireConsentFallback = true         # when region is unknown, fall back to default-denied (safe)
+    honorGlobalPrivacyControl = true      # treat navigator.globalPrivacyControl === true as "denied"
+    disableGoogleSignals = true           # no Signals => no remarketing/demographics/interests
+    disableAdsPersonalization = true      # no ad personalization signals
+
 [menu]
   [[menu.main]]
     name = "Home"

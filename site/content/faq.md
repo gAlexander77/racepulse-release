@@ -196,9 +196,15 @@ Yes. RacePulse widgets are standard windows that appear in OBS and other capture
 - **Game Capture** may not show widgets — add each widget as a separate **Window Capture** source, or switch to Display Capture
 - Widgets have transparent backgrounds, so they overlay cleanly in both the game and the stream
 
-### Does RacePulse send data to the internet?
+### Privacy & Data Collection
 
-RacePulse reads telemetry locally from your machine (shared memory or localhost UDP). It does not send your telemetry data, lap times, or any racing data to external servers. The only network activity is checking for updates and anonymous usage analytics (page views), both of which can be blocked by a firewall if preferred.
+RacePulse processes racing telemetry locally on your device. It does not upload racing telemetry, lap times, racing inputs, session recordings, driver names, iRacing IDs, or detailed driving data to RacePulse servers.
+
+RacePulse does collect limited app usage analytics to understand whether the app is being used and which supported games need the most development attention. This may include app startup events, app version, operating system, supported game detected, and a randomly generated installation ID. The installation ID is not based on hardware information and is used only to measure app usage.
+
+RacePulse may keep limited server logs for security, abuse prevention, rate limiting, and blocking malicious traffic. Website analytics may also be used to understand page views, downloads, referrers, browser/device information, and general product interest.
+
+RacePulse does not sell personal data and does not use analytics to collect racing telemetry.
 
 ---
 
