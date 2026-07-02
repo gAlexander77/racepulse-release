@@ -39,6 +39,7 @@
   --muted:   #8A8682;
   --red:     #E11D48;
   --red-2:   #B81138;
+  --red-ink: #F43F5E;  /* lighter red — WCAG-AA-safe for small red TEXT on dark backgrounds */
 
   --display: 'Anton', 'Inter Tight', sans-serif;
   --sans:    'Inter Tight', ui-sans-serif, system-ui, -apple-system, sans-serif;
@@ -865,7 +866,7 @@ footer.foot .brand-blk p {
   max-width: 36ch;
   color: var(--muted);
 }
-footer.foot h4 {
+footer.foot h2 {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.2em;
@@ -1539,3 +1540,26 @@ html.js .hero-meta               { animation-delay: 0.28s; }
   .sims-grid .sim .go { top: 18px; right: 18px; font-size: 16px; }
   .duo { grid-template-columns: 1fr; gap: 24px; }
 }
+
+/* ───── A11Y: red-text contrast (WCAG 2 AA) ─────
+   Brand --red (#E11D48) is ~4.2:1 as small text on BOTH the black and the light
+   panels — under the 4.5:1 minimum. --red stays the brand colour for bars, icons,
+   button backgrounds, and large display accents (those meet their thresholds); only
+   small red TEXT is retoned: lighter red on dark, darker red (--red-2) on light. */
+nav.bar ul a.is-active,
+.nav-mobile a.is-active,
+.hero-side .k,
+.howto-head .eyebrow,
+.step-num,
+.preview-wrap .sec-head .num,
+.dark-panel .sec-head .num,
+.req-list .k,
+.prose ol li::before,
+.prose th,
+.page-hero .eyebrow .sep,
+.toc summary,
+footer.foot h2 { color: var(--red-ink); }
+
+.stats .lbl,
+.panel .sec-head .num,
+.closer .btn-white { color: var(--red-2); }
