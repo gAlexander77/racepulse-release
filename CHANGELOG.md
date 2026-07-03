@@ -2,6 +2,29 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.3.2] — 2026-07-02
+
+### Added
+
+- Widgets, previews, and pages now show a small error panel instead of going blank if something unexpected goes wrong
+
+### Fixed
+
+- iRacing: projected iRating now reads the correct field and only shows in valid sessions
+- Le Mans Ultimate no longer gets stuck in a detect/reconnect loop after the game closes and its shared memory goes stale
+- F1: reconnecting now works after capture stops on its own (the UDP port is released properly)
+- Fixed hangs that could occur when stopping telemetry capture on iRacing, Le Mans Ultimate, and F1
+- Assetto Corsa Competizione and Assetto Corsa no longer hang when the game closes on its own
+- Failed auto-connects now retry and surface the error instead of failing silently
+- Telemetry no longer bleeds between sessions when switching games
+
+### Improved
+
+- Major performance pass while driving: the Home and dashboard pages stop re-rendering at 60Hz during capture, off-screen widget previews pause, graph canvases only reallocate when resized, and analysis and track-map updates are throttled — noticeably lower CPU and GPU usage
+- Home quick links restyled into a single row
+
+---
+
 ## [v0.3.1] — 2026-06-02
 
 ### Added
