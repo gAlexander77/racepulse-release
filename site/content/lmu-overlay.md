@@ -7,7 +7,7 @@ ogImage: "assets/lmu-overlay-preview.jpg"
 
 ## Free Telemetry Overlay for Le Mans Ultimate
 
-RacePulse is a free telemetry overlay for Le Mans Ultimate. It reads telemetry directly from LMU's rFactor 2 shared memory plugin — the same interface used by the sim engine to expose physics, scoring, and vehicle data. No additional plugins, no web dashboards, no configuration files.
+RacePulse is a free telemetry overlay for Le Mans Ultimate. It reads LMU's built-in shared memory interface — the official Studio 397 API that ships with the game. No plugins to install, no web dashboards, no configuration files.
 
 <div style="margin: 2rem 0; overflow: hidden; border: 1px solid #232323;">
   <video playsinline autoplay muted loop preload="metadata" poster="/assets/lmu-overlay-preview.jpg" style="width: 100%; display: block;" aria-label="RacePulse telemetry overlay running in Le Mans Ultimate showing speed, gear, RPM, inputs, and lap time widgets">
@@ -16,17 +16,18 @@ RacePulse is a free telemetry overlay for Le Mans Ultimate. It reads telemetry d
   </video>
 </div>
 
-Le Mans Ultimate is built on the rFactor 2 engine, which exposes telemetry through a shared memory plugin. RacePulse reads this data at up to 50Hz for physics and 5Hz for scoring, giving you real-time overlays with virtually zero setup.
+Le Mans Ultimate ships with an official shared memory interface that exposes the sim engine's physics, scoring, and vehicle data. RacePulse reads this data at up to 50Hz for physics and 5Hz for scoring, giving you real-time overlays with virtually zero setup.
 
 ## Setup
 
-1. Download `RacePulse.exe` from the [Releases page](https://github.com/gAlexander77/racepulse-release/releases)
-2. Run `RacePulse.exe` (no installation needed)
-3. In LMU, go to **Settings > Gameplay** and ensure **Enable Plugins** is turned on
-4. Launch a session in LMU
-5. RacePulse automatically detects the shared memory and begins streaming telemetry
+1. Download `RacePulse.exe` from the [Releases page](https://github.com/gAlexander77/racepulse-release/releases) and run it (no installation needed)
+2. In LMU, go to **Settings > Gameplay** and turn **Enable Plugins** on
+3. Load into a session (practice, qualifying, or race)
+4. RacePulse automatically detects the shared memory and begins streaming telemetry
 
-> **Important:** The rFactor 2 shared memory plugin must be enabled in LMU. Go to **Settings > Gameplay > Enable Plugins** and make sure it is turned on. This is the only configuration step required.
+That's the whole setup. RacePulse reads the shared memory interface built into Le Mans Ultimate itself, so there is no plugin DLL to download or install.
+
+> **Troubleshooting:** if RacePulse reports "failed to open LMU shared memory," check that **Settings > Gameplay > Enable Plugins** is on and that you're loaded into a session (not sitting in the main menu). On very old LMU versions that predate the built-in interface, RacePulse falls back to TheIronWolf's rF2 Shared Memory Map plugin if it's installed — updating the game is the simpler fix.
 
 ## Available Widgets for Le Mans Ultimate
 
@@ -65,14 +66,14 @@ RacePulse captures data specific to the rFactor 2 / LMU engine:
 
 The Delta widget uses a multi-tier approach for LMU: sector split comparisons after sector boundaries for accuracy, and proportional estimation during the first sector for real-time feedback.
 
-## Dual-Buffer Telemetry
+## Dual-Rate Telemetry
 
-LMU's rFactor 2 engine exposes two separate shared memory buffers:
+LMU's shared memory carries two streams updated at different rates:
 
-- **Telemetry buffer** (~50Hz) — Per-vehicle physics data including speed, G-forces, tyre data, fuel, inputs, engine data
-- **Scoring buffer** (~5Hz) — Session information, standings, gaps, lap times, sector times, pit status
+- **Telemetry** (~50Hz) — Per-vehicle physics data including speed, G-forces, tyre data, fuel, inputs, engine data
+- **Scoring** (~5Hz) — Session information, standings, gaps, lap times, sector times, pit status
 
-RacePulse reads both buffers and merges the data into a unified stream. The higher-frequency telemetry buffer provides smooth animations for speed, RPM, and input widgets, while the scoring buffer provides accurate timing and position data.
+RacePulse reads both and merges the data into a unified stream. The higher-frequency telemetry provides smooth animations for speed, RPM, and input widgets, while scoring provides accurate timing and position data.
 
 ## Customization
 
@@ -88,10 +89,10 @@ Every widget is independently configurable:
 
 - **Free** — No subscription, no paid tier
 - **Single executable** — 21MB `.exe`, no installer required
-- **Minimal setup** — Just enable the LMU plugin once, then forget about it
+- **One-time setup** — Turn on Enable Plugins in LMU once, then forget about it
 - **Endurance-ready** — Fuel estimation and multi-class track map for long races
 - **Multi-sim** — Same app works with iRacing, ACC, Assetto Corsa, F1 25, and F1 24
 
 ---
 
-[Download RacePulse](/install/) and set up your Le Mans Ultimate overlays in under a minute. View all widgets on the [features page](/features/) or check the [changelog](/changelog/) for what's new.
+[Download RacePulse](/install/) and set up your Le Mans Ultimate overlays. View all widgets on the [features page](/features/) or check the [changelog](/changelog/) for what's new.

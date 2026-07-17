@@ -14,8 +14,8 @@ disableKinds = ["taxonomy", "term"]
   repoURL = "https://github.com/gAlexander77/racepulse-release"
   releaseURL = "https://github.com/gAlexander77/racepulse-release/releases"
   # Bump appVersion and downloadURL together on each release (footer + schema read appVersion).
-  appVersion = "0.3.3"
-  downloadURL = "https://github.com/gAlexander77/racepulse-release/releases/download/v0.3.3/RacePulse.exe"
+  appVersion = "0.3.4"
+  downloadURL = "https://github.com/gAlexander77/racepulse-release/releases/download/v0.3.4/RacePulse.exe"
   # Date the preview MP4s referenced by VideoObject schema were last replaced.
   videoUploadDate = "2026-05-23"
   # Google Analytics 4 Measurement ID. In production it is injected at build time from the

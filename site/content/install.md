@@ -33,7 +33,7 @@ No configuration needed. RacePulse automatically detects Assetto Corsa via share
 
 ### Le Mans Ultimate
 
-No configuration needed. RacePulse automatically detects Le Mans Ultimate via the rFactor 2 shared memory plugin when the sim is running.
+One-time step: in LMU, go to **Settings > Gameplay** and turn **Enable Plugins** on. RacePulse reads the shared memory interface built into the game — no plugin DLL to install. Once a session is loaded, RacePulse detects LMU automatically.
 
 ### F1 25
 
@@ -80,6 +80,7 @@ Download a newer release and replace the previous `RacePulse.exe`. Your widget s
 
 - Ensure the sim is running and you are in a session (not the main menu)
 - Shared memory is only available while on track or in replay
+- **LMU only:** verify **Settings > Gameplay > Enable Plugins** is turned on
 
 ### App won't start or crashes
 

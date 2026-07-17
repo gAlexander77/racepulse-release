@@ -23,7 +23,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "What sim racing games does RacePulse support?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "RacePulse supports six games: iRacing, Assetto Corsa Competizione (ACC), Assetto Corsa, Le Mans Ultimate (LMU), F1 25, and F1 24. iRacing, ACC, AC, and LMU use Windows shared memory (no setup needed). F1 25 and F1 24 use UDP telemetry (one-time toggle in game settings)."
+        "text": "RacePulse supports six games: iRacing, Assetto Corsa Competizione (ACC), Assetto Corsa, Le Mans Ultimate (LMU), F1 25, and F1 24. iRacing, ACC, AC, and LMU use Windows shared memory (LMU needs the Enable Plugins toggle turned on once). F1 25 and F1 24 use UDP telemetry (one-time toggle in game settings)."
       }
     },
     {
@@ -31,7 +31,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "Do I need to install plugins or configure anything?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For iRacing, ACC, and Assetto Corsa — no. RacePulse detects these games automatically via shared memory. For Le Mans Ultimate, you need to enable the Plugins option in Settings > Gameplay (one-time). For F1 25 and F1 24, you need to enable UDP Telemetry in the game's settings (one-time)."
+        "text": "No plugins to install for any game. For iRacing, ACC, and Assetto Corsa, RacePulse detects the game automatically via shared memory. For Le Mans Ultimate, turn on Enable Plugins in Settings > Gameplay (one-time) — RacePulse reads the shared memory interface built into the game. For F1 25 and F1 24, enable UDP Telemetry in the game's settings (one-time)."
       }
     },
     {
@@ -123,7 +123,7 @@ RacePulse supports six games:
 - [**iRacing**](/iracing-overlay/) — Windows shared memory, no setup needed
 - [**Assetto Corsa Competizione**](/acc-overlay/) — Windows shared memory, no setup needed
 - [**Assetto Corsa**](/assetto-corsa-overlay/) — Windows shared memory, no setup needed
-- [**Le Mans Ultimate**](/lmu-overlay/) — rFactor 2 shared memory plugin, enable Plugins in LMU settings once
+- [**Le Mans Ultimate**](/lmu-overlay/) — built-in shared memory, enable Plugins in LMU settings once
 - [**F1 25**](/f1-25-overlay/) — UDP telemetry on port 22025, enable in game settings once
 - [**F1 24**](/f1-24-overlay/) — UDP telemetry on port 22024, enable in game settings once
 
@@ -131,7 +131,7 @@ RacePulse supports six games:
 
 For **iRacing, ACC, and Assetto Corsa** — no. RacePulse detects these games automatically via shared memory with zero configuration.
 
-For **Le Mans Ultimate** — one-time step: go to **Settings > Gameplay** and enable **Plugins**. This activates the rFactor 2 shared memory plugin that RacePulse reads from.
+For **Le Mans Ultimate** — one-time step: go to **Settings > Gameplay** and turn on **Enable Plugins**. RacePulse reads the shared memory interface built into the game, so there is no plugin DLL to install.
 
 For **F1 25 and F1 24** — one-time step: go to **Settings > Telemetry Settings** and set **UDP Telemetry** to **On**. The default UDP port (22025 for F1 25, 22024 for F1 24) works automatically.
 

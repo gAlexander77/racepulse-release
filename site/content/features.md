@@ -10,7 +10,7 @@ ogImage: "assets/widget-customization-preview.jpg"
 - **iRacing** — Automatic detection via Windows shared memory. No configuration needed.
 - **Assetto Corsa Competizione** — Automatic detection via shared memory. No configuration needed.
 - **Assetto Corsa** — Automatic detection via shared memory. No configuration needed.
-- **Le Mans Ultimate** — Automatic detection via rFactor 2 shared memory plugin. No configuration needed.
+- **Le Mans Ultimate** — Automatic detection via the game's built-in shared memory (enable Plugins in LMU settings once).
 - **F1 25** — UDP telemetry on port 22025 (enable in game settings under Telemetry).
 - **F1 24** — UDP telemetry on port 22024 (enable in game settings under Telemetry).
 
