@@ -2,6 +2,55 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.3.3] — 2026-07-16
+
+### Added
+
+- Widgets can now be hidden and shown again without losing them — hiding previously closed the widget for good
+- Smarter delta timing: the reference lap is now selected automatically and new personal bests are promoted as you set them
+
+### Fixed
+
+- **iRacing:** tire pressures now show real PSI values (a unit conversion ran the wrong way, giving readings in the thousands)
+- **iRacing:** on-track detection works again — it was permanently "off track", which kept dependent widgets dark
+- **iRacing:** shift lights now scale to each car's actual redline instead of a fixed RPM
+- **iRacing:** checkered and cooldown phases are no longer swapped at the end of a race, and wind speed uses the correct unit
+- **iRacing:** the last driver in the session roster is no longer missing from the leaderboard
+- **iRacing:** leaderboard gaps to the leader are now accurate
+- **ACC:** shift lights work again (a data type mismatch left them permanently dark)
+- **ACC:** the clutch bar no longer reads 100% while driving — the sim reports clutch engagement, which is now converted to pedal position
+- **ACC & AC:** pausing the game no longer disconnects the session after a few seconds
+- **ACC:** the live delta now works from your second lap onward
+- **ACC:** all three sector times now populate correctly
+- **ACC:** your car now appears at its true position on track maps
+- **Assetto Corsa:** flags and pit-lane detection now work (the app was reading ACC's memory layout, which AC doesn't share)
+- **Assetto Corsa:** phantom cars no longer appear on track maps
+- **Le Mans Ultimate:** tire temperatures now display in Celsius instead of raw Kelvin (~350°)
+- **Le Mans Ultimate:** track flags and session types now map correctly — green-flag racing no longer shows as a caution, and races are no longer "unknown" sessions
+- **Le Mans Ultimate:** the delta no longer compares against sectors you haven't finished driving
+- **Le Mans Ultimate:** torn shared-memory frames are discarded instead of producing corrupted readings, and shared-memory faults no longer stop capture
+- **F1 24/25:** F1 24 is now auto-detected (a port bug made it undetectable on a fresh start)
+- **F1 24/25:** driver names are no longer garbled in F1 25, and several packet layouts were corrected for both games
+- **ACC, AC & LMU:** the rev limiter indicator no longer flashes before the car's redline is known
+- Widget layouts can no longer be corrupted by a crash during save — saves are atomic, and a damaged file is set aside and recovered from instead of silently overwritten
+- Launching RacePulse twice no longer cross-wires widgets between the two instances
+- Widgets automatically reconnect if their connection to the main app drops
+- The app can no longer hang forever on exit — shutdown is bounded
+- Failed auto-connects now back off progressively instead of retrying every 3 seconds
+- Fuel-per-lap estimates are no longer skewed by your first lap out of the pits
+- Track map no longer shows a bogus gap to the car ahead while crossing the start/finish line
+- Invalid values from the sims no longer cause telemetry frames to silently drop
+- The inputs graph no longer floods solid red in widget previews
+- Rapidly toggling widgets on the Home page no longer gets them stuck
+
+### Improved
+
+- Live widget previews are far more realistic: coherent lap times, ticking sectors, a true live delta, distance-accurate car movement on the track map, and a proper multiclass field — with no flickering lap times
+- Lap time, delta, and gaps on ACC now update smoothly instead of stepping a few times per second
+- The Help menu now explains that ACC and AC can only be detected once you've loaded into a session
+
+---
+
 ## [v0.3.2] — 2026-07-02
 
 ### Added
