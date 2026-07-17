@@ -5,6 +5,19 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.jpg"
 ---
 
+## v0.3.4 <span class="changelog-date">2026-07-16</span>
+
+### Fixed
+
+- **Le Mans Ultimate:** RacePulse now works on fresh LMU installs with zero setup. It reads the shared memory interface built into the game, so the rF2 Shared Memory Map plugin DLL is no longer required — just turn on **Settings > Gameplay > Enable Plugins**. Previously, LMU telemetry silently depended on a plugin that other apps (Crew Chief, wheel software) happened to install; without it, RacePulse never detected the game. Older LMU versions that predate the built-in interface still fall back to the plugin if installed.
+
+### Improved
+
+- **Le Mans Ultimate:** your car is now identified directly by the game instead of through name-matching heuristics
+- In-app Help and the website setup guides for LMU rewritten for the zero-setup flow
+
+---
+
 ## v0.3.3 <span class="changelog-date">2026-07-16</span>
 
 ### Added
