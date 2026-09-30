@@ -4,9 +4,9 @@ This repository hosts public releases, user documentation, issues, changelogs, a
 
 ## Handover status
 
-Prepared 2026-09-30. The old public `.github/workflows/release.yml` is removed by this change so public main no longer clones private source or publishes app releases from a tag/dispatch. Existing public PR #3 proposes a newer Go/Wails toolchain; it remains untouched and should be coordinated during review so a competing public build path is not reintroduced. This handover is based on public main `8725a84`, not that unmerged tooling branch. Source-owned uploads refuse to run while the legacy workflow still exists on public main. **0.3.5 remains on hold.** This cleanup changes neither the current stable v0.3.4 nor website version/download settings.
+Prepared 2026-09-30. The old public `.github/workflows/release.yml` was removed from main in `fa9c268` so public main no longer clones private source or publishes app releases from a tag/dispatch. Existing public PR #3 proposes a newer Go/Wails toolchain; it remains untouched and should be coordinated during review so a competing public build path is not reintroduced. This handover is based on public main `8725a84`, not that unmerged tooling branch. Source-owned uploads still check that the legacy workflow is absent before uploading. **0.3.5 remains on hold.** This cleanup changes neither the current stable v0.3.4 nor website version/download settings.
 
-After merging retirement, delete the public `SOURCE_REPO_PAT` Actions secret. Revoke its token only after establishing that it was dedicated to this workflow. Public site builds need no credential for private source. A dedicated public-repo Contents read/write credential is stored as `RELEASE_REPO_TOKEN` in the private source repository.
+Next, delete the public `SOURCE_REPO_PAT` Actions secret. Revoke its token only after establishing that it was dedicated to this retired workflow. Public site builds need no credential for private source. A dedicated public-repo Contents read/write credential is stored as `RELEASE_REPO_TOKEN` in the private source repository.
 
 ## Candidate assets
 
