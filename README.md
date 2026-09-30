@@ -59,11 +59,11 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 This repo is the public release, documentation, issue tracking, and Hugo website home for RacePulse.
 
-- Download signed Windows executables
+- Download portable Windows executables with SHA-256 checksums
 - Read feature documentation and setup guides
 - Track release notes and known issues
 
-The main RacePulse application source code is closed source and not published in this repository.
+The main RacePulse application source code is private and not published in this repository. Builds run in the private source repository and arrive here as verified drafts; this repo owns public distribution and the website. See [RELEASING.md](RELEASING.md) for the handover and publication checks.
 
 ## Download
 
@@ -72,7 +72,7 @@ Get the latest build from [Releases](../../releases).
 Each release includes:
 
 - `RacePulse.exe` (main application)
-- Optional release notes and checksums
+- `RacePulse.exe.sha256` (download integrity checksum)
 
 ## Supported Games
 

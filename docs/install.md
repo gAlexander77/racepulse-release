@@ -6,7 +6,7 @@ Download the latest `RacePulse.exe` from the repository [Releases](../../release
 
 ## 2) Verify (optional but recommended)
 
-If checksums are provided in the release, verify file integrity before running.
+Download the matching `RacePulse.exe.sha256` asset and verify the executable SHA-256 before running. Compare it with `Get-FileHash -LiteralPath .\RacePulse.exe -Algorithm SHA256` in PowerShell; the first field in the sidecar is the expected hash.
 
 ## 3) Launch
 
