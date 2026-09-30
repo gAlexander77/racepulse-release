@@ -4,9 +4,11 @@ This repository hosts public releases, user documentation, issues, changelogs, a
 
 ## Handover status
 
-Prepared 2026-09-30. The old public `.github/workflows/release.yml` was removed from main in `fa9c268` so public main no longer clones private source or publishes app releases from a tag/dispatch. Existing public PR #3 proposes a newer Go/Wails toolchain; it remains untouched and should be coordinated during review so a competing public build path is not reintroduced. This handover is based on public main `8725a84`, not that unmerged tooling branch. Source-owned uploads still check that the legacy workflow is absent before uploading. **0.3.5 remains on hold.** This cleanup changes neither the current stable v0.3.4 nor website version/download settings.
+Prepared 2026-09-30. The old public `.github/workflows/release.yml` was removed from main in `fa9c268` so public main no longer clones private source or publishes app releases from a tag/dispatch. Public tooling PR #3 was closed during the second review so it cannot restore a competing build path. This handover is based on public main `8725a84`, not that tooling branch. Source-owned uploads still check that the legacy workflow is absent before uploading. **0.3.5 remains on hold.** This cleanup changes neither the current stable v0.3.4 nor website version/download settings.
 
-Next, delete the public `SOURCE_REPO_PAT` Actions secret. Revoke its token only after establishing that it was dedicated to this retired workflow. Public site builds need no credential for private source. A dedicated public-repo Contents read/write credential is stored as `RELEASE_REPO_TOKEN` in the private source repository.
+The public `SOURCE_REPO_PAT` Actions secret was deleted during the second review. Revoke its underlying token only after establishing that it was dedicated to this retired workflow. Public site builds need no credential for private source. Before a candidate build, configure a dedicated public-repo Contents read/write credential as `RELEASE_REPO_TOKEN` in the private source repository; it is not configured yet.
+
+Private source main `afc48c3` now runs CI only by manual dispatch and has retired its old tag-triggered release workflow. Source PR #3 prepares the manual draft build replacement and still needs to merge before that path is available on main. Website Pages is the only automatic CI/CD path.
 
 ## Candidate assets
 
