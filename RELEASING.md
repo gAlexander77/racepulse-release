@@ -8,7 +8,11 @@ Prepared 2026-09-30. The old public `.github/workflows/release.yml` was removed 
 
 The public `SOURCE_REPO_PAT` Actions secret was deleted during the second review. Revoke its underlying token only after establishing that it was dedicated to this retired workflow. Public site builds need no credential for private source. Before a candidate build, configure a dedicated public-repo Contents read/write credential as `RELEASE_REPO_TOKEN` in the private source repository; it is not configured yet.
 
-Private source main `afc48c3` now runs CI only by manual dispatch and has retired its old tag-triggered release workflow. Source PR #3 prepares the manual draft build replacement and still needs to merge before that path is available on main. Website Pages is the only automatic CI/CD path.
+Private source PR #3 merged to main in `6b53855` on 2026-09-30. Source CI and its draft-build replacement are both active and accept only manual dispatch; the old private tag-triggered release is retired. The merge did not start a hosted build. Website Pages is the only automatic CI/CD path.
+
+Active `Immutable version tags` rulesets block updates and deletion of `refs/tags/v*` in both source and distribution, with no bypass actors; new tags remain allowed. Distribution rule: [24283108](https://github.com/gAlexander77/racepulse-release/rules/24283108). Do not weaken this rule or move a version tag to repair a published release.
+
+The remaining owner setup is to create an expiring fine-grained credential limited to **`racepulse-release`, Contents read/write**, then store it as **`RELEASE_REPO_TOKEN` in private source Actions secrets**, not here. Do not paste it into chat or reuse the broad `gh` login credential. Native Windows/live-game acceptance and the actual published-v0.3.4 upgrade to an exact candidate remain required before publication. Adding a secret alone does not build or publish anything; the private source runbook owns candidate preflight and the full acceptance matrix.
 
 ## Candidate assets
 
