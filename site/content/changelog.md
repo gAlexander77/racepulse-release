@@ -5,6 +5,28 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.jpg"
 ---
 
+## v0.3.5 <span class="changelog-date">2026-10-04</span>
+
+### Added
+
+- Smooth opening and closing animations for settings drawers and confirmation dialogs, with reduced-motion support.
+- **Star on GitHub** in Home and Help, making it easy to support RacePulse through the public repository.
+
+### Fixed
+
+- More reliable update installation and restart, including downloads staged on a different drive and recovery when replacing the executable fails.
+- Safer widget startup, reconnection, and shutdown when connections are slow, interrupted, or closed mid-operation.
+- Settings save/reset failures now preserve edits and report the problem instead of appearing to succeed.
+- More consistent lap references and sector timing around missing lap counters, session changes, and stationary periods.
+- Startup problems now show recovery guidance, and transient event-registration failures retry automatically.
+
+### Improved
+
+- Bounded telemetry queues and lap-analysis buffers reduce unnecessary background work and memory growth during interrupted or stationary sessions.
+- The familiar main-page layout and widget designs are preserved, with bundled fonts and icons for offline use.
+
+---
+
 ## v0.3.4 <span class="changelog-date">2026-07-16</span>
 
 ### Fixed

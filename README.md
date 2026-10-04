@@ -81,7 +81,7 @@ Each release includes:
 | **iRacing**                    | Shared memory | No configuration needed — detected automatically when iRacing is running            |
 | **Assetto Corsa Competizione** | Shared memory | No configuration needed — detected automatically when ACC is running                |
 | **Assetto Corsa**              | Shared memory | No configuration needed — detected automatically when AC is running                 |
-| **Le Mans Ultimate**           | Shared memory | No configuration needed — detected automatically via rFactor 2 shared memory plugin |
+| **Le Mans Ultimate**           | Shared memory | Enable Plugins in LMU's Gameplay settings; uses the built-in shared memory interface |
 | **F1 25**                      | UDP           | Enable UDP telemetry in game settings (default port 22025)                          |
 | **F1 24**                      | UDP           | Enable UDP telemetry in game settings (default port 22024)                          |
 
