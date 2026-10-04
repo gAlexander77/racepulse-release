@@ -2,11 +2,17 @@
 
 This repository hosts public releases, user documentation, issues, changelogs, and the Hugo site. The private `racepulse` source repository builds the Windows app and transfers verified assets into an unpublished draft here. This repository does not clone or build private application source. The GitHub Pages website is the only push-triggered deploy path that should remain automatic; app packaging, API/Fly deploys, and release publication are manual.
 
-## Handover status
+## Current stable
 
-Prepared 2026-09-30. The old public `.github/workflows/release.yml` was removed from main in `fa9c268` so public main no longer clones private source or publishes app releases from a tag/dispatch. Public tooling PR #3 was closed during the second review so it cannot restore a competing build path. This handover is based on public main `8725a84`, not that tooling branch. Source-owned uploads still check that the legacy workflow is absent before uploading. **0.3.5 remains on hold.** This cleanup changes neither the current stable v0.3.4 nor website version/download settings.
+[RacePulse v0.3.5](https://github.com/gAlexander77/racepulse-release/releases/tag/v0.3.5) was published on 2026-10-04. The source-owned workflow built a fresh portable bundle and verified all three draft assets. Published anonymous downloads match the retained bundle; GitHub Latest and the first eligible updater entry select v0.3.5. Public PR #4 and successful Pages run `37184000380` updated the paired website version/download and both changelogs, with live home/install/changelog checks passing.
 
-The public `SOURCE_REPO_PAT` Actions secret was deleted during the second review. Revoke its underlying token only after establishing that it was dedicated to this retired workflow. Public site builds need no credential for private source. The owner has stored `RELEASE_REPO_TOKEN` in private source Actions secrets; its presence was confirmed through metadata only. Actual scope/expiration/access and candidate upload acceptance remain unverified.
+Owner live-game acceptance covered iRacing and Le Mans Ultimate. An all-provider or actual legacy-upgrade pass is not claimed; the private source release receipt records the full evidence and limits. The separate Wails v3 migration is not part of this release.
+
+## Handover history
+
+Prepared 2026-09-30. The old public `.github/workflows/release.yml` was removed from main in `fa9c268` so public main no longer clones private source or publishes app releases from a tag/dispatch. Public tooling PR #3 was closed during the second review so it cannot restore a competing build path. This handover is based on public main `8725a84`, not that tooling branch. Source-owned uploads still check that the legacy workflow is absent before uploading. At that handover, 0.3.5 was held and stable v0.3.4/site settings were unchanged. The October 4 release above supersedes that hold.
+
+The public `SOURCE_REPO_PAT` Actions secret was deleted during the second review. Revoke its underlying token only after establishing that it was dedicated to this retired workflow. Public site builds need no credential for private source. The owner has stored `RELEASE_REPO_TOKEN` in private source Actions secrets; its presence was confirmed through metadata only. The October 4 source workflow subsequently passed real preflight and authenticated draft upload/download verification. Token scope/expiration values were not inspected.
 
 Private source PR #3 merged to main in `6b53855` on 2026-09-30. Source CI and its draft-build replacement are both active and accept only manual dispatch; the old private tag-triggered release is retired. The merge did not start a hosted build. Website Pages is the only automatic CI/CD path.
 
