@@ -50,18 +50,6 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 ![Widget customization preview](site/static/assets/widget-customization-preview.gif)
 
-**Overlay Widget**
-
-![iRacing inputs telemetry overlay at Sebring](site/static/assets/iracing-input-telemetry-overlay-sebring.gif)
-
-**Works across multiple titles (LMU in preview below)**
-
-![Working in LMU](site/static/assets/lmu-overlay-preview.gif)
-
-**Use Multiple widgets at once. Relative Widget, Flat Map Widget, and Input Widget Active in iRacing**
-
-![Relative Widget, Flat Map Widget, and Input Widget Active in iRacing](site/static/assets/iracing-overlay-preview.gif)
-
 ## What this repository is for
 
 This repo is the public release, documentation, issue tracking, and Hugo website home for RacePulse.
