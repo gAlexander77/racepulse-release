@@ -23,7 +23,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "What sim racing games does RacePulse support?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "RacePulse supports six games: iRacing, Assetto Corsa Competizione (ACC), Assetto Corsa, Le Mans Ultimate (LMU), F1 25, and F1 24. iRacing, ACC, AC, and LMU use Windows shared memory (LMU needs the Enable Plugins toggle turned on once). F1 25 and F1 24 use UDP telemetry (one-time toggle in game settings)."
+        "text": "RacePulse supports six games: iRacing, Assetto Corsa Competizione (ACC), Assetto Corsa, Le Mans Ultimate (LMU), F1 25, and F1 24. iRacing, ACC, AC, and LMU use Windows shared memory (LMU needs the Enable Plugins toggle turned on once). F1 25 and F1 24 use UDP telemetry (one-time setting in the game)."
       }
     },
     {
@@ -31,7 +31,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "Do I need to install plugins or configure anything?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No plugins to install for any game. For iRacing, ACC, and Assetto Corsa, RacePulse detects the game automatically via shared memory. For Le Mans Ultimate, turn on Enable Plugins in Settings > Gameplay (one-time) — RacePulse reads the shared memory interface built into the game. For F1 25 and F1 24, enable UDP Telemetry in the game's settings (one-time)."
+        "text": "No plugins to install for any game. For iRacing, ACC, and Assetto Corsa, RacePulse detects the game automatically via shared memory; ACC and Assetto Corsa are detected once you load into a session. For Le Mans Ultimate, turn on Enable Plugins in Settings > Gameplay (one-time). RacePulse reads the shared memory interface built into the game. For F1 25 and F1 24, enable UDP Telemetry in the game's settings and set the UDP port to one RacePulse listens on: 22025, 22024, 22023, or 20777."
       }
     },
     {
@@ -39,7 +39,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "Does RacePulse work in VR?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "RacePulse overlays are standard Windows windows, so they appear on your desktop monitor rather than inside a VR headset. If your sim supports a desktop mirror or spectator view, the overlays will be visible there. For in-headset overlays, you would need a VR overlay tool like OVR Toolkit to bring the RacePulse widgets into your VR environment."
+        "text": "RacePulse overlays are standard Windows windows, so they appear on your desktop monitor rather than inside a VR headset. If your sim supports a desktop mirror or spectator view, the overlays will be visible there. For in-headset overlays, you would need a VR overlay app to bring the RacePulse widgets into your VR environment."
       }
     },
     {
@@ -47,7 +47,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "How many widgets does RacePulse have?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "RacePulse has 12 overlay widgets: Speed, Gear, RPM, Lap Time, Delta, Inputs, Fuel, G-Force, Telemetry Core (all-in-one display), Inputs Telemetry (scrolling input graph), Flat Track Map (car positions on track), and Relative (nearby drivers with gap times — iRacing only)."
+        "text": "RacePulse has 14 overlay widgets: Speed, Gear, RPM, Lap Times, Delta, Inputs, Fuel, G-Force, Telemetry Core (all-in-one display), Inputs Telemetry (scrolling input graph), Flat Track Map (car positions on track), Relative (nearby drivers with gap times), Standings (the whole field by class), and Lap Log (every lap with its delta)."
       }
     },
     {
@@ -55,7 +55,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "Does RacePulse require an installer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. RacePulse is a single portable executable (about 21MB). Download RacePulse.exe, run it, and you're ready. No installation, no dependencies, no runtime to install."
+        "text": "No. RacePulse is a single portable executable (about 16MB). Download RacePulse.exe, run it, and you're ready. No installation, no dependencies, no runtime to install."
       }
     },
     {
@@ -79,7 +79,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "Can I use RacePulse while streaming?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. RacePulse widgets are standard windows that appear in OBS window and game captures. If you use Game Capture in OBS, you may need to add each widget as a separate Window Capture source, or switch to Display Capture to pick them up automatically."
+        "text": "Yes. RacePulse widgets are standard windows, so streaming and recording software can capture them. A display capture picks them up automatically. A game capture may not show them; add each widget as its own window capture, or use a display capture instead."
       }
     },
     {
@@ -87,7 +87,23 @@ ogImage: "assets/application-preview.jpg"
       "name": "How do I update RacePulse?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Download the latest RacePulse.exe from the releases page and replace your existing file. Widget positions, sizes, and settings are stored separately and will be preserved across updates."
+        "text": "RacePulse checks for new versions when it starts and shows an update banner when one is out. Choose Update now and it downloads, checks, and restarts into the new version. You can also check from Settings, or download the latest RacePulse.exe from the releases page and replace your existing file. Widget positions, sizes, layouts, and settings are stored separately and will be preserved across updates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do my widgets disappear when I'm not driving?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only show with telemetry is on by default. It hides locked widgets while no game is sending telemetry, after a 5-second countdown on each widget, and shows them again as soon as telemetry returns. Widgets always show while you arrange them. To keep them on screen all the time, turn off Only show with telemetry in the Overlay menu in RacePulse's bottom bar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does RacePulse keep my settings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the .racepulse folder in your Windows user profile. It holds your widgets' places, sizes, and settings, your widget layouts, and the telemetry dashboard's settings. Settings > Advanced in RacePulse opens the folder. Updating or replacing RacePulse.exe doesn't touch it."
       }
     }
   ]
@@ -102,7 +118,7 @@ Yes. RacePulse is completely free — no subscription, no trial period, no premi
 
 ### Does RacePulse require an installer?
 
-No. RacePulse is a single portable executable, about 21MB. Download `RacePulse.exe`, run it, and you're ready. No installation wizard, no runtime dependencies, no `.NET` or `Java` to install.
+No. RacePulse is a single portable executable, about 16MB. Download `RacePulse.exe`, run it, and you're ready. No installation wizard and no runtimes to install.
 
 ### What operating system does RacePulse run on?
 
@@ -110,7 +126,13 @@ Windows 10 and Windows 11 (64-bit). iRacing, ACC, Assetto Corsa, and Le Mans Ult
 
 ### How do I update RacePulse?
 
-Download the latest `RacePulse.exe` from the [Releases page](https://github.com/gAlexander77/racepulse-release/releases) and replace your existing file. Widget positions, sizes, and all customized settings are stored separately in `~/.racepulse/` and will be preserved across updates.
+RacePulse checks for new versions when it starts. When one is out, an update banner appears under the title bar: choose **Update now**, and RacePulse downloads the new version, checks it, and restarts into it. You can also check from **Settings › Updates**.
+
+To update by hand, download the latest `RacePulse.exe` from the [Releases page](https://github.com/gAlexander77/racepulse-release/releases) and replace your existing file. Widget positions, sizes, layouts, and all customized settings are stored separately in `%USERPROFILE%\.racepulse` and will be preserved across updates.
+
+### Where does RacePulse keep my settings?
+
+In `%USERPROFILE%\.racepulse`. It holds your widgets' places, sizes, and settings, your widget layouts, and the telemetry dashboard's settings. **Settings › Advanced** in RacePulse opens the folder. Updating or replacing `RacePulse.exe` doesn't touch it. Close RacePulse before backing it up or editing its files.
 
 ---
 
@@ -121,27 +143,27 @@ Download the latest `RacePulse.exe` from the [Releases page](https://github.com/
 RacePulse supports six games:
 
 - [**iRacing**](/iracing-overlay/) — Windows shared memory, no setup needed
-- [**Assetto Corsa Competizione**](/acc-overlay/) — Windows shared memory, no setup needed
-- [**Assetto Corsa**](/assetto-corsa-overlay/) — Windows shared memory, no setup needed
+- [**Assetto Corsa Competizione**](/acc-overlay/) — Windows shared memory, no setup needed; load into a session to be detected
+- [**Assetto Corsa**](/assetto-corsa-overlay/) — Windows shared memory, no setup needed; load into a session to be detected
 - [**Le Mans Ultimate**](/lmu-overlay/) — built-in shared memory, enable Plugins in LMU settings once
-- [**F1 25**](/f1-25-overlay/) — UDP telemetry on port 22025, enable in game settings once
-- [**F1 24**](/f1-24-overlay/) — UDP telemetry on port 22024, enable in game settings once
+- [**F1 25**](/f1-25-overlay/) — UDP telemetry, enable in game settings once and pick one of RacePulse's ports
+- [**F1 24**](/f1-24-overlay/) — UDP telemetry, enable in game settings once and pick one of RacePulse's ports
 
 ### Do I need to install plugins or configure anything?
 
-For **iRacing, ACC, and Assetto Corsa** — no. RacePulse detects these games automatically via shared memory with zero configuration.
+For **iRacing, ACC, and Assetto Corsa** — no. RacePulse detects these games automatically via shared memory with zero configuration. ACC and Assetto Corsa can't be detected from their main menus, so load into a session first.
 
 For **Le Mans Ultimate** — one-time step: go to **Settings > Gameplay** and turn on **Enable Plugins**. RacePulse reads the shared memory interface built into the game, so there is no plugin DLL to install.
 
-For **F1 25 and F1 24** — one-time step: go to **Settings > Telemetry Settings** and set **UDP Telemetry** to **On**. The default UDP port (22025 for F1 25, 22024 for F1 24) works automatically.
+For **F1 25 and F1 24** — one-time step: go to **Settings > Telemetry Settings**, set **UDP Telemetry** to **On**, and set the **UDP Port** to one RacePulse listens on: 22025, 22024, 22023, or 20777. Use UDP format 2025 for F1 25 and 2024 for F1 24. If RacePulse doesn't connect, another app may be using that port; pick another of these ports in the game. The [install guide](/install/) has the full steps.
 
 ### Can I switch between games without reconfiguring?
 
-Yes. RacePulse auto-detects which supported game is currently running. Close one sim, launch another, and RacePulse connects to the new game automatically. Your widget layout and settings carry over between games.
+Yes. RacePulse auto-detects which supported game is currently running. Close one sim, launch another, and RacePulse connects to the new game automatically. Your widget layout and settings carry over between games. If the new game can't feed a widget, such as Relative in ACC, that widget hides with a notice and comes back when you switch to a game that supports it.
 
 ### Does RacePulse work with iRacing in VR?
 
-RacePulse overlays are standard Windows windows that appear on your desktop monitor, not inside the VR headset. If you use a desktop mirror or spectator view, overlays will be visible there. To bring RacePulse widgets into your VR environment, you can use a VR overlay tool like **OVR Toolkit** or **Desktop+** to project the windows into headset space.
+RacePulse overlays are standard Windows windows that appear on your desktop monitor, not inside the VR headset. If you use a desktop mirror or spectator view, overlays will be visible there. To bring RacePulse widgets into your VR environment, you can use a VR overlay app to project the windows into headset space.
 
 ---
 
@@ -149,36 +171,45 @@ RacePulse overlays are standard Windows windows that appear on your desktop moni
 
 ### How many widgets does RacePulse have?
 
-RacePulse has **12 overlay widgets**:
+RacePulse has **14 overlay widgets**:
 
-- **Core (8):** Speed, Gear, RPM, Lap Time, Delta, Inputs, Fuel, G-Force
-- **Advanced (4):** Telemetry Core (all-in-one display), Inputs Telemetry (scrolling input graph), Flat Track Map (car positions), Relative (nearby drivers with gaps)
+- **Core (8):** Speed, Gear, RPM, Lap Times, Delta, Inputs, Fuel, G-Force (listed as Basic in the app)
+- **Advanced (6):** Telemetry Core (all-in-one display), Inputs Telemetry (scrolling input graph), Flat Track Map (car positions), Relative (nearby drivers with gaps), Standings (the whole field by class, in six layouts), Lap Log (every lap with its delta)
 
 See the full [features page](/features/) for details on each widget.
 
 ### Do all widgets work with every game?
 
-Most widgets work across all six supported games. Two exceptions:
+Most widgets work across all six supported games. The exceptions:
 
-- **Relative** — iRacing only (requires iRating, safety rating, and license class data)
-- **Flat Track Map** — iRacing, Le Mans Ultimate, and F1 only (requires per-car position data)
+- **Relative, Standings, and Flat Track Map** — iRacing, Le Mans Ultimate, and F1 (they need data about every car that ACC and Assetto Corsa don't send)
+- **Delta** — iRacing, Le Mans Ultimate, and ACC (F1 and Assetto Corsa don't send a live delta)
 
-All other widgets work identically across iRacing, ACC, Assetto Corsa, LMU, F1 25, and F1 24.
+Some settings depend on the game too. iRating, license, and who's talking in Relative and Standings are iRacing only, and country flags show in iRacing, F1, and Le Mans Ultimate online servers. The app marks each widget and setting with the sims it works in.
 
 ### Can I customize widget appearance and behavior?
 
-Yes. Every widget has per-instance settings:
+Yes. Every widget has its own Customize page with a live preview:
 
-- **Units** — km/h or mph for speed, Celsius or Fahrenheit for temperatures
+- **Units** — KPH or MPH for speed, Celsius or Fahrenheit for temperatures, liters or US gallons for fuel
 - **Visibility toggles** — show or hide individual display elements
+- **Layouts and colors** — for example, RPM as a number or rev lights, and Standings in six layouts
 - **Frame rate** — 60, 30, or 15 FPS per widget
-- **Position and size** — drag to reposition in Edit Mode, resize as needed
+- **Position and size** — drag to reposition while arranging, resize as needed
 
-All settings persist across sessions automatically. You can reset any widget to defaults through the customization panel.
+All settings persist across sessions automatically. **Reset defaults** on a widget's Customize page restores its default settings.
 
 ### How do I reposition widgets on screen?
 
-Click **Edit Mode** in the RacePulse dashboard. Widgets become draggable — move them anywhere on your screen. Click Edit Mode again to lock them in place with click-through enabled so they don't interfere with your game.
+Turning a widget on starts **Arrange**: widgets become draggable, so you can move them anywhere on your screen. When you're done, choose **Lock for racing** in the bottom bar. Locked widgets are click-through, so they don't interfere with your game. Switch back to **Arrange** any time to move them again.
+
+To keep different setups, save them as widget layouts from the layout picker in the bottom bar.
+
+### Why do my widgets disappear when I'm not driving?
+
+**Only show with telemetry** is on by default. It hides locked widgets while no game is sending telemetry, for example in menus or between sessions. Each widget counts down for 5 seconds first, and they all come back as soon as telemetry returns. Widgets always show while you arrange them.
+
+To keep widgets on screen all the time, open the **Overlay** menu in RacePulse's bottom bar and turn off **Only show with telemetry**. You can also choose **Keep showing** on the countdown banner in the main window.
 
 ---
 
@@ -190,10 +221,10 @@ RacePulse is designed to be lightweight. It reads telemetry passively — shared
 
 ### Can I use RacePulse while streaming or recording?
 
-Yes. RacePulse widgets are standard windows that appear in OBS and other capture tools.
+Yes. RacePulse widgets are standard windows that streaming and recording software can capture.
 
-- **Display Capture** in OBS picks up widgets automatically
-- **Game Capture** may not show widgets — add each widget as a separate **Window Capture** source, or switch to Display Capture
+- **Display capture** picks up widgets automatically
+- **Game capture** may not show widgets. Add each widget as its own **window capture** source, or switch to display capture.
 - Widgets have transparent backgrounds, so they overlay cleanly in both the game and the stream
 
 ### Privacy & Data Collection
@@ -213,16 +244,18 @@ RacePulse does not sell personal data and does not use analytics to collect raci
 ### RacePulse doesn't detect my game
 
 - Make sure you are **in a session** (on track or in replay), not in the main menu — shared memory is only populated while on track
+- For **ACC and Assetto Corsa**: they can't be detected from the main menu, so load into a session first
 - For **Le Mans Ultimate**: verify that **Settings > Gameplay > Enable Plugins** is turned on
-- For **F1 25/F1 24**: verify that **UDP Telemetry** is enabled in the game's Telemetry Settings
-- Check that the RacePulse dashboard shows "Searching" — if it shows "Disconnected," click Connect
+- For **F1 25/F1 24**: verify that **UDP Telemetry** is enabled and the **UDP Port** is 22025, 22024, 22023, or 20777. If it still doesn't connect, another app may be using that port; pick another of these ports in the game, or close the other app.
+- Check the connection pill at the top of RacePulse. It reads **LIVE** when telemetry arrives. If it reads **Not connected**, click it to auto-detect, or open its menu to pick your sim.
 
 ### Overlays don't appear on screen
 
-- Make sure at least one widget is **enabled** (toggled on) in the dashboard
-- Try toggling **Edit Mode** on and off
+- Make sure at least one widget is **on** in All widgets
+- With **Only show with telemetry** on, locked widgets stay hidden until a game sends telemetry. Switch to **Arrange** to see them, or turn the setting off in the bottom bar's **Overlay** menu.
+- If a widget card says **Hidden in** your sim, that game doesn't send the data the widget needs
 - Run your game in **Borderless Windowed** mode for best overlay compatibility
-- If using multiple monitors, check that widgets aren't positioned on a different display
+- If using multiple monitors, **Overlay › Recenter all widgets** brings every widget to the main window's screen
 
 ### Windows SmartScreen blocks RacePulse
 
@@ -230,7 +263,7 @@ On first launch, Windows may show a SmartScreen warning because the app is not c
 
 ### Widgets show stale data after closing a game
 
-RacePulse automatically disconnects after approximately 10 seconds of no telemetry data. You can also click **Disconnect** manually in the dashboard to clear stale data immediately.
+RacePulse disconnects automatically shortly after the game stops sending telemetry. You can also choose **Disconnect** from the connection pill's menu to clear stale data immediately.
 
 ---
 

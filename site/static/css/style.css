@@ -744,6 +744,8 @@ nav.bar ul a.is-active::after {
 }
 .widgets-grid .cell:nth-child(4n) { border-right: 0; }
 .widgets-grid .cell:nth-last-child(-n+4) { border-bottom: 0; }
+/* 14 cells leave a short last row; no rule beside the empty space. */
+.widgets-grid .cell:last-child { border-right: 0; }
 .widgets-grid .cell .nm {
   font-family: var(--display);
   font-size: 28px;
@@ -1111,6 +1113,11 @@ footer.foot .colophon {
   color: var(--ink-2);
 }
 .prose tr:last-child td { border-bottom: 0; }
+/* Wide tables scroll in their own box on phones instead of widening the page. */
+@media (max-width: 680px) {
+  .prose table { display: block; overflow-x: auto; }
+  .prose th, .prose td { padding: 12px 10px; }
+}
 
 .prose blockquote {
   margin: 24px 0;
@@ -1271,7 +1278,7 @@ footer.foot .colophon {
   margin: 0 auto;
   align-items: start;
 }
-.content-with-toc .prose { max-width: 70ch; }
+.content-with-toc .prose { max-width: 70ch; min-width: 0; }
 
 /* ───── TOC ───── */
 .toc {
@@ -1421,6 +1428,8 @@ html.js .reveal-stagger:not(.is-visible) > * {
 .reveal-stagger.is-visible > *:nth-child(10) { transition-delay: 0.42s; }
 .reveal-stagger.is-visible > *:nth-child(11) { transition-delay: 0.46s; }
 .reveal-stagger.is-visible > *:nth-child(12) { transition-delay: 0.50s; }
+.reveal-stagger.is-visible > *:nth-child(13) { transition-delay: 0.54s; }
+.reveal-stagger.is-visible > *:nth-child(14) { transition-delay: 0.58s; }
 
 /* ───── HERO LOAD ANIMATION (JS-gated for crawler safety) ───── */
 @keyframes hero-rise {
@@ -1480,6 +1489,8 @@ html.js .hero-meta               { animation-delay: 0.28s; }
   .widgets-grid { grid-template-columns: repeat(2, 1fr); }
   .widgets-grid .cell:nth-child(4n) { border-right: 1px solid var(--paper-2); }
   .widgets-grid .cell:nth-child(2n) { border-right: 0; }
+  .widgets-grid .cell:nth-last-child(-n+4) { border-bottom: 1px solid var(--paper-2); }
+  .widgets-grid .cell:nth-last-child(-n+2) { border-bottom: 0; }
   .feat-list .row { grid-template-columns: 1fr; gap: 18px; }
   .feat-list .soon-tag { position: static; align-self: flex-start; }
   .hero-meta { grid-template-columns: 1fr; gap: 32px; }
@@ -1520,6 +1531,7 @@ html.js .hero-meta               { animation-delay: 0.28s; }
   .sims-grid .sim:nth-child(2n) { border-right: 0; }
   .widgets-grid { grid-template-columns: 1fr; }
   .widgets-grid .cell { border-right: 0 !important; }
+  .widgets-grid .cell:nth-last-child(2) { border-bottom: 1px solid var(--paper-2); }
   .panel, .dark-panel, .howto { padding-top: 80px; padding-bottom: 80px; }
   .panel .sec-head, .dark-panel .sec-head, .preview-wrap .sec-head {
     grid-template-columns: 1fr; gap: 16px;

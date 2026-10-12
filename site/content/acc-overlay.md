@@ -1,37 +1,37 @@
 ---
 title: "Free ACC Overlay"
-subtitle: "Lightweight telemetry overlay for Assetto Corsa Competizione with automatic shared memory detection, 12 customizable widgets, and zero configuration."
-description: "Free ACC telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, and track map widgets for Assetto Corsa Competizione. No plugins needed."
+subtitle: "Lightweight telemetry overlay for Assetto Corsa Competizione with automatic shared memory detection, 11 customizable widgets, and zero configuration."
+description: "Free ACC telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, and lap log widgets for Assetto Corsa Competizione. No plugins needed."
 ogImage: "assets/application-preview.jpg"
 ---
 
 ## Free Telemetry Overlay for Assetto Corsa Competizione
 
-RacePulse is a free, standalone telemetry overlay for Assetto Corsa Competizione. It reads telemetry directly from ACC's shared memory buffers — the same interface the game uses to expose physics, graphics, and session data. No plugins, no SimHub dashboards, no configuration. Download and race.
+RacePulse is a free, standalone telemetry overlay for Assetto Corsa Competizione. It reads telemetry directly from ACC's shared memory buffers — the same interface the game uses to expose physics, graphics, and session data. No plugins, no dashboards to import, no configuration. Download and race.
 
-Unlike overlay tools that require importing dashboard layouts or installing additional software, RacePulse works immediately. ACC exposes three shared memory buffers (Physics, Graphics, and Static) whenever the sim is running, and RacePulse reads them directly at up to 60Hz.
+Unlike overlay tools that require importing dashboard layouts or installing additional software, RacePulse works immediately. ACC exposes three shared memory buffers (Physics, Graphics, and Static) while you're in a session, and RacePulse reads them directly at up to 60Hz.
 
 ## Setup
 
 1. Download `RacePulse.exe` from the [Releases page](https://github.com/gAlexander77/racepulse-release/releases)
 2. Run `RacePulse.exe` (no installation needed)
-3. Launch ACC and enter a session
+3. Launch ACC and enter a session (practice, qualifying, or race)
 4. RacePulse automatically detects ACC and begins streaming telemetry
 
-No plugins to enable, no ports to configure. ACC's shared memory is always available when the game is running.
+No plugins to enable, no ports to configure. ACC can't be detected from the main menu, so load into a session first. Widgets receive data while you're driving.
 
 > **Tip:** For best results, run ACC in **Borderless Windowed** mode. This allows RacePulse widgets to float over the game without alt-tab interruptions.
 
 ## Available Widgets for ACC
 
-ACC supports 11 of the 12 RacePulse widgets:
+ACC supports 11 of the 14 RacePulse widgets:
 
 ### Core Widgets
 
-- **Speed** — Live speed in km/h or mph
+- **Speed** — Live speed in KPH or MPH
 - **Gear** — Large gear indicator for peripheral visibility
-- **RPM** — Horizontal bar with redline indicator
-- **Lap Time** — Current lap, last lap, and personal best
+- **RPM** — The number, or a row of rev lights
+- **Lap Times** — Current lap, last lap, and personal best, with an optional strike-through when ACC invalidates your lap
 - **Delta** — Real-time delta to best lap using ACC's built-in delta calculation
 - **Inputs** — Throttle, brake, and clutch as vertical bars
 - **Fuel** — Fuel remaining with estimated laps of fuel
@@ -39,13 +39,14 @@ ACC supports 11 of the 12 RacePulse widgets:
 
 ### Advanced Widgets
 
-- **Telemetry Core** — Combined display with rev lights, gear, RPM, speed, position, track temperature, elapsed time, and lap count
-- **Inputs Telemetry** — Scrolling input graph with pedal bars, optional steering wheel, gear, and speed
+- **Telemetry Core** — Combined display with rev lights, gear, and readouts you choose, such as speed, RPM, position, track temperature, and lap count. ACC doesn't send elapsed session time, so that reading shows a dash.
+- **Inputs Telemetry** — Scrolling input graph with pedal bars, a steering wheel, gear, and speed. ABS can color the brake line.
+- **Lap Log** — Every lap you drive with its delta, sectors, and lap validity, under your best lap
 
 ### Partial Support
 
-- **Flat Track Map** — Not currently available for ACC (requires per-car coordinate data that ACC's shared memory does not expose in a compatible format)
-- **Relative** — Not available for ACC (iRacing exclusive, requires iRating and license data)
+- **Flat Track Map** — Not currently available for ACC (requires per-car data that ACC's shared memory does not expose in a compatible format)
+- **Relative** and **Standings** — Not currently available for ACC, for the same reason. If one is open when you connect ACC, it hides with a notice and comes back when you switch to a supported sim.
 
 ## ACC-Specific Telemetry
 
@@ -69,14 +70,14 @@ Every widget can be individually customized:
 - Metric or imperial units per widget
 - Toggle display elements on or off
 - Configurable frame rate (60, 30, or 15 FPS)
-- Drag-to-reposition in Edit Mode
+- Drag-to-reposition while arranging, then lock for racing
 - Settings persist automatically between sessions
 
 ## How It Works
 
 ACC exposes telemetry through three Windows shared memory buffers:
 
-- **Physics** (~60Hz) — speed, G-forces, tyre data, fuel, inputs, temperatures
+- **Physics** (~60Hz) — speed, G-forces, tire data, fuel, inputs, temperatures
 - **Graphics** (~5Hz) — session info, positions, gaps, delta, flags, weather
 - **Static** (once on connect) — car model, track name, max RPM, pit window
 
@@ -85,8 +86,8 @@ RacePulse reads these buffers directly using Windows API calls. The connection i
 ## Why RacePulse for ACC
 
 - **Free** — No subscription, no premium tier, no feature locks
-- **Single executable** — 21MB `.exe`, no installer, no runtime dependencies
-- **Zero configuration** — No SimHub import, no plugin setup, no dashboard files
+- **Single executable** — 16MB `.exe`, no installer, no runtime dependencies
+- **Zero configuration** — No imports, no plugin setup, no dashboard files
 - **Lightweight** — Designed to run alongside demanding sims without impacting FPS
 - **Multi-sim support** — The same app works with iRacing, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24
 

@@ -1,6 +1,6 @@
 ---
 title: "Free Le Mans Ultimate Overlay"
-subtitle: "Lightweight telemetry overlay for Le Mans Ultimate with automatic shared memory detection, 12 customizable widgets, and zero configuration."
+subtitle: "Lightweight telemetry overlay for Le Mans Ultimate with automatic shared memory detection, 14 customizable widgets, and zero configuration."
 description: "Free Le Mans Ultimate telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, and track map widgets for LMU. No plugins to install."
 ogImage: "assets/lmu-overlay-preview.jpg"
 ---
@@ -27,42 +27,44 @@ Le Mans Ultimate ships with an official shared memory interface that exposes the
 
 That's the whole setup. RacePulse reads the shared memory interface built into Le Mans Ultimate itself, so there is no plugin DLL to download or install.
 
-> **Troubleshooting:** if RacePulse reports "failed to open LMU shared memory," check that **Settings > Gameplay > Enable Plugins** is on and that you're loaded into a session (not sitting in the main menu). On very old LMU versions that predate the built-in interface, RacePulse falls back to TheIronWolf's rF2 Shared Memory Map plugin if it's installed — updating the game is the simpler fix.
+> **Troubleshooting:** if RacePulse can't connect to LMU, check that **Settings > Gameplay > Enable Plugins** is on and that you're loaded into a session (not sitting in the main menu). If you're on a very old LMU version without the built-in interface, update the game.
 
 ## Available Widgets for Le Mans Ultimate
 
-LMU supports 11 of the 12 RacePulse widgets:
+LMU supports all 14 RacePulse widgets:
 
 ### Core Widgets
 
-- **Speed** — Live speed in km/h or mph
+- **Speed** — Live speed in KPH or MPH
 - **Gear** — Large gear indicator for peripheral visibility
-- **RPM** — Horizontal bar with redline indicator
-- **Lap Time** — Current lap, last lap, and personal best
+- **RPM** — The number, or a row of rev lights
+- **Lap Times** — Current lap, last lap, and personal best
 - **Delta** — Real-time delta to best lap using sector split comparison
 - **Inputs** — Throttle, brake, and clutch as vertical bars
-- **Fuel** — Fuel remaining with estimated laps of fuel
+- **Fuel** — Fuel remaining with estimated laps of fuel, plus optional fuel to finish and fuel to add
 - **G-Force** — 2D lateral and longitudinal G-force visualization
 
 ### Advanced Widgets
 
-- **Telemetry Core** — Combined display with rev lights, gear, RPM, speed, position, track temperature, elapsed time, and lap count
-- **Inputs Telemetry** — Scrolling input graph with pedal bars, optional steering wheel, gear, and speed
-- **Flat Track Map** — Horizontal bar showing all cars on track with class-colored markers and your position highlighted
+- **Telemetry Core** — Combined display with rev lights, gear, and readouts you choose, such as speed, RPM, position, class position, time left, ERS, and track temperature
+- **Inputs Telemetry** — Scrolling input graph with pedal bars, gear, speed, and a steering wheel that uses your car's own steering lock
+- **Flat Track Map** — Every car on one line of the lap, with class-colored markers, a lane per class if you like, and your position highlighted
+- **Relative** — Nearby drivers sorted by gap on track, with class colors, car numbers, country flags, and pit/out lap indicators. From the pits it follows the best-placed car on track until you head out.
+- **Standings** — The field by class in six layouts, with class headers, gaps, laps, and pit stops
+- **Lap Log** — Every lap you drive with its delta and sectors, under the session best and your best
 
-### Not Available
-
-- **Relative** — Not available for LMU (iRacing exclusive, requires iRating and license class data)
+> **Note:** On LMU online servers, Relative and Standings show each driver's country flag. LMU sends no nationality in single-player sessions, so those show no flags.
 
 ## LMU-Specific Telemetry
 
-RacePulse captures data specific to the rFactor 2 / LMU engine:
+RacePulse captures data specific to the LMU engine:
 
 - **ERS Battery** level (for hybrid prototypes)
 - **Boost Torque** from hybrid systems
 - **Turbo Boost** pressure
 - **Competitor gaps** — delta to leader and delta to car ahead from scoring data
 - **Multi-class support** — class positions and class-colored track map markers
+- **Car numbers, team names, and countries** — read from LMU's own local web interface on your PC while the game is running, so custom-team cars show their real numbers. Countries are only available on online servers.
 
 The Delta widget uses a multi-tier approach for LMU: sector split comparisons after sector boundaries for accuracy, and proportional estimation during the first sector for real-time feedback.
 
@@ -70,7 +72,7 @@ The Delta widget uses a multi-tier approach for LMU: sector split comparisons af
 
 LMU's shared memory carries two streams updated at different rates:
 
-- **Telemetry** (~50Hz) — Per-vehicle physics data including speed, G-forces, tyre data, fuel, inputs, engine data
+- **Telemetry** (~50Hz) — Per-vehicle physics data including speed, G-forces, tire data, fuel, inputs, engine data
 - **Scoring** (~5Hz) — Session information, standings, gaps, lap times, sector times, pit status
 
 RacePulse reads both and merges the data into a unified stream. The higher-frequency telemetry provides smooth animations for speed, RPM, and input widgets, while scoring provides accurate timing and position data.
@@ -82,15 +84,15 @@ Every widget is independently configurable:
 - Metric or imperial units
 - Toggle individual display elements
 - Configurable frame rate (60, 30, or 15 FPS)
-- Drag-to-reposition in Edit Mode
+- Drag-to-reposition while arranging, then lock for racing
 - Persistent settings across sessions
 
 ## Why RacePulse for Le Mans Ultimate
 
 - **Free** — No subscription, no paid tier
-- **Single executable** — 21MB `.exe`, no installer required
+- **Single executable** — 16MB `.exe`, no installer required
 - **One-time setup** — Turn on Enable Plugins in LMU once, then forget about it
-- **Endurance-ready** — Fuel estimation and multi-class track map for long races
+- **Endurance-ready** — Fuel estimation, multi-class standings, and a multi-class track map for long races
 - **Multi-sim** — Same app works with iRacing, ACC, Assetto Corsa, F1 25, and F1 24
 
 ---

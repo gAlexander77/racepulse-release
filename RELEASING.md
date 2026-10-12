@@ -8,6 +8,10 @@ This repository hosts public releases, user documentation, issues, changelogs, a
 
 Owner live-game acceptance covered iRacing and Le Mans Ultimate. An all-provider or actual legacy-upgrade pass is not claimed; the private source release receipt records the full evidence and limits. The separate Wails v3 migration is not part of this release.
 
+## 0.4.0 (published 2026-10-12)
+
+0.4.0 is the Wails v3 release, published 2026-10-12 from source tag `v0.4.0`. Its website and documentation changes set the paired `appVersion`/`downloadURL` to v0.4.0, date the v0.4.0 entry in both changelogs, and describe the 0.4.0 app. The site's 16 MB size figure matches the published `RacePulse.exe` (16,446,464 bytes).
+
 ## Handover history
 
 Prepared 2026-09-30. The old public `.github/workflows/release.yml` was removed from main in `fa9c268` so public main no longer clones private source or publishes app releases from a tag/dispatch. Public tooling PR #3 was closed during the second review so it cannot restore a competing build path. This handover is based on public main `8725a84`, not that tooling branch. Source-owned uploads still check that the legacy workflow is absent before uploading. At that handover, 0.3.5 was held and stable v0.3.4/site settings were unchanged. The October 4 release above supersedes that hold.
