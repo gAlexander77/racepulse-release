@@ -2,6 +2,78 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.4.0] — 2026-10-12
+
+RacePulse 0.4.0 redesigns the main window and most widgets, adds the Standings and Lap Log widgets, brings Relative and Standings to Le Mans Ultimate and F1, and adds widget layouts, a Settings window, and a getting-started Help guide.
+
+**Behavior change:** widgets now hide when no game is sending telemetry. **Only show with telemetry** is on by default, including for existing setups. Locked widgets count down for 5 seconds, then hide, and come back as soon as telemetry returns. They always show while you arrange them. To keep widgets on screen all the time, open the **Overlay** menu in the bottom bar and turn off **Only show with telemetry**, or choose **Keep showing** on the countdown banner.
+
+**Upgrading from 0.3.5:** your widgets, their places, and their settings carry over. They stay in `%USERPROFILE%\.racepulse`. Edit Mode is now **Arrange**, click-through is **Lock for racing**, and each widget's settings are on its own **Customize** page.
+
+### New
+
+- **Standings widget:** the whole field by class in six layouts: Classic Multiclass, Timing Tower, Class Columns, Battle View, Analyst, and Practice and Qualifying. Every column can follow the layout or be shown or hidden. Purple marks a class's fastest lap and green a personal best. Works in iRacing, Le Mans Ultimate, and F1.
+- **Lap Log widget:** every lap under a banner of the session best and your best, with its delta, IN and OUT pit tags, and optional sectors, fuel used, temperatures, top speed, and position. A live row shows the lap you're driving. Works in every supported sim.
+- **Relative in Le Mans Ultimate and F1:** Relative now works in Le Mans Ultimate and F1 as well as iRacing.
+- **Country flags** in Relative and Standings: from profile flair in iRacing, nationality in F1, and nationality on Le Mans Ultimate online servers. Show Country Flags is on by default.
+- **Widget layouts:** save the widgets on screen, with their places, sizes, and settings, as named layouts, and switch between them from the bottom bar. The Widget layouts page shows each layout across your monitors, and layouts remember the monitors they were saved on. Choose No layout to use RacePulse without them.
+- **Settings window** (the gear at the top of the window, or Ctrl+,): language, the compact sidebar, Only show with telemetry, the selected layout, the connection and each sim's setup, updates, and the data folder in one place, with search.
+- **Language:** English (US), English (UK), or Automatic, in Settings › General. English (UK) uses British spelling in the main window and every widget. Automatic decides from your Windows language and time zone, on your computer.
+- **Overlay menu** in the bottom bar, with Only show with telemetry, Recenter all widgets, and Turn all off. Recenter and Turn all off now ask first.
+- **Help is a getting-started guide:** four steps (connect your sim, turn on widgets, place and lock them, save a layout) that tick off as you go, plus tips and setup for each sim.
+- **Telemetry dashboard (experimental):** a car-style dash in its own window for a second screen, with borderless full screen. Open it from Dashboard in the side menu and choose Pop out.
+- **Setting hints:** hover a setting name with a dotted underline for a short explanation.
+- **Preview backdrops:** on a widget's Customize page, see it over a sunny, stormy, or night track.
+
+### Improved
+
+- **Redesigned main window:** a widget sidebar, an All widgets gallery with live previews and Advanced widgets first, a Customize page for each widget with a large preview, and a bottom bar with the layout picker, the widget count, and Arrange / Lock for racing.
+- **Arrange and Lock for racing** replace Edit Mode and Click-Through. Turning a widget on starts Arrange, and you can set widgets up before starting a game. While arranging, each widget has a lock button and a × that turns off just that widget.
+- **Relative redesign:** class colors, car numbers, laps-ahead colors, a headset for who's talking on the radio (iRacing), an optional header with strength of field or the session, Hide Parked Cars, Your Row Color, and smooth row animations. Its window fits what it shows.
+- **Relative in iRacing:** gaps between classes are measured on your class's lap, so a faster car alongside reads close to 0.0. OUT now marks a car on the lap after it leaves the pits, instead of every car at a race start. From the garage, while spectating, or in a replay, it centers on the car the camera follows.
+- **Flat Track Map redesign:** horizontal or vertical, a lane per class, tags with position, number, or initials, sector lines, yellow flag zones, a pit lane row, and warnings when a faster class closes on you.
+- **Telemetry Core redesign:** choose each readout from 19 readings, with an optional delta bar, pedal bars, fuel bar, flags, and ABS light.
+- **Inputs Telemetry redesign:** a steering wheel at either end that uses the car's own steering lock in iRacing and Le Mans Ultimate, ABS shown on the brake line (iRacing and ACC), and more graph settings. The pedal bars sit closer together, in Inputs too.
+- **Basic widgets redesign:** RPM can show rev lights, Speed an optional session top speed and pit limiter state, Lap Times three layouts, and G-Force rings, a trail, and lap peaks. Numbers sit in fixed slots, so they no longer shift as they change.
+- **Fuel:** use per lap is now averaged over your recent laps, leaving out pit and refueling laps. Optional fuel to finish, a SAFE, TIGHT, or SHORT status, and fuel to add at your next stop.
+- **Widgets a sim can't feed now hide** instead of staying on screen empty, with a notice that says why. They come back in the same place when you switch to a sim that supports them.
+- Each widget card shows the sims it works in, and settings that only some sims support are marked.
+- Widgets now open as windows of RacePulse itself instead of separate helper programs, and they have their own taskbar button, so the main window is easy to find.
+- Delta is now offered only in iRacing, Le Mans Ultimate, and ACC. F1 and Assetto Corsa don't send a live delta, so it used to sit at +0.000 there.
+- F1 25's 2026 Season Pack telemetry format is supported.
+- **Le Mans Ultimate:** car numbers and team names come from the game, so custom-team cars show their real numbers. Driver names drop LMU's account tag, and class names read cleanly.
+- **Le Mans Ultimate:** time left, laps left, and your class position now reach the widgets.
+- Clearer connection errors: picking a game that isn't running now says to start it and load into a session.
+
+### Fixed
+
+- **iRacing:** drivers whose names arrive as question marks (characters iRacing's data can't hold) now show as Driver #N with their car number.
+- **iRacing:** Delta shows dashes while iRacing marks the delta invalid, instead of 0.000.
+- **Le Mans Ultimate:** Delta shows dashes before you have a best lap, instead of a red +0.000.
+- Delta shows a plain 0.000 when you're level with your best, instead of a red +0.000.
+- Telemetry Core shows a dash instead of P0 when you have no position yet.
+- G-Force now shows the force you feel on both axes: out of the corner, up under braking, and down under acceleration.
+- **F1:** best laps now show in Lap Times; the Best row used to stay empty.
+- **F1:** races were reported as an unknown session, and Sprint Shootouts as races.
+- **F1:** the Flat Track Map put every car on the start line. Cars now show where they are on the lap, including you on your out lap.
+- **F1:** a car after an empty grid slot could be missing from the field.
+- **F1:** the Inputs Telemetry steering wheel turned the wrong way.
+- **ACC:** an unset best lap showed as a huge time; it now shows as no time.
+- **ACC and Assetto Corsa:** the Inputs Telemetry steering wheel turned the wrong way and only about a third of the way at full lock.
+- Retry after a failed update now starts the download again.
+
+### Good to know
+
+If something looks wrong in your sim, please [open an issue on GitHub](https://github.com/gAlexander77/racepulse-release/issues) with the sim, the widget, and what you saw.
+
+- **F1:** if RacePulse doesn't connect, another app may be using the port the game sends to. Pick another of RacePulse's ports (22025, 22024, 22023, or 20777) in the game, or close the other app.
+- **Le Mans Ultimate:** country flags need an online server; single-player sessions have none. The Lap Log's session best clears when the driver who set it leaves.
+- Standings counts positions gained only if RacePulse was running before the green flag, and counts pit stops and stints from what it has seen.
+- A layout's widgets on a monitor that isn't connected stay where they were saved. Use Recenter all widgets to bring them onto your screen.
+- The telemetry dashboard is experimental and has few settings for now.
+
+---
+
 ## [v0.3.5] — 2026-10-04
 
 ### Added
@@ -28,7 +100,7 @@ All notable changes to RacePulse releases are documented here.
 
 ### Fixed
 
-- **Le Mans Ultimate:** RacePulse now works on fresh LMU installs with zero setup. It reads the shared memory interface built into the game, so the rF2 Shared Memory Map plugin DLL is no longer required — just turn on **Settings > Gameplay > Enable Plugins**. Previously, LMU telemetry silently depended on a plugin that other apps (Crew Chief, wheel software) happened to install; without it, RacePulse never detected the game. Older LMU versions that predate the built-in interface still fall back to the plugin if installed.
+- **Le Mans Ultimate:** RacePulse now works on fresh LMU installs with zero setup. It reads the shared memory interface built into the game, so the separate shared memory plugin DLL is no longer required — just turn on **Settings > Gameplay > Enable Plugins**. Previously, LMU telemetry silently depended on a plugin that other apps happened to install; without it, RacePulse never detected the game. Older LMU versions that predate the built-in interface still fall back to the plugin if installed.
 
 ### Improved
 

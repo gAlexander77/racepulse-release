@@ -5,8 +5,8 @@
   "@type": "VideoObject",
   "name": "RacePulse — real-time sim racing telemetry overlays",
   "description": {{ .Site.Params.description | jsonify | safeJS }},
-  "thumbnailUrl": "{{ "assets/application-preview.jpg" | absURL }}",
-  "contentUrl": "{{ "assets/application-preview.mp4" | absURL }}",
+  "thumbnailUrl": "{{ "assets/application-preview.jpg" | absURL }}?v={{ .Site.Params.videoUploadDate }}",
+  "contentUrl": "{{ "assets/application-preview.mp4" | absURL }}?v={{ .Site.Params.videoUploadDate }}",
   "uploadDate": "{{ .Site.Params.videoUploadDate }}",
   "publisher": {
     "@type": "Organization",
@@ -31,13 +31,13 @@
       <span class="line line-3"><span class="accent">telemetry</span> overlays.</span>
     </h1>
     <div class="hero-headline-frame">
-      <video playsinline autoplay muted loop preload="metadata" width="1000" height="626"
-             poster="{{ "assets/application-preview.jpg" | absURL }}"
-             aria-label="RacePulse dashboard showing live widget previews, toggle controls, and per-widget customization for sim racing telemetry overlays">
-        <source src="{{ "assets/application-preview.mp4" | absURL }}" type="video/mp4">
-        <img src="{{ "assets/application-preview.gif" | absURL }}"
-             alt="RacePulse dashboard showing live widget previews, toggle controls, and per-widget customization for sim racing telemetry overlays"
-             width="1000" height="626">
+      <video playsinline autoplay muted loop preload="metadata" width="1280" height="690"
+             poster="{{ "assets/application-preview.jpg" | absURL }}?v={{ .Site.Params.videoUploadDate }}"
+             aria-label="RacePulse widget gallery with live previews of sim racing telemetry overlays, their on/off switches, and Customize buttons">
+        <source src="{{ "assets/application-preview.mp4" | absURL }}?v={{ .Site.Params.videoUploadDate }}" type="video/mp4">
+        <img src="{{ "assets/application-preview.gif" | absURL }}?v={{ .Site.Params.videoUploadDate }}"
+             alt="RacePulse widget gallery with live previews of sim racing telemetry overlays, their on/off switches, and Customize buttons"
+             width="1000" height="540">
       </video>
     </div>
   </div>
@@ -55,7 +55,7 @@
         <a class="btn btn--ghost" href="{{ "features/" | absURL }}">
           See what's inside
         </a>
-        <span class="price"><b>FREE</b> &middot; 21&nbsp;MB &middot; WINDOWS</span>
+        <span class="price"><b>FREE</b> &middot; 16&nbsp;MB &middot; WINDOWS</span>
       </div>
     </div>
 
@@ -75,16 +75,16 @@
   <div>
     <div class="lbl">Games supported</div>
     <div class="num tabular" data-count="6">6</div>
-    <div class="sub">All your favourite sims</div>
+    <div class="sub">All your favorite sims</div>
   </div>
   <div>
     <div class="lbl">Overlay widgets</div>
-    <div class="num tabular" data-count="12">12</div>
+    <div class="num tabular" data-count="14">14</div>
     <div class="sub">Mix and match what you need</div>
   </div>
   <div>
     <div class="lbl">Download size</div>
-    <div class="num tabular" data-count="21">21<small>MB</small></div>
+    <div class="num tabular" data-count="16">16<small>MB</small></div>
     <div class="sub">One file, no installer</div>
   </div>
   <div>
@@ -146,17 +146,17 @@
       <li>
         <span class="step-num" aria-hidden="true">01</span>
         <h3>Download</h3>
-        <p>Grab the 21 MB file. No installer, no account.</p>
+        <p>Grab the 16 MB file. No installer, no account.</p>
       </li>
       <li>
         <span class="step-num" aria-hidden="true">02</span>
         <h3>Launch your sim</h3>
-        <p>RacePulse picks it up automatically. F1 fans, flip one switch.</p>
+        <p>Load into a session and RacePulse picks it up. F1 and LMU need one setting in the game.</p>
       </li>
       <li>
         <span class="step-num" aria-hidden="true">03</span>
         <h3>Pick your widgets</h3>
-        <p>Drag what you need onto the screen. Your setup sticks.</p>
+        <p>Turn them on, drag them into place, and lock them for racing. Save it as a layout.</p>
       </li>
     </ol>
   </div>
@@ -186,7 +186,7 @@
       <span class="name">Assetto Corsa</span>
     </a>
     <a class="sim" href="{{ "lmu-overlay/" | absURL }}">
-      <span class="badge">Plug &amp; play</span>
+      <span class="badge cfg">One-step setup</span>
       <span class="go" aria-hidden="true">→</span>
       <span class="name">Le Mans Ultimate</span>
     </a>
@@ -218,7 +218,15 @@
       </div>
       <div class="row">
         <div class="ttl">Customization<br>that sticks</div>
-        <div class="desc">Switch units, pick what each widget shows, drag it where you want. Your setup is remembered next time you launch.</div>
+        <div class="desc">Switch units, pick what each widget shows, and see it in a live preview before you race. Your setup is remembered next time you launch.</div>
+      </div>
+      <div class="row">
+        <div class="ttl">Widget<br>layouts</div>
+        <div class="desc">Save the widgets on screen as a layout, with their places, sizes, and settings, and switch layouts from the bottom bar. Layouts remember the monitors they were saved on.</div>
+      </div>
+      <div class="row">
+        <div class="ttl">Out of<br>your way</div>
+        <div class="desc">Lock widgets for racing and your clicks go straight to the game. With Only show with telemetry on, they hide when no game is sending data and come back when it returns.</div>
       </div>
       <div class="row">
         <div class="ttl">Every sim,<br>one app</div>
@@ -226,10 +234,10 @@
       </div>
       <div class="row">
         <div class="ttl">Advanced<br>widgets</div>
-        <div class="desc">Telemetry Core combines rev lights, gear, speed, and position. Inputs Telemetry shows live pedal traces. Relative shows nearby drivers and gaps.</div>
+        <div class="desc">Standings shows the whole field by class in six layouts. Lap Log keeps every lap with its delta. Relative shows nearby drivers, gaps, and country flags. Telemetry Core, Inputs Telemetry, and Flat Track Map round it out.</div>
       </div>
       <div class="row">
-        <div class="ttl">21&nbsp;MB.<br>That's&nbsp;it.</div>
+        <div class="ttl">16&nbsp;MB.<br>That's&nbsp;it.</div>
         <div class="desc">No installer, no extra software, nothing running in the background. Just one small file you double-click.</div>
       </div>
       <div class="row">
@@ -241,26 +249,28 @@
   </div>
 </section>
 
-<!-- ═══ 12 WIDGETS ═══ -->
+<!-- ═══ 14 WIDGETS ═══ -->
 <section class="panel">
   <div class="sec-head reveal">
     <span class="num">Every widget</span>
-    <h2>12 Widgets</h2>
+    <h2>14 Widgets</h2>
   </div>
 
   <div class="widgets-grid reveal-stagger">
     <div class="cell"><span class="nm">Speed</span><span class="desc">Live speed readout in your choice of units.</span></div>
     <div class="cell"><span class="nm">Gear</span><span class="desc">Big, easy-to-read gear indicator.</span></div>
-    <div class="cell"><span class="nm">RPM</span><span class="desc">Redline bar with a shift marker.</span></div>
-    <div class="cell"><span class="nm">Lap&nbsp;time</span><span class="desc">Current, last, and best lap — sector by sector.</span></div>
+    <div class="cell"><span class="nm">RPM</span><span class="desc">The number, or a row of rev lights.</span></div>
+    <div class="cell"><span class="nm">Lap&nbsp;times</span><span class="desc">Current, last, and best lap.</span></div>
     <div class="cell"><span class="nm">Delta</span><span class="desc">Are you up or down on your best? See it live.</span></div>
     <div class="cell"><span class="nm">Inputs</span><span class="desc">Live throttle, brake, and clutch bars.</span></div>
-    <div class="cell"><span class="nm">Fuel</span><span class="desc">Fuel left, plus how many laps you've got.</span></div>
+    <div class="cell"><span class="nm">Fuel</span><span class="desc">Fuel left, laps left, and what to add to finish.</span></div>
     <div class="cell"><span class="nm">G-Force</span><span class="desc">Watch your cornering and braking forces.</span></div>
-    <div class="cell"><span class="nm">Telemetry<br>Core</span><span class="desc">Rev lights, gear, speed, and position in one view.</span></div>
-    <div class="cell"><span class="nm">Inputs<br>Telemetry</span><span class="desc">Scrolling graph of your pedal traces and steering.</span></div>
-    <div class="cell"><span class="nm">Track<br>Map</span><span class="desc">See every car on track in one horizontal bar.</span></div>
+    <div class="cell"><span class="nm">Telemetry<br>Core</span><span class="desc">Rev lights, gear, and the readings you pick in one view.</span></div>
+    <div class="cell"><span class="nm">Inputs<br>Telemetry</span><span class="desc">Scrolling graph of your pedal traces, with a steering wheel.</span></div>
+    <div class="cell"><span class="nm">Flat Track<br>Map</span><span class="desc">Every car on one line of the lap, across or down the screen.</span></div>
     <div class="cell"><span class="nm">Relative</span><span class="desc">Nearby drivers, their gaps, and who's catching you.</span></div>
+    <div class="cell"><span class="nm">Standings</span><span class="desc">The whole field by class, in six layouts.</span></div>
+    <div class="cell"><span class="nm">Lap&nbsp;Log</span><span class="desc">Every lap with its delta, under your best and the session best.</span></div>
   </div>
 </section>
 
@@ -274,13 +284,13 @@
   <div class="shell-narrow">
     <div class="duo single reveal">
       <figure>
-        <video playsinline autoplay muted loop preload="metadata" width="1000" height="736"
-               poster="{{ "assets/widget-customization-preview.jpg" | absURL }}"
-               aria-label="RacePulse per-widget customization panel with unit toggles, display options, opacity controls, and live preview">
-          <source src="{{ "assets/widget-customization-preview.mp4" | absURL }}" type="video/mp4">
-          <img src="{{ "assets/widget-customization-preview.gif" | absURL }}"
-               alt="RacePulse per-widget customization panel with unit toggles, display options, opacity controls, and live preview"
-               width="1000" height="736" loading="lazy">
+        <video playsinline autoplay muted loop preload="metadata" width="1600" height="1000"
+               poster="{{ "assets/widget-customization-preview.jpg" | absURL }}?v={{ .Site.Params.videoUploadDate }}"
+               aria-label="RacePulse widget customization: changing Inputs Telemetry settings updates its live preview">
+          <source src="{{ "assets/widget-customization-preview.mp4" | absURL }}?v={{ .Site.Params.videoUploadDate }}" type="video/mp4">
+          <img src="{{ "assets/widget-customization-preview.gif" | absURL }}?v={{ .Site.Params.videoUploadDate }}"
+               alt="RacePulse widget customization: changing Inputs Telemetry settings updates its live preview"
+               width="1000" height="626" loading="lazy">
         </video>
         <figcaption>
           <span>Per-widget customization</span>
@@ -307,18 +317,23 @@
       </div>
       <div class="row">
         <div class="k">Download size</div>
-        <div class="v">~21&nbsp;MB</div>
+        <div class="v">~16&nbsp;MB</div>
         <div class="sub">One file · No installer</div>
       </div>
       <div class="row">
-        <div class="k">iRacing, ACC, AC, LMU</div>
+        <div class="k">iRacing, ACC, AC</div>
         <div class="v">Plug &amp; play</div>
-        <div class="sub">Launch the game and RacePulse picks it up</div>
+        <div class="sub">Load into a session and RacePulse picks it up</div>
+      </div>
+      <div class="row">
+        <div class="k">Le Mans Ultimate</div>
+        <div class="v">One quick toggle</div>
+        <div class="sub">Turn on Enable Plugins in Gameplay settings · Done</div>
       </div>
       <div class="row">
         <div class="k">F1 25 &amp; F1 24</div>
-        <div class="v">One quick toggle</div>
-        <div class="sub">Flip telemetry on in game settings · Done</div>
+        <div class="v">One-time setup</div>
+        <div class="sub">Turn on UDP telemetry and pick a RacePulse port · Done</div>
       </div>
     </div>
   </div>
@@ -335,7 +350,7 @@
       <p>Grab the executable, drop it anywhere, launch your sim. Overlays appear in under a minute.</p>
       <div class="closer-actions">
         <a class="btn btn-white" href="{{ .Site.Params.downloadURL }}" data-download-location="home_closer">
-          Download · 21&nbsp;MB
+          Download · 16&nbsp;MB
         </a>
         <a class="btn btn-dark" href="{{ .Site.Params.releaseURL }}">
           All releases <span class="arrow">→</span>

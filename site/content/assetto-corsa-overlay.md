@@ -1,7 +1,7 @@
 ---
 title: "Free Assetto Corsa Overlay"
 subtitle: "Lightweight telemetry overlay for Assetto Corsa with automatic shared memory detection, customizable widgets, and zero configuration."
-description: "Free Assetto Corsa telemetry overlay with real-time speed, RPM, inputs, lap times, fuel, and G-force widgets. No plugins, no Content Manager setup — just download and drive."
+description: "Free Assetto Corsa telemetry overlay with real-time speed, RPM, inputs, lap times, fuel, and G-force widgets. No plugins, no launcher setup — just download and drive."
 ogImage: "assets/application-preview.jpg"
 ---
 
@@ -9,7 +9,7 @@ ogImage: "assets/application-preview.jpg"
 
 RacePulse is a free telemetry overlay for Assetto Corsa. It connects directly to AC's shared memory buffers to display real-time speed, RPM, inputs, lap times, fuel, and more as transparent overlay widgets floating over the game.
 
-No Content Manager plugins, no SimHub dashboards, no Python apps. RacePulse reads AC's shared memory natively — the same interface that AC exposes for any external tool. Download, launch, and drive.
+No launcher plugins, no dashboards to import, no in-game apps. RacePulse reads AC's shared memory natively — the same interface that AC exposes for any external tool. Download, launch, and drive.
 
 ## Setup
 
@@ -18,34 +18,35 @@ No Content Manager plugins, no SimHub dashboards, no Python apps. RacePulse read
 3. Launch Assetto Corsa and enter a session
 4. RacePulse automatically detects AC and begins streaming telemetry
 
-No setup inside Assetto Corsa or Content Manager is required. Shared memory is always available when AC is running.
+No setup inside Assetto Corsa or its launcher is required. AC is detected once a session is loaded; its main menu runs in a separate launcher, so RacePulse can't see the game there.
 
 > **Tip:** Use **Borderless Windowed** mode in AC for the best overlay experience. Widgets float on top of the game without interrupting fullscreen rendering.
 
 ## Available Widgets for Assetto Corsa
 
-Assetto Corsa supports 10 of the 12 RacePulse widgets:
+Assetto Corsa supports 10 of the 14 RacePulse widgets:
 
 ### Core Widgets
 
-- **Speed** — Live speed readout in km/h or mph
+- **Speed** — Live speed readout in KPH or MPH
 - **Gear** — Large, bold gear indicator
-- **RPM** — Horizontal bar with redline indicator
-- **Lap Time** — Current lap, last lap, and personal best
+- **RPM** — The number, or a row of rev lights
+- **Lap Times** — Current lap, last lap, and personal best
 - **Inputs** — Throttle, brake, and clutch as vertical bars
 - **Fuel** — Fuel remaining with estimated laps
 - **G-Force** — 2D lateral and longitudinal G-force dot
-- **Delta** — Delta time display (note: AC does not expose a native delta calculation via shared memory, so accuracy depends on RacePulse's internal best-lap comparison)
 
 ### Advanced Widgets
 
-- **Telemetry Core** — All-in-one display with rev lights, gear, RPM, speed, position, track temperature, elapsed time, and lap count
-- **Inputs Telemetry** — Live scrolling graph of throttle and brake inputs with pedal bars, optional steering wheel, gear, and speed
+- **Telemetry Core** — All-in-one display with rev lights, gear, and readouts you choose, such as speed, RPM, position, track temperature, and lap count. AC doesn't send elapsed session time, so that reading shows a dash.
+- **Inputs Telemetry** — Live scrolling graph of throttle and brake inputs with pedal bars, a steering wheel, gear, and speed
+- **Lap Log** — Every lap you drive with its delta and sectors, under your best lap, with the track's readable name
 
 ### Not Available
 
-- **Flat Track Map** — Not supported for AC (requires competitor coordinate data in a compatible format)
-- **Relative** — iRacing exclusive
+- **Delta** — AC does not send a live delta to your best lap, so the Delta widget isn't offered. The Lap Log still compares each finished lap with your best.
+- **Flat Track Map** — Not supported for AC (requires competitor data in a compatible format)
+- **Relative** and **Standings** — Not supported for AC, for the same reason. If one is open when you connect AC, it hides with a notice and comes back when you switch to a supported sim.
 
 ## AC-Specific Data
 
@@ -60,17 +61,17 @@ AC uses three shared memory buffers (Physics, Graphics, Static) with the same me
 
 Every widget is independently customizable:
 
-- Choose between km/h and mph
+- Choose between KPH and MPH
 - Toggle display elements on or off
 - Configurable frame rate (60, 30, or 15 FPS)
-- Reposition widgets by entering Edit Mode
+- Reposition widgets while arranging, then lock them for racing
 - All settings persist across sessions
 
 ## How It Works
 
 Assetto Corsa exposes telemetry through three Windows shared memory buffers:
 
-- **Physics** (~60Hz) — speed, inputs, G-forces, tyre data, fuel, temperatures
+- **Physics** (~60Hz) — speed, inputs, G-forces, tire data, fuel, temperatures
 - **Graphics** (~5Hz) — session info, positions, flags, lap info
 - **Static** (once on connect) — car name, track name, max RPM
 
@@ -79,8 +80,8 @@ RacePulse reads these buffers directly. Each widget is a separate transparent, a
 ## Why RacePulse for Assetto Corsa
 
 - **Free** — No subscription, no paid features
-- **Single executable** — One 21MB file, no installer needed
-- **No plugin setup** — No Content Manager apps, no Python scripts, no SimHub
+- **Single executable** — One 16MB file, no installer needed
+- **No plugin setup** — No launcher apps, no scripts, no dashboards to import
 - **Lightweight** — Minimal resource usage, won't impact your FPS
 - **Multi-sim** — Same overlay app works across iRacing, ACC, Le Mans Ultimate, F1 25, and F1 24
 
