@@ -58,9 +58,9 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 ![Working in LMU](site/static/assets/lmu-overlay-preview.gif)
 
-**Use Multiple widgets at once. Relative Widget, Flat Map Widget, and Input Widget Active in iRacing**
+**Use multiple widgets at once. Relative, Standings, Flat Map, and Inputs Telemetry active in iRacing**
 
-![Relative Widget, Flat Map Widget, and Input Widget Active in iRacing](site/static/assets/iracing-overlay-preview.gif)
+![Relative, Standings, Flat Map, and Inputs Telemetry widgets active in iRacing at Oschersleben](site/static/assets/iracing-overlay-preview.gif)
 
 ## What this repository is for
 
