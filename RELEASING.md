@@ -14,7 +14,7 @@ Owner live-game acceptance covered iRacing and Le Mans Ultimate. An all-provider
 
 ## 0.4.1
 
-0.4.1 is published from source tag `v0.4.1` on YYYY-MM-DD. Its website changes set the paired `appVersion`/`downloadURL` to v0.4.1, add and date the v0.4.1 entry in both changelogs, describe the per-run usage summary 0.4.1 sends in the privacy policy, and change the size figure from 16 MB to 19 MB to match the published `RacePulse.exe` (BYTES bytes), which now carries the VR files and maker logos.
+0.4.1 is published from source tag `v0.4.1` on YYYY-MM-DD. Its website changes set the paired `appVersion`/`downloadURL` to v0.4.1, add and date the v0.4.1 entry in both changelogs, describe the per-run usage summary 0.4.1 sends in the privacy policy, and change the size figure from 16 MB to 19 MB to match the published `RacePulse.exe` (19,363,840 bytes), which now carries the VR files and maker logos.
 
 ## Handover history
 
