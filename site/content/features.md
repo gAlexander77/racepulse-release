@@ -100,6 +100,10 @@ Save the widgets on screen as a named layout: which widgets are on, where they s
 
 A car-style dash for a second screen, in a normal window of its own. Open **Dashboard** in the side menu to see what it shows, preview it, and change its settings, then choose **Pop out**. The window can go borderless full screen on any monitor: F11 toggles full screen and Esc leaves it. The dash shows rev lights, gear, speed, delta, lap times, position and lap, fuel, temperatures, and inputs, and each can be turned off. It is experimental, with few settings for now.
 
+## VR Widgets (Experimental)
+
+Show your widgets inside your VR headset in iRacing, ACC, Assetto Corsa, and Le Mans Ultimate. VR has its own layouts and its own widget settings, kept apart from the desktop, and you can show, move, resize, and set up widgets from RacePulse's tab in the SteamVR dashboard. While you're in VR, your desktop widgets hide, and they come back when you leave. VR widgets are free and off by default; the [VR Guide](/vr/) has the recommended SteamVR setup.
+
 ## Session Recording (Coming Soon)
 
 - Telemetry sessions will be recorded to local storage automatically
@@ -110,7 +114,8 @@ A car-style dash for a second screen, in a normal window of its own. Open **Dash
 ## Quality of Life
 
 - Single executable — no installer, no dependencies
-- Compact distribution (~16MB)
+- Compact distribution (~19MB)
+- Easy to remove: delete the file, and the [Uninstall Guide](/uninstall/) covers your settings
 - Widgets open as windows of RacePulse itself, with no separate helper programs
 - Widget positions, sizes, and settings persist across sessions
 - Set widgets up before you start a game, so they're ready when you load in

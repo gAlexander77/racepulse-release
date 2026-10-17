@@ -80,7 +80,8 @@ RacePulse reads these buffers directly. Each widget is a separate transparent, a
 ## Why RacePulse for Assetto Corsa
 
 - **Free** — No subscription, no paid features
-- **Single executable** — One 16MB file, no installer needed
+- **Single executable** — One 19MB file, no installer needed
+- **VR overlays** — Your widgets in your headset through SteamVR (experimental). See the [VR Guide](/vr/)
 - **No plugin setup** — No launcher apps, no scripts, no dashboards to import
 - **Lightweight** — Minimal resource usage, won't impact your FPS
 - **Multi-sim** — Same overlay app works across iRacing, ACC, Le Mans Ultimate, F1 25, and F1 24

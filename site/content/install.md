@@ -68,6 +68,10 @@ While LMU is running, RacePulse also reads car numbers, team names, and (on onli
 
 > **Note:** With **Only show with telemetry** on (the default), locked widgets hide while no game is sending telemetry and come back when it returns. To keep them on screen all the time, turn it off in the bottom bar's **Overlay** menu.
 
+**VR:** to see your widgets in a VR headset, follow the [VR Guide](/vr/). We recommend running your sim through SteamVR.
+
+**Uninstalling:** RacePulse has no uninstaller. The [Uninstall](/uninstall/) page shows how to remove it, with or without your settings.
+
 ## 5. Updating
 
 RacePulse checks for new versions when it starts. When one is out, an update banner appears under the title bar: choose **Update now**, and RacePulse downloads the new version, checks it, and restarts into it. You can also check from **Settings › Updates**.

@@ -4,7 +4,7 @@ subtitle: "How RacePulse handles data — a clear split between the desktop app 
 description: "RacePulse privacy policy: the desktop app keeps racing telemetry local and collects only limited app usage analytics; the website uses GoatCounter and Google Analytics for traffic analytics."
 ---
 
-**Last updated: July 1, 2026**
+**Last updated: October 17, 2026**
 
 RacePulse is an independent, free sim racing telemetry overlay tool. This policy explains what happens to data in two separate places: the **RacePulse desktop app** and the **RacePulse website** (racepulse.racing). They are not the same, and they are described separately below.
 
@@ -24,7 +24,9 @@ RacePulse processes racing telemetry locally on your device, reading it from you
 
 ### Limited app usage analytics
 
-RacePulse does collect limited app usage analytics to understand whether the app is being used and which supported games need the most development attention. This may include app startup events, app version, operating system, supported game detected, and a randomly generated installation ID. The installation ID is not based on hardware information and is used only to measure app usage.
+RacePulse does collect limited app usage analytics to understand whether the app is being used, which features and supported games need the most development attention, and whether updates and connections work. This may include app startup events, app version, operating system and Windows version, supported game detected, and a randomly generated installation ID. The installation ID is not based on hardware information and is used only to measure app usage.
+
+From version 0.4.1, RacePulse also keeps a short summary of each time you use it and sends it the next time it starts: how long it was open and whether it closed normally, how long each game was connected and how many connection attempts failed, which widget types were open, which pages and features were used (such as layouts, the dashboard window, and VR widgets), whether an update was offered and how installing it went, and your number of monitors, display scale, and WebView2 version. The summary is stored on your PC until it is sent, and nothing is sent while you race. It does not include racing telemetry, lap times, tracks, cars, driver names, file paths, your settings, or error messages.
 
 RacePulse may keep limited server logs for security, abuse prevention, rate limiting, and blocking malicious traffic. RacePulse does not use these analytics to collect racing telemetry.
 
