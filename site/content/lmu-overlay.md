@@ -1,7 +1,7 @@
 ---
 title: "Free Le Mans Ultimate Overlay"
 subtitle: "Lightweight telemetry overlay for Le Mans Ultimate with automatic shared memory detection, 14 customizable widgets, and zero configuration."
-description: "Free Le Mans Ultimate telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, and track map widgets for LMU. No plugins to install."
+description: "Free Le Mans Ultimate telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, standings, and track map widgets for LMU. No plugins to install."
 ogImage: "assets/lmu-overlay-preview.jpg"
 ---
 
@@ -10,9 +10,9 @@ ogImage: "assets/lmu-overlay-preview.jpg"
 RacePulse is a free telemetry overlay for Le Mans Ultimate. It reads LMU's built-in shared memory interface — the official Studio 397 API that ships with the game. No plugins to install, no web dashboards, no configuration files.
 
 <div style="margin: 2rem 0; overflow: hidden; border: 1px solid #232323;">
-  <video playsinline autoplay muted loop preload="metadata" poster="/assets/lmu-overlay-preview.jpg" style="width: 100%; display: block;" aria-label="RacePulse telemetry overlay running in Le Mans Ultimate showing speed, gear, RPM, inputs, and lap time widgets">
+  <video playsinline autoplay muted loop preload="metadata" poster="/assets/lmu-overlay-preview.jpg" style="width: 100%; display: block;" aria-label="RacePulse Standings, Flat Map, and Inputs Telemetry widgets running together as overlays in Le Mans Ultimate at Laguna Seca">
     <source src="/assets/lmu-overlay-preview.mp4" type="video/mp4">
-    <img src="/assets/lmu-overlay-preview.gif" alt="RacePulse telemetry overlay running in Le Mans Ultimate showing speed, gear, RPM, inputs, and lap time widgets" style="width: 100%; display: block; margin: 0; border: 0;">
+    <img src="/assets/lmu-overlay-preview.gif" alt="RacePulse Standings, Flat Map, and Inputs Telemetry widgets running together as overlays in Le Mans Ultimate at Laguna Seca" style="width: 100%; display: block; margin: 0; border: 0;">
   </video>
 </div>
 

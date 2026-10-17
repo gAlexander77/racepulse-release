@@ -56,7 +56,7 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 **Works across multiple titles (LMU in preview below)**
 
-![Working in LMU](site/static/assets/lmu-overlay-preview.gif)
+![Standings, Flat Map, and Inputs Telemetry widgets active in Le Mans Ultimate at Laguna Seca](site/static/assets/lmu-overlay-preview.gif)
 
 **Use multiple widgets at once. Relative, Standings, Flat Map, and Inputs Telemetry active in iRacing**
 
