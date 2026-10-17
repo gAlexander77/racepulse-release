@@ -62,6 +62,10 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 ![Relative, Standings, Flat Map, and Inputs Telemetry widgets active in iRacing at Oschersleben](site/static/assets/iracing-overlay-preview.gif)
 
+**VR widgets in your headset. Relative, Standings, Inputs Telemetry, Lap Log, and Flat Map in iRacing**
+
+[![Relative, Standings, Inputs Telemetry, Lap Log, and Flat Map VR widgets in iRacing at Okayama International Circuit](site/static/assets/vr-overlay-preview.webp)](https://racepulse.racing/vr/)
+
 ## What this repository is for
 
 This repo is the public release, documentation, issue tracking, and Hugo website home for RacePulse.

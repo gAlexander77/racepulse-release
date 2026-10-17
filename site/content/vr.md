@@ -2,12 +2,20 @@
 title: "Sim Racing VR Overlay Guide"
 subtitle: "Put RacePulse widgets in your VR headset with SteamVR, and place them from inside the headset."
 description: "Free VR overlays for iRacing, ACC, Assetto Corsa and Le Mans Ultimate. Set up RacePulse with SteamVR, place widgets in your headset, and fix common problems."
-ogImage: "assets/application-preview.jpg"
+ogImage: "assets/vr-overlay-preview.jpg"
 ---
 
 RacePulse can show its widgets, such as Relative, Standings, inputs, and fuel, inside your VR headset while you race in iRacing, Assetto Corsa Competizione, Assetto Corsa, or Le Mans Ultimate. VR widgets are **experimental**, **free**, and **off by default**, so nothing VR loads until you turn them on. They need RacePulse 0.4.1 or later.
 
 **We recommend running your sim through SteamVR.** RacePulse adds its own tab to the SteamVR dashboard, so you can show, move, resize, and set up widgets with your controller without taking the headset off. It works with any headset SteamVR supports.
+
+<div style="margin: 2rem 0; overflow: hidden; border: 1px solid #232323;">
+  <video playsinline autoplay muted loop preload="metadata" poster="/assets/vr-overlay-preview.jpg" width="1280" height="720" style="width: 100%; height: auto; display: block;" aria-label="RacePulse Relative, Standings, Inputs Telemetry, Lap Log, and Flat Map widgets in a VR headset in iRacing at Okayama International Circuit in a Formula 4 car">
+    <source src="/assets/vr-overlay-preview.av1.mp4" type='video/mp4; codecs="av01.0.05M.08"'>
+    <source src="/assets/vr-overlay-preview.mp4" type="video/mp4">
+    <img src="/assets/vr-overlay-preview.jpg" alt="RacePulse Relative, Standings, Inputs Telemetry, Lap Log, and Flat Map widgets in a VR headset in iRacing at Okayama International Circuit in a Formula 4 car" width="1280" height="720" style="width: 100%; height: auto; display: block; margin: 0; border: 0;">
+  </video>
+</div>
 
 ## What you need
 
