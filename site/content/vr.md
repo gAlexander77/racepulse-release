@@ -5,13 +5,13 @@ description: "How to use RacePulse VR widgets: the recommended SteamVR setup, se
 ogImage: "assets/application-preview.jpg"
 ---
 
-RacePulse can show your widgets in your VR headset. VR widgets are **experimental**, **free**, and **off by default**, so nothing VR loads until you turn them on. They need RacePulse 0.4.1 or later.
+RacePulse can show your widgets in your VR headset. VR widgets are **experimental**, **free**, and **off by default**, so nothing VR loads until you turn them on. They need RacePulse 0.4.2 or later.
 
 **We recommend running your sim through SteamVR.** RacePulse adds its own tab to the SteamVR dashboard, so you can show, move, resize, and set up widgets with your controller without taking the headset off. It works with any headset SteamVR supports.
 
 ## What you need
 
-- RacePulse 0.4.1 or later
+- RacePulse 0.4.2 or later
 - [SteamVR](https://store.steampowered.com/app/250820/SteamVR/), installed through Steam
 - A headset SteamVR supports. A Meta Quest connects through Quest Link (cable), Air Link, or Steam Link.
 - A sim with a VR mode: iRacing, Assetto Corsa Competizione, Assetto Corsa, or Le Mans Ultimate
@@ -71,7 +71,7 @@ Recentering moves only your RacePulse widgets, never the game's view.
 
 ## Without SteamVR
 
-RacePulse can also draw its widgets inside Direct3D 11 games running on another OpenXR runtime, such as Meta's own runtime with Quest Link. Turn **Native OpenXR games** on, and set the game's VR mode to OpenXR. This route has no dashboard tab, so you place widgets with the keyboard shortcuts, and a bar under your view shows the selected widget while you edit. We recommend SteamVR whenever your game supports it.
+RacePulse can also draw its widgets inside Direct3D 11 games running on another OpenXR runtime, such as Meta's own runtime with Quest Link. Turn **Native OpenXR games** on, start RacePulse before the game, and set the game's VR mode to OpenXR. This route has no dashboard tab, so you place widgets with the keyboard shortcuts, and a bar under your view shows the selected widget while you edit. We recommend SteamVR whenever your game supports it.
 
 Games in the old Oculus mode aren't supported. Switch them to OpenXR or SteamVR in the game's VR settings.
 
@@ -86,11 +86,11 @@ Games in the old Oculus mode aren't supported. Switch them to OpenXR or SteamVR 
 
 Turn off **Show widgets in VR** on the VR widgets page. Your VR layouts stay saved for next time.
 
-RacePulse has no uninstaller. If you turned on **Native OpenXR games**, turn **Show widgets in VR** off before deleting RacePulse, so those games stop loading its VR layer.
+RacePulse has no uninstaller, and it doesn't need one for VR: it registers its VR layer for games only while it's running, so closing or deleting RacePulse leaves nothing loading into your games.
 
-### Already deleted RacePulse?
+### Deleted RacePulse after it crashed?
 
-If you deleted RacePulse while VR widgets were on, the VR layer stays registered for your Windows user. It does nothing without RacePulse, but you can remove it. Run this in PowerShell:
+If RacePulse didn't close normally while VR widgets were on, for example after a crash, and you deleted it before starting it again, its VR layer can stay registered for your Windows user. It does nothing without RacePulse, but you can remove it. Run this in PowerShell:
 
 ```powershell
 $k = 'HKCU:\Software\Khronos\OpenXR\1\ApiLayers\Implicit'
