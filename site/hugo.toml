@@ -14,8 +14,8 @@ disableKinds = ["taxonomy", "term"]
   repoURL = "https://github.com/gAlexander77/racepulse-release"
   releaseURL = "https://github.com/gAlexander77/racepulse-release/releases"
   # Bump appVersion, downloadURL, and downloadSizeMB together on each release (footer + schema read appVersion).
-  appVersion = "0.4.1"
-  downloadURL = "https://github.com/gAlexander77/racepulse-release/releases/download/v0.4.1/RacePulse.exe"
+  appVersion = "0.4.3"
+  downloadURL = "https://github.com/gAlexander77/racepulse-release/releases/download/v0.4.3/RacePulse.exe"
   # RacePulse.exe in MB, rounded (0.4.1: 19,363,840 bytes). Every size in the templates reads this; the
   # content pages say it in their own words, so search them for the old number too.
   downloadSizeMB = 19
