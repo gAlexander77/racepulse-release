@@ -55,7 +55,7 @@
         <a class="btn btn--ghost" href="{{ "features/" | absURL }}">
           See what's inside
         </a>
-        <span class="price"><b>FREE</b> &middot; 16&nbsp;MB &middot; WINDOWS</span>
+        <span class="price"><b>FREE</b> &middot; {{ .Site.Params.downloadSizeMB }}&nbsp;MB &middot; WINDOWS</span>
       </div>
     </div>
 
@@ -84,7 +84,7 @@
   </div>
   <div>
     <div class="lbl">Download size</div>
-    <div class="num tabular" data-count="16">16<small>MB</small></div>
+    <div class="num tabular" data-count="{{ .Site.Params.downloadSizeMB }}">{{ .Site.Params.downloadSizeMB }}<small>MB</small></div>
     <div class="sub">One file, no installer</div>
   </div>
   <div>
@@ -146,7 +146,7 @@
       <li>
         <span class="step-num" aria-hidden="true">01</span>
         <h3>Download</h3>
-        <p>Grab the 19 MB file. No installer, no account.</p>
+        <p>Grab the {{ .Site.Params.downloadSizeMB }} MB file. No installer, no account.</p>
       </li>
       <li>
         <span class="step-num" aria-hidden="true">02</span>
@@ -237,7 +237,7 @@
         <div class="desc">Standings shows the whole field by class in six layouts. Lap Log keeps every lap with its delta. Relative shows nearby drivers, gaps, and country flags. Telemetry Core, Inputs Telemetry, and Flat Track Map round it out.</div>
       </div>
       <div class="row">
-        <div class="ttl">16&nbsp;MB.<br>That's&nbsp;it.</div>
+        <div class="ttl">{{ .Site.Params.downloadSizeMB }}&nbsp;MB.<br>That's&nbsp;it.</div>
         <div class="desc">No installer, no extra software, nothing running in the background. Just one small file you double-click.</div>
       </div>
       <div class="row">
@@ -317,7 +317,7 @@
       </div>
       <div class="row">
         <div class="k">Download size</div>
-        <div class="v">~16&nbsp;MB</div>
+        <div class="v">~{{ .Site.Params.downloadSizeMB }}&nbsp;MB</div>
         <div class="sub">One file · No installer</div>
       </div>
       <div class="row">
@@ -350,7 +350,7 @@
       <p>Grab the executable, drop it anywhere, launch your sim. Overlays appear in under a minute.</p>
       <div class="closer-actions">
         <a class="btn btn-white" href="{{ .Site.Params.downloadURL }}" data-download-location="home_closer">
-          Download · 16&nbsp;MB
+          Download · {{ .Site.Params.downloadSizeMB }}&nbsp;MB
         </a>
         <a class="btn btn-dark" href="{{ .Site.Params.releaseURL }}">
           All releases <span class="arrow">→</span>
