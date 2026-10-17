@@ -93,7 +93,7 @@ RacePulse has no uninstaller. If you turned on **Native OpenXR games**, turn **S
 If you deleted RacePulse while VR widgets were on, the VR layer stays registered for your Windows user. It does nothing without RacePulse, but you can remove it. Run this in PowerShell:
 
 ```powershell
-$k = 'HKCU:\Software\Khronos\OpenXR\ApiLayers\Implicit'
+$k = 'HKCU:\Software\Khronos\OpenXR\1\ApiLayers\Implicit'
 if (Test-Path $k) { (Get-Item $k).Property | Where-Object { $_ -like '*\RacePulse\VR\*' } | ForEach-Object { Remove-ItemProperty -Path $k -Name $_ } }
 Remove-Item -Recurse -Force "$env:LOCALAPPDATA\RacePulse\VR" -ErrorAction SilentlyContinue
 ```
