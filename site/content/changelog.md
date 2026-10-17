@@ -5,9 +5,9 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.jpg"
 ---
 
-## v0.4.2 <span class="changelog-date">YYYY-MM-DD</span>
+## v0.4.1 <span class="changelog-date">YYYY-MM-DD</span>
 
-RacePulse 0.4.2 adds VR widgets (experimental), maker logos in Relative and Standings, and a launch screen. It also fixes RacePulse opening twice and widgets taking the focus from your game.
+RacePulse 0.4.1 adds VR widgets (experimental), maker logos in Relative and Standings, and a launch screen. It also fixes RacePulse opening twice and widgets taking the focus from your game.
 
 ### New
 
@@ -32,7 +32,7 @@ RacePulse 0.4.2 adds VR widgets (experimental), maker logos in Relative and Stan
 ### Good to know
 
 - VR widgets are experimental. With **Show widgets in VR** off, RacePulse works as before.
-- For games that use OpenXR outside SteamVR, start RacePulse before the game. RacePulse registers its VR layer only while it's running, so closing or deleting RacePulse leaves nothing loading into your games.
+- If you use VR widgets, turn off **Show widgets in VR** before deleting RacePulse. The [Uninstall](https://racepulse.racing/uninstall/) page lists everything RacePulse keeps on your PC and how to remove it.
 - The [VR Guide](https://racepulse.racing/vr/) has the recommended settings and setup.
 
 If something looks wrong in your sim or headset, please [open an issue on GitHub](https://github.com/gAlexander77/racepulse-release/issues) with the sim, the widget, and what you saw.

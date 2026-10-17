@@ -70,6 +70,8 @@ While LMU is running, RacePulse also reads car numbers, team names, and (on onli
 
 **VR:** to see your widgets in a VR headset, follow the [VR Guide](/vr/). We recommend running your sim through SteamVR.
 
+**Uninstalling:** RacePulse has no uninstaller. The [Uninstall](/uninstall/) page shows how to remove it, with or without your settings.
+
 ## 5. Updating
 
 RacePulse checks for new versions when it starts. When one is out, an update banner appears under the title bar: choose **Update now**, and RacePulse downloads the new version, checks it, and restarts into it. You can also check from **Settings › Updates**.
