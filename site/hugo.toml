@@ -57,13 +57,17 @@ disableKinds = ["taxonomy", "term"]
     url = "/install/"
     weight = 3
   [[menu.main]]
+    name = "VR"
+    url = "/vr/"
+    weight = 4
+  [[menu.main]]
     name = "Changelog"
     url = "/changelog/"
-    weight = 4
+    weight = 5
   [[menu.main]]
     name = "FAQ"
     url = "/faq/"
-    weight = 5
+    weight = 6
 
 [markup]
   [markup.goldmark]
