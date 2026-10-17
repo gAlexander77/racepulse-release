@@ -2,6 +2,37 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.4.1] — YYYY-MM-DD
+
+RacePulse 0.4.1 adds VR widgets (experimental), maker logos in Relative and Standings, and a launch screen. It also fixes RacePulse opening twice and widgets taking the focus from your game.
+
+### New
+
+- **VR widgets (experimental, free):** see your widgets in your headset: in games running through SteamVR, with any SteamVR headset, and in Direct3D 11 games on other OpenXR runtimes. Games on the old Oculus PC SDK aren't supported; switch them to their OpenXR or SteamVR mode. Turn on **Show widgets in VR** on the new **VR widgets** page; it's off by default, and nothing VR loads until you turn it on. A short guide takes you through choosing widgets, starting VR, and placing them.
+- **VR layouts:** VR has its own layouts, kept apart from your desktop layouts, and each VR widget has its own settings. Start from your desktop widgets or pick new ones. VR starts with the layout you selected last.
+- **Place widgets from inside the headset:** RacePulse's tab in the SteamVR dashboard shows, hides, moves, resizes, and sets up your VR widgets, and switches layouts. From the keyboard, **Ctrl+Alt+Home** starts or ends editing, **Ctrl+Alt+End** recenters the widgets on your view, and **Ctrl+Alt+Page Down** switches to the next VR layout.
+- **Desktop or headset, never both:** while a VR session runs, your desktop widgets hide, and they come back when it ends.
+- **Manufacturer logos** in Relative and Standings: each car's maker before the driver's name, in iRacing, Le Mans Ultimate, and F1. Standings shows them by default; in Relative, turn on **Show Manufacturer Logos**.
+- **Launch screen:** RacePulse shows a short loading animation while it starts, then the whole window at once.
+
+### Improved
+
+- The Dashboard has its own monitor icon in the side menu, Settings, and its quick-link card.
+- The Widget layouts, VR widgets, and Dashboard pages have their own header photos.
+
+### Fixed
+
+- Opening RacePulse while it's already running now brings the open window forward, instead of starting a second copy.
+- Widgets no longer take the keyboard focus from your game when they open or reappear.
+- **Inputs Telemetry:** the gear and speed no longer get cut off in short windows, and the corners are round again when the steering wheel is hidden.
+
+### Good to know
+
+- VR widgets are experimental. With **Show widgets in VR** off, RacePulse works as before.
+- RacePulse has no uninstaller. If you used VR widgets with OpenXR games outside SteamVR, turn **Show widgets in VR** off before deleting RacePulse, so those games stop loading its VR layer.
+
+If something looks wrong in your sim or headset, please [open an issue on GitHub](https://github.com/gAlexander77/racepulse-release/issues) with the sim, the widget, and what you saw.
+
 ## [v0.4.0] — 2026-10-12
 
 RacePulse 0.4.0 redesigns the main window and most widgets, adds the Standings and Lap Log widgets, brings Relative and Standings to Le Mans Ultimate and F1, and adds widget layouts, a Settings window, and a getting-started Help guide.

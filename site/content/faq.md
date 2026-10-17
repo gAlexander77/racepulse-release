@@ -55,7 +55,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "Does RacePulse require an installer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. RacePulse is a single portable executable (about 16MB). Download RacePulse.exe, run it, and you're ready. No installation, no dependencies, no runtime to install."
+        "text": "No. RacePulse is a single portable executable (about 19MB). Download RacePulse.exe, run it, and you're ready. No installation, no dependencies, no runtime to install."
       }
     },
     {
@@ -118,7 +118,7 @@ Yes. RacePulse is completely free — no subscription, no trial period, no premi
 
 ### Does RacePulse require an installer?
 
-No. RacePulse is a single portable executable, about 16MB. Download `RacePulse.exe`, run it, and you're ready. No installation wizard and no runtimes to install.
+No. RacePulse is a single portable executable, about 19MB. Download `RacePulse.exe`, run it, and you're ready. No installation wizard and no runtimes to install.
 
 ### What operating system does RacePulse run on?
 
