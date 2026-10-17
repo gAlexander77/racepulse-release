@@ -4,7 +4,7 @@ subtitle: "How RacePulse handles data — a clear split between the desktop app 
 description: "RacePulse privacy policy: the desktop app keeps racing telemetry local and collects only limited app usage analytics; the website uses GoatCounter and Google Analytics for traffic analytics."
 ---
 
-**Last updated: MONTH DD, 2026**
+**Last updated: October 17, 2026**
 
 RacePulse is an independent, free sim racing telemetry overlay tool. This policy explains what happens to data in two separate places: the **RacePulse desktop app** and the **RacePulse website** (racepulse.racing). They are not the same, and they are described separately below.
 

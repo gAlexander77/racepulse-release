@@ -2,7 +2,7 @@
 
 All notable changes to RacePulse releases are documented here.
 
-## [v0.4.1] — YYYY-MM-DD
+## [v0.4.1] — 2026-10-17
 
 RacePulse 0.4.1 adds VR widgets (experimental), maker logos in Relative and Standings, and a launch screen. It also fixes RacePulse opening twice and widgets taking the focus from your game.
 
