@@ -2,6 +2,16 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.4.3] — 2026-10-17
+
+RacePulse 0.4.3 fixes RacePulse closing when you turned off VR widgets.
+
+### Fixed
+
+- Turning off **Show widgets in VR** right after your headset connected could close RacePulse. It no longer does, and a widget or the Dashboard window closed while it is still opening can no longer close it either.
+
+If something looks wrong in your sim or headset, please [open an issue on GitHub](https://github.com/gAlexander77/racepulse-release/issues) with the sim, the widget, and what you saw.
+
 ## [v0.4.1] — 2026-10-17
 
 RacePulse 0.4.1 adds VR widgets (experimental), maker logos in Relative and Standings, and a launch screen. It also fixes RacePulse opening twice and widgets taking the focus from your game.
