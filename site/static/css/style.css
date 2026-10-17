@@ -713,7 +713,7 @@ nav.bar ul a.is-active::after {
 }
 .duo figure img { width: 100%; height: auto; display: block; }
 .duo figcaption {
-  display: flex; justify-content: space-between;
+  display: flex; justify-content: space-between; gap: 16px;
   padding: 14px 18px;
   background: var(--black);
   color: var(--ink-2);
