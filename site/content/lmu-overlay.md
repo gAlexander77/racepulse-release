@@ -91,6 +91,7 @@ Every widget is independently configurable:
 
 - **Free** — No subscription, no paid tier
 - **Single executable** — 19MB `.exe`, no installer required
+- **VR overlays** — Your widgets in your headset through SteamVR (experimental). See the [VR Guide](/vr/)
 - **One-time setup** — Turn on Enable Plugins in LMU once, then forget about it
 - **Endurance-ready** — Fuel estimation, multi-class standings, and a multi-class track map for long races
 - **Multi-sim** — Same app works with iRacing, ACC, Assetto Corsa, F1 25, and F1 24

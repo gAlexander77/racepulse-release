@@ -1,11 +1,11 @@
 ---
-title: "VR Guide"
-subtitle: "Set up RacePulse widgets in your VR headset with SteamVR, and place them from inside the headset."
-description: "How to use RacePulse VR widgets: the recommended SteamVR setup, settings for RacePulse and SteamVR, placing widgets from the SteamVR dashboard, VR layouts, and fixes for common problems."
+title: "Sim Racing VR Overlay Guide"
+subtitle: "Put RacePulse widgets in your VR headset with SteamVR, and place them from inside the headset."
+description: "Free VR overlays for iRacing, ACC, Assetto Corsa and Le Mans Ultimate. Set up RacePulse with SteamVR, place widgets in your headset, and fix common problems."
 ogImage: "assets/application-preview.jpg"
 ---
 
-RacePulse can show your widgets in your VR headset. VR widgets are **experimental**, **free**, and **off by default**, so nothing VR loads until you turn them on. They need RacePulse 0.4.1 or later.
+RacePulse can show its widgets, such as Relative, Standings, inputs, and fuel, inside your VR headset while you race in iRacing, Assetto Corsa Competizione, Assetto Corsa, or Le Mans Ultimate. VR widgets are **experimental**, **free**, and **off by default**, so nothing VR loads until you turn them on. They need RacePulse 0.4.1 or later.
 
 **We recommend running your sim through SteamVR.** RacePulse adds its own tab to the SteamVR dashboard, so you can show, move, resize, and set up widgets with your controller without taking the headset off. It works with any headset SteamVR supports.
 
@@ -16,7 +16,7 @@ RacePulse can show your widgets in your VR headset. VR widgets are **experimenta
 - A headset SteamVR supports. A Meta Quest connects through Quest Link (cable), Air Link, or Steam Link.
 - A sim with a VR mode: iRacing, Assetto Corsa Competizione, Assetto Corsa, or Le Mans Ultimate
 
-## Recommended settings
+## Recommended SteamVR settings
 
 | Where | Setting | Recommended | Why |
 | --- | --- | --- | --- |
@@ -27,7 +27,7 @@ RacePulse can show your widgets in your VR headset. VR widgets are **experimenta
 | Your sim | VR mode | **SteamVR / OpenVR**, or OpenXR with SteamVR as the runtime | Keeps the game in SteamVR. |
 | Each VR widget › **Customize** | Frame Rate | **30 FPS** for timing widgets, **60 FPS** for Inputs Telemetry | Relative, Standings, Fuel, and Lap Log don't need more than 30, and a lower rate leaves more of your PC for the game. |
 
-## Set it up
+## Set up VR widgets
 
 1. In RacePulse, open **VR widgets** in the side menu and turn on **Show widgets in VR**.
 2. The **Get set up** guide on the Overview takes you through three steps. For the first, choose **Use my desktop widgets** to bring the widgets you use on your monitor, each with a copy of its settings, or **Choose widgets** to pick others.
@@ -69,13 +69,13 @@ Recentering moves only your RacePulse widgets, never the game's view.
 - Each VR widget has its **own settings**. Changing a VR widget's settings on the **Widgets** tab, or in the headset, leaves the desktop widget as it is.
 - Everything on the VR widgets page works with VR off, so you can set things up before you put the headset on.
 
-## Without SteamVR
+## Without SteamVR (OpenXR games)
 
 RacePulse can also draw its widgets inside Direct3D 11 games running on another OpenXR runtime, such as Meta's own runtime with Quest Link. Turn **Native OpenXR games** on, and set the game's VR mode to OpenXR. This route has no dashboard tab, so you place widgets with the keyboard shortcuts, and a bar under your view shows the selected widget while you edit. We recommend SteamVR whenever your game supports it.
 
 Games in the old Oculus mode aren't supported. Switch them to OpenXR or SteamVR in the game's VR settings.
 
-## If something isn't right
+## Troubleshooting
 
 - **No widgets in the headset:** check the Overview. The status should say you're in VR, and the second step should show **Connected through SteamVR**. Widgets follow **Only show with telemetry**: they stay hidden until your sim sends telemetry, unless you're editing them or that setting is off.
 - **My desktop widgets disappeared:** that's expected while you're in VR. They come back about 10 seconds after you leave.

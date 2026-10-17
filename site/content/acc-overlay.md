@@ -87,6 +87,7 @@ RacePulse reads these buffers directly using Windows API calls. The connection i
 
 - **Free** — No subscription, no premium tier, no feature locks
 - **Single executable** — 19MB `.exe`, no installer, no runtime dependencies
+- **VR overlays** — Your widgets in your headset through SteamVR (experimental). See the [VR Guide](/vr/)
 - **Zero configuration** — No imports, no plugin setup, no dashboard files
 - **Lightweight** — Designed to run alongside demanding sims without impacting FPS
 - **Multi-sim support** — The same app works with iRacing, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24

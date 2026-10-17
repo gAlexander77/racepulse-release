@@ -39,7 +39,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "Does RacePulse work in VR?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "RacePulse overlays are standard Windows windows, so they appear on your desktop monitor rather than inside a VR headset. If your sim supports a desktop mirror or spectator view, the overlays will be visible there. For in-headset overlays, you would need a VR overlay app to bring the RacePulse widgets into your VR environment."
+        "text": "Yes. From version 0.4.1, RacePulse can show its widgets inside your VR headset in iRacing, Assetto Corsa Competizione, Assetto Corsa, and Le Mans Ultimate. VR widgets are free, experimental, and off by default. We recommend running your sim through SteamVR, which lets you place widgets from RacePulse's tab in the SteamVR dashboard. The VR Guide on racepulse.racing has the recommended settings."
       }
     },
     {
@@ -103,7 +103,15 @@ ogImage: "assets/application-preview.jpg"
       "name": "Where does RacePulse keep my settings?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In the .racepulse folder in your Windows user profile. It holds your widgets' places, sizes, and settings, your widget layouts, and the telemetry dashboard's settings. Settings > Advanced in RacePulse opens the folder. Updating or replacing RacePulse.exe doesn't touch it."
+        "text": "In the .racepulse folder in your Windows user profile. It holds your widgets' places, sizes, and settings, your widget layouts, your VR layouts, and the telemetry dashboard's settings. Settings > Advanced in RacePulse opens the folder. Updating or replacing RacePulse.exe doesn't touch it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I uninstall RacePulse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RacePulse has no installer, so there's no uninstaller either. If you used VR widgets, turn off Show widgets in VR first. Then close RacePulse and delete RacePulse.exe. Your settings stay in the .racepulse folder in your user profile until you delete it too. The Uninstall Guide on racepulse.racing lists every folder RacePulse uses and has a PowerShell command that removes them."
       }
     }
   ]
@@ -118,7 +126,7 @@ Yes. RacePulse is completely free — no subscription, no trial period, no premi
 
 ### Does RacePulse require an installer?
 
-No. RacePulse is a single portable executable, about 19MB. Download `RacePulse.exe`, run it, and you're ready. No installation wizard and no runtimes to install.
+No. RacePulse is a single portable executable, about 19MB. Download `RacePulse.exe`, run it, and you're ready. No installation wizard and no runtimes to install. To remove it, see the [Uninstall Guide](/uninstall/).
 
 ### What operating system does RacePulse run on?
 
@@ -132,7 +140,11 @@ To update by hand, download the latest `RacePulse.exe` from the [Releases page](
 
 ### Where does RacePulse keep my settings?
 
-In `%USERPROFILE%\.racepulse`. It holds your widgets' places, sizes, and settings, your widget layouts, and the telemetry dashboard's settings. **Settings › Advanced** in RacePulse opens the folder. Updating or replacing `RacePulse.exe` doesn't touch it. Close RacePulse before backing it up or editing its files.
+In `%USERPROFILE%\.racepulse`. It holds your widgets' places, sizes, and settings, your widget layouts, your VR layouts, and the telemetry dashboard's settings. **Settings › Advanced** in RacePulse opens the folder. Updating or replacing `RacePulse.exe` doesn't touch it. Close RacePulse before backing it up or editing its files.
+
+### How do I uninstall RacePulse?
+
+RacePulse has no installer, so there's no uninstaller either. If you used VR widgets, turn off **Show widgets in VR** first. Then close RacePulse and delete `RacePulse.exe`. Your settings stay in `%USERPROFILE%\.racepulse` until you delete that folder too. The [Uninstall Guide](/uninstall/) lists every folder RacePulse uses and has a PowerShell command that removes them.
 
 ---
 
@@ -161,9 +173,9 @@ For **F1 25 and F1 24** — one-time step: go to **Settings > Telemetry Settings
 
 Yes. RacePulse auto-detects which supported game is currently running. Close one sim, launch another, and RacePulse connects to the new game automatically. Your widget layout and settings carry over between games. If the new game can't feed a widget, such as Relative in ACC, that widget hides with a notice and comes back when you switch to a game that supports it.
 
-### Does RacePulse work with iRacing in VR?
+### Does RacePulse work in VR?
 
-RacePulse overlays are standard Windows windows that appear on your desktop monitor, not inside the VR headset. If you use a desktop mirror or spectator view, overlays will be visible there. To bring RacePulse widgets into your VR environment, you can use a VR overlay app to project the windows into headset space.
+Yes. From version 0.4.1, RacePulse can show its widgets inside your VR headset in iRacing, Assetto Corsa Competizione, Assetto Corsa, and Le Mans Ultimate. VR widgets are free, experimental, and off by default: turn on **Show widgets in VR** on the **VR widgets** page. We recommend running your sim through SteamVR, which lets you place widgets from RacePulse's tab in the SteamVR dashboard. The [VR Guide](/vr/) has the recommended settings.
 
 ---
 
@@ -231,7 +243,7 @@ Yes. RacePulse widgets are standard windows that streaming and recording softwar
 
 RacePulse processes racing telemetry locally on your device. It does not upload racing telemetry, lap times, racing inputs, session recordings, driver names, iRacing IDs, or detailed driving data to RacePulse servers.
 
-RacePulse does collect limited app usage analytics to understand whether the app is being used and which supported games need the most development attention. This may include app startup events, app version, operating system, supported game detected, and a randomly generated installation ID. The installation ID is not based on hardware information and is used only to measure app usage.
+RacePulse does collect limited app usage analytics to understand whether the app is being used, which features and supported games need the most development attention, and whether updates and connections work. This may include app startup events, app version, operating system and Windows version, supported game detected, and a randomly generated installation ID. The installation ID is not based on hardware information and is used only to measure app usage. From version 0.4.1, RacePulse also sends a short summary of each time you use it the next time it starts, such as how long it was open, which widgets and features were used, and whether it closed normally. The [Privacy Policy](/privacy/) lists exactly what it includes.
 
 RacePulse may keep limited server logs for security, abuse prevention, rate limiting, and blocking malicious traffic. Website analytics may also be used to understand page views, downloads, referrers, browser/device information, and general product interest.
 

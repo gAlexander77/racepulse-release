@@ -1,7 +1,7 @@
 ---
-title: "Uninstall"
+title: "Uninstall Guide"
 subtitle: "Remove RacePulse from your PC, with or without your settings."
-description: "How to uninstall RacePulse: turn off VR widgets, delete RacePulse.exe, and remove its settings, browser data, and VR files, by hand or with one PowerShell command."
+description: "How to uninstall RacePulse on Windows: turn off VR widgets, delete RacePulse.exe, and remove its settings and files by hand or with one PowerShell command."
 ogImage: "assets/application-preview.jpg"
 ---
 

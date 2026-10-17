@@ -107,7 +107,7 @@ A car-style dash for a second screen, in a normal window of its own. Open **Dash
 ## Quality of Life
 
 - Single executable — no installer, no dependencies
-- Compact distribution (~16MB)
+- Compact distribution (~19MB)
 - Widgets open as windows of RacePulse itself, with no separate helper programs
 - Widget positions, sizes, and settings persist across sessions
 - Set widgets up before you start a game, so they're ready when you load in
