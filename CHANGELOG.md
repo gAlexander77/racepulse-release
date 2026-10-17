@@ -29,7 +29,7 @@ RacePulse 0.4.1 adds VR widgets (experimental), maker logos in Relative and Stan
 ### Good to know
 
 - VR widgets are experimental. With **Show widgets in VR** off, RacePulse works as before.
-- RacePulse has no uninstaller. If you used VR widgets with OpenXR games outside SteamVR, turn **Show widgets in VR** off before deleting RacePulse, so those games stop loading its VR layer.
+- RacePulse has no uninstaller. If you used VR widgets with OpenXR games outside SteamVR, turn **Show widgets in VR** off before deleting RacePulse, so those games stop loading its VR layer. The [VR Guide](https://racepulse.racing/vr/#already-deleted-racepulse) shows how to clean up if you already deleted it.
 
 If something looks wrong in your sim or headset, please [open an issue on GitHub](https://github.com/gAlexander77/racepulse-release/issues) with the sim, the widget, and what you saw.
 

@@ -88,4 +88,16 @@ Turn off **Show widgets in VR** on the VR widgets page. Your VR layouts stay sav
 
 RacePulse has no uninstaller. If you turned on **Native OpenXR games**, turn **Show widgets in VR** off before deleting RacePulse, so those games stop loading its VR layer.
 
+### Already deleted RacePulse?
+
+If you deleted RacePulse while VR widgets were on, the VR layer stays registered for your Windows user. It does nothing without RacePulse, but you can remove it. Run this in PowerShell:
+
+```powershell
+$k = 'HKCU:\Software\Khronos\OpenXR\ApiLayers\Implicit'
+if (Test-Path $k) { (Get-Item $k).Property | Where-Object { $_ -like '*\RacePulse\VR\*' } | ForEach-Object { Remove-ItemProperty -Path $k -Name $_ } }
+Remove-Item -Recurse -Force "$env:LOCALAPPDATA\RacePulse\VR" -ErrorAction SilentlyContinue
+```
+
+It removes only RacePulse's entry and its VR files. Other OpenXR layers stay as they are.
+
 If something looks wrong in your headset, please [open an issue on GitHub](https://github.com/gAlexander77/racepulse-release/issues) with your headset, the sim, and what you saw.
