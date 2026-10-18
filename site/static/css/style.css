@@ -705,6 +705,7 @@ nav.bar ul a.is-active::after {
   max-width: 900px;
   margin: 0 auto;
 }
+.duo.single.narrow figure { max-width: 664px; } /* one clip, same size as a two-up column */
 .duo figure {
   margin: 0;
   background: #000;
