@@ -55,7 +55,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "Does RacePulse require an installer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. RacePulse is a single portable executable (about 19MB). Download RacePulse.exe, run it, and you're ready. No installation, no dependencies, no runtime to install."
+        "text": "No. RacePulse is a single portable executable (about 20MB). Download RacePulse.exe, run it, and you're ready. No installation, no dependencies, no runtime to install."
       }
     },
     {
@@ -103,7 +103,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "Where does RacePulse keep my settings?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In the .racepulse folder in your Windows user profile. It holds your widgets' places, sizes, and settings, your widget layouts, your VR layouts, and the telemetry dashboard's settings. Settings > Advanced in RacePulse opens the folder. Updating or replacing RacePulse.exe doesn't touch it."
+        "text": "In the .racepulse folder in your Windows user profile. It holds your widgets' places, sizes, and settings, your widget layouts, your VR layouts, and the dashboards' settings. Settings > Advanced in RacePulse opens the folder. Updating or replacing RacePulse.exe doesn't touch it."
       }
     },
     {
@@ -126,7 +126,7 @@ Yes. RacePulse is completely free — no subscription, no trial period, no premi
 
 ### Does RacePulse require an installer?
 
-No. RacePulse is a single portable executable, about 19MB. Download `RacePulse.exe`, run it, and you're ready. No installation wizard and no runtimes to install. To remove it, see the [Uninstall Guide](/uninstall/).
+No. RacePulse is a single portable executable, about 20MB. Download `RacePulse.exe`, run it, and you're ready. No installation wizard and no runtimes to install. To remove it, see the [Uninstall Guide](/uninstall/).
 
 ### What operating system does RacePulse run on?
 
@@ -140,7 +140,7 @@ To update by hand, download the latest `RacePulse.exe` from the [Releases page](
 
 ### Where does RacePulse keep my settings?
 
-In `%USERPROFILE%\.racepulse`. It holds your widgets' places, sizes, and settings, your widget layouts, your VR layouts, and the telemetry dashboard's settings. **Settings › Advanced** in RacePulse opens the folder. Updating or replacing `RacePulse.exe` doesn't touch it. Close RacePulse before backing it up or editing its files.
+In `%USERPROFILE%\.racepulse`. It holds your widgets' places, sizes, and settings, your widget layouts, your VR layouts, and the dashboards' settings. **Settings › Advanced** in RacePulse opens the folder. Updating or replacing `RacePulse.exe` doesn't touch it. Close RacePulse before backing it up or editing its files.
 
 ### How do I uninstall RacePulse?
 

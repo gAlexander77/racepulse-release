@@ -82,7 +82,7 @@ Telemetry is captured at up to 60Hz and normalized into a unified format. Each w
 ## Why RacePulse for iRacing
 
 - **Free** — No subscription, no trial period, no feature gates
-- **Single executable** — One 19MB `.exe` file, no installer, no dependencies
+- **Single executable** — One 20MB `.exe` file, no installer, no dependencies
 - **VR overlays** — Your widgets in your headset through SteamVR (experimental). See the [VR Guide](/vr/)
 - **Zero configuration** — No plugins to install, no ports to open, no JSON files to edit
 - **Lightweight** — Minimal CPU and memory footprint designed for racing
