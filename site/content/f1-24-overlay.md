@@ -90,7 +90,7 @@ RacePulse supports both F1 24 and F1 25 simultaneously. If you have both games i
 ## Why RacePulse for F1 24
 
 - **Free** — No cost, no subscription, no feature limits
-- **Single executable** — 19MB `.exe`, no installer needed
+- **Single executable** — 20MB `.exe`, no installer needed
 - **Simple setup** — Enable UDP telemetry once in F1 24 and forget about it
 - **Lightweight** — Won't impact your game performance
 - **Multi-sim** — Same app works with iRacing, ACC, Assetto Corsa, Le Mans Ultimate, and F1 25

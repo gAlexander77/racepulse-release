@@ -90,7 +90,7 @@ Every widget is independently configurable:
 ## Why RacePulse for Le Mans Ultimate
 
 - **Free** — No subscription, no paid tier
-- **Single executable** — 19MB `.exe`, no installer required
+- **Single executable** — 20MB `.exe`, no installer required
 - **VR overlays** — Your widgets in your headset through SteamVR (experimental). See the [VR Guide](/vr/)
 - **One-time setup** — Turn on Enable Plugins in LMU once, then forget about it
 - **Endurance-ready** — Fuel estimation, multi-class standings, and a multi-class track map for long races

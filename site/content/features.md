@@ -96,9 +96,19 @@ Save the widgets on screen as a named layout: which widgets are on, where they s
 - **Language** (Settings › General) is English (US), English (UK), or Automatic. English (UK) uses British spelling, such as colour, tyre, and licence, in the main window and every widget. Automatic decides from your Windows language and time zone, on your computer; nothing is sent anywhere.
 - **Help** (the ? at the top of the window) walks you through getting started in four steps: connect your sim, turn on widgets, place and lock them, and save a layout. Each step ticks off as you do it. It also has tips and the setup for each sim.
 
-## Telemetry Dashboard (Experimental)
+## Dashboards for a Second Screen (Experimental)
 
-A car-style dash for a second screen, in a normal window of its own. Open **Dashboard** in the side menu to see what it shows, preview it, and change its settings, then choose **Pop out**. The window can go borderless full screen on any monitor: F11 toggles full screen and Esc leaves it. The dash shows rev lights, gear, speed, delta, lap times, position and lap, fuel, temperatures, and inputs, and each can be turned off. It is experimental, with few settings for now.
+Three dashes for a second screen:
+- **Telemetry:** a car-style dash with rev lights, gear, speed, delta, lap times, position and lap, fuel, temperatures, and inputs.
+- **Standings:** the whole field by class, filling the screen.
+- **Relative:** the cars around you.
+
+Open **Dashboards** in the side menu to preview each one and change its settings, then choose **Pop out** for its own window. The window can go borderless full screen on any monitor: F11 toggles full screen and Esc leaves it.
+
+**Browser view:** the same dashes in a web browser, on this PC or on a phone, tablet, laptop, or dash screen on your network, with nothing to install on that device.
+- Turn it on under **Dashboards › Browser & phone**. Turn on **Allow other devices** to use other devices, and scan the QR code with a phone.
+- Each device can show a different dash, and on a phone the home page can be added to your Home Screen as **RacePulse Dashboards**.
+- It's off by default, and nothing runs while it's off.
 
 ## VR Widgets (Experimental)
 
@@ -114,7 +124,7 @@ Show your widgets inside your VR headset in iRacing, ACC, Assetto Corsa, and Le 
 ## Quality of Life
 
 - Single executable — no installer, no dependencies
-- Compact distribution (~19MB)
+- Compact distribution (~20MB)
 - Easy to remove: delete the file, and the [Uninstall Guide](/uninstall/) covers your settings
 - Widgets open as windows of RacePulse itself, with no separate helper programs
 - Widget positions, sizes, and settings persist across sessions

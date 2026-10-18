@@ -92,7 +92,7 @@ All widgets are independently customizable:
 ## Why RacePulse for F1 25
 
 - **Free** — No subscription, no trial, no locked features
-- **Single executable** — 19MB `.exe`, no installer or dependencies
+- **Single executable** — 20MB `.exe`, no installer or dependencies
 - **One-time setup** — Enable UDP telemetry once in F1 25, done forever
 - **Lightweight** — Minimal resource footprint alongside the game
 - **Multi-sim** — Same app also works with iRacing, ACC, Assetto Corsa, Le Mans Ultimate, and F1 24

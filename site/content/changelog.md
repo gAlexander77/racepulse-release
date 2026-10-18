@@ -5,6 +5,33 @@ description: "Track RacePulse release history, feature additions, fixes, and tel
 ogImage: "assets/application-preview.jpg"
 ---
 
+## v0.4.4 <span class="changelog-date">2026-10-18</span>
+
+RacePulse 0.4.4 adds dashboards for a second screen: Telemetry, Standings, and Relative, in their own windows or in a browser on a phone, tablet, or another screen on your network (experimental).
+
+### New
+
+- **Dashboards:** the Dashboard page is now **Dashboards**, with three dashes for a second screen: **Telemetry**, and new full-screen **Standings** and **Relative**. Choose one to preview it and change its settings, then **Pop out** its own window, which goes borderless full screen on any monitor.
+- **Standings and Relative dashes** fill any screen, from a phone to a 4K monitor. They group classes under colored bands, keep your car in view, show country flags and maker logos, and have their own settings, including **Text Size** for Standings.
+- **Browser view (experimental):** show the dashes in a web browser, on this PC or on a phone, tablet, laptop, or dash screen on your network, with nothing to install on that device. Turn it on under **Dashboards › Browser & phone**, then turn on **Allow other devices** and scan the QR code with your phone.
+  - **Each device** can show a different dash. They all follow the settings you choose in RacePulse, and the frame rate can be 15, 30, or 60.
+  - **The home page** at `http://<your PC>:8095/` lists all three. On a phone, add it to your Home Screen as **RacePulse Dashboards**; each dash has a home button that shows when you touch the screen.
+  - [Requested on GitHub](https://github.com/gAlexander77/racepulse-release/issues/11).
+
+### Fixed
+
+- **Telemetry dash:** in iRacing, the rev lights follow the car's shift lights instead of lighting up early.
+- **iRacing:** a driver whose license color is missing no longer gets a broken color.
+
+### Good to know
+
+- The browser view is off by default, and nothing runs while it's off. When it's on, it answers only this PC until you allow other devices, and then only devices on your own network.
+- The first time you allow other devices, Windows asks whether to let RacePulse on your network.
+- On iPhone, full screen needs **Add to Home Screen**. To keep the screen on, set **Settings › Display & Brightness › Auto-Lock** to **Never**.
+- Pages need a browser from 2023 or later.
+
+If something looks wrong in your sim or on a screen, please [open an issue on GitHub](https://github.com/gAlexander77/racepulse-release/issues) with the sim, the dash or widget, the device, and what you saw.
+
 ## v0.4.3 <span class="changelog-date">2026-10-17</span>
 
 RacePulse 0.4.3 fixes RacePulse closing when you turned off VR widgets.
