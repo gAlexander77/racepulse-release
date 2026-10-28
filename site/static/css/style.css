@@ -1114,6 +1114,8 @@ footer.foot .colophon {
   color: var(--ink-2);
 }
 .prose tr:last-child td { border-bottom: 0; }
+/* The h2 already draws a rule; don't stack a second one on top of the table. */
+.prose h2 + table { border-top: 0; }
 /* Wide tables scroll in their own box on phones instead of widening the page. */
 @media (max-width: 680px) {
   .prose table { display: block; overflow-x: auto; }
