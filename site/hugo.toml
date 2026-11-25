@@ -6,7 +6,7 @@ enableGitInfo = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Real-time sim racing telemetry overlays for iRacing, Assetto Corsa Competizione, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24"
+  description = "Real-time sim racing telemetry overlays for iRacing, Assetto Corsa Competizione, Assetto Corsa, Assetto Corsa EVO, Le Mans Ultimate, F1 25, and F1 24"
   # og:image must be a small static image — social scrapers reject the multi-MB GIFs
   # (X/Twitter caps cards at 5 MB), so point at the .jpg stills, not the .gif previews.
   ogImage = "assets/application-preview.jpg"
@@ -14,9 +14,9 @@ disableKinds = ["taxonomy", "term"]
   repoURL = "https://github.com/gAlexander77/racepulse-release"
   releaseURL = "https://github.com/gAlexander77/racepulse-release/releases"
   # Bump appVersion, downloadURL, and downloadSizeMB together on each release (footer + schema read appVersion).
-  appVersion = "0.4.4"
-  downloadURL = "https://github.com/gAlexander77/racepulse-release/releases/download/v0.4.4/RacePulse.exe"
-  # RacePulse.exe in MB, rounded (0.4.4: 20,195,840 bytes). Every size in the templates reads this; the
+  appVersion = "0.4.5"
+  downloadURL = "https://github.com/gAlexander77/racepulse-release/releases/download/v0.4.5/RacePulse.exe"
+  # RacePulse.exe in MB, rounded (0.4.5: 20,300,288 bytes). Every size in the templates reads this; the
   # content pages say it in their own words, so search them for the old number too.
   downloadSizeMB = 20
   # Date the preview MP4s referenced by VideoObject schema were last replaced.
