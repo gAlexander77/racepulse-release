@@ -7,6 +7,7 @@ RacePulse is a desktop telemetry overlay application designed for sim racing. Th
 - **iRacing** — Automatic detection via Windows shared memory. No configuration needed.
 - **Assetto Corsa Competizione** — Automatic detection via shared memory once you load into a session. ACC can't be detected from the main menu.
 - **Assetto Corsa** — Automatic detection via shared memory once a session is loaded. AC's main menu runs in a separate launcher, so it isn't detected there.
+- **Assetto Corsa EVO** — Automatic detection via the game's own shared memory once a session is loaded, from game version 0.6. Nothing to install or turn on in the game.
 - **Le Mans Ultimate** — Automatic detection via the game's built-in shared memory (enable Plugins in LMU settings once).
 - **F1 25** — UDP telemetry. Turn it on in the game's Telemetry Settings and send it to one of RacePulse's ports: 22025, 22024, 22023, or 20777.
 - **F1 24** — UDP telemetry, set up the same way as F1 25.
@@ -28,7 +29,7 @@ Standalone, always-on-top widget overlays that float over your game. The app lis
 - **Gear** — Large, bold indicator visible in peripheral vision, with its own colors for neutral and reverse
 - **RPM** — The number (7840 or 7.8k), or a row of 8 to 15 rev lights with the number under them. The pit limiter can flash every light together.
 - **Lap Times** — Current, last, and best lap, in rows, with a large current lap, or on one line. Optional last-vs-best and a 5-second hold of the lap you just finished.
-- **Delta** — Real-time delta to best lap (green = faster, red = slower). iRacing, Le Mans Ultimate, and ACC.
+- **Delta** — Real-time delta to best lap (green = faster, red = slower). iRacing, Le Mans Ultimate, ACC, and Assetto Corsa EVO.
 - **Inputs** — Throttle, brake, and clutch as vertical bars, with percentages
 - **Fuel** — Fuel left and laps left, with fuel use averaged over your recent laps (pit and refueling laps are left out). Optional fuel per lap, a fuel bar, fuel to finish, a SAFE, TIGHT, or SHORT status, and fuel to add at your next stop.
 - **G-Force** — 2D lateral and longitudinal G-force visualization, with rings at 1 g and 2 g, a fading trail, and optional peaks for the lap
@@ -36,24 +37,27 @@ Standalone, always-on-top widget overlays that float over your game. The app lis
 ## Advanced Widgets
 
 - **Telemetry Core** — All-in-one display combining animated rev lights, a large gear, two readouts beside it, and an info row of four slots. Each readout and slot is your choice of 19 readings, such as speed, RPM, position, lap, time left, delta, fuel, temperatures, brake bias, and ERS. Supports metric and imperial units. Optional delta bar, pedal bars, fuel bar, flags, and ABS light.
-- **Inputs Telemetry** — Live scrolling graph of throttle and brake inputs (and optionally clutch) with color-coded traces, combined with real-time pedal bars, gear, speed, and a steering wheel that turns with yours. The brake line can change color while ABS is working (iRacing and ACC).
+- **Inputs Telemetry** — Live scrolling graph of throttle and brake inputs (and optionally clutch) with color-coded traces, combined with real-time pedal bars, gear, speed, and a steering wheel that turns with yours. The brake line can change color while ABS is working (iRacing, ACC, and Assetto Corsa EVO).
 - **Flat Track Map** — Every car on one line of the lap, across the screen or down its edge, in one lane or a lane per class. Markers can be dots or tags with each car's position, class position, number, or initials. Optional sector lines, yellow flag zones, a pit lane row, lapped-car marks, and a warning when a faster class closes on you. Supports iRacing, LMU, and F1.
 - **Relative** — Nearby drivers sorted by track proximity with live gap times, class colors, car numbers, country flags, and pit/out lap indicators. In iRacing it also shows iRating, safety rating, license class, and who's talking on the radio; projected iRating change is in beta. An optional header shows strength of field or the session. Supports iRacing, LMU, and F1.
 - **Standings** — The whole field by class in six layouts: Classic Multiclass, Timing Tower, Class Columns, Battle View, Analyst, and Practice and Qualifying. Each column can follow the layout or be shown or hidden. Purple marks a class's fastest lap and green a personal best. Fill Window lists more drivers when the window has room. Supports iRacing, LMU, and F1.
 - **Lap Log** — Every lap under a banner of the session best and your best, with its delta to your best, the session best, the previous lap, or the average of your last five. IN and OUT pit tags, and optional sectors, fuel used, track and air temperature, top speed, and position. A live row shows the lap you're driving. Works in every supported game.
+- **Flag Panel** — An LED flag box that lights with the flag the sim is showing you, like a hardware flag box on your rig. Yellow and red flash, blue flashes slower, the checkered flag is a checkerboard, and the safety car, virtual safety car, and full course yellow show as SC, VSC, and FCY. When two flags are out, the more urgent one shows. Choose an 8 × 8, 16 × 8, or 16 × 16 grid, round or square LEDs, glow, brightness, and how fast it flashes, or Steady for no flashing at all. Green shows for 3 seconds by default, and by default the panel hides while no flag is out. Turn on **Flag Panel 2** for a second panel with its own place and settings, for example one on each side of the screen. Works in every supported game; the Customize page previews every flag and shows which sims send it.
 
 Country flags come from each driver's profile flair in iRacing, their nationality in F1, and their nationality on Le Mans Ultimate online servers. LMU single-player sessions have no flags.
 
 ## Widget Support by Game
 
-| Widget | iRacing | Le Mans Ultimate | F1 25 / F1 24 | ACC | Assetto Corsa |
-| --- | --- | --- | --- | --- | --- |
-| Speed, Gear, RPM, Lap Times, Inputs, Fuel, G-Force | Yes | Yes | Yes | Yes | Yes |
-| Delta | Yes | Yes | No | Yes | No |
-| Telemetry Core, Inputs Telemetry, Lap Log | Yes | Yes | Yes | Yes | Yes |
-| Flat Track Map, Relative, Standings | Yes | Yes | Yes | No | No |
+| Widget | iRacing | Le Mans Ultimate | F1 25 / F1 24 | ACC | Assetto Corsa | Assetto Corsa EVO |
+| --- | --- | --- | --- | --- | --- | --- |
+| Speed, Gear, RPM, Lap Times, Inputs, Fuel, G-Force | Yes | Yes | Yes | Yes | Yes | Yes |
+| Delta | Yes | Yes | No | Yes | No | Yes |
+| Telemetry Core, Inputs Telemetry, Lap Log, Flag Panel | Yes | Yes | Yes | Yes | Yes | Yes |
+| Flat Track Map, Relative, Standings | Yes | Yes | Yes | No | No | No |
 
 F1 and Assetto Corsa don't send a live delta, so Delta isn't offered there. Some settings also depend on the game, such as iRating and license in Relative (iRacing only). Each widget card shows the sims it works in, and settings that only some sims support are marked with those sims.
+
+Each sim sends its own set of flags, so the Flag Panel shows what that sim reports: for example, F1 has the safety car and virtual safety car, Le Mans Ultimate the full course yellow, and iRacing a caution, the meatball, and debris.
 
 If you connect a game that can't feed an open widget, such as Relative in ACC, the widget hides instead of closing, and a notice says why. It comes back in the same place when you switch to a game that supports it.
 

@@ -1,6 +1,6 @@
 ---
 title: "Free F1 24 Overlay"
-subtitle: "Lightweight telemetry overlay for F1 24 with automatic UDP detection, 13 customizable widgets, and simple one-time setup."
+subtitle: "Lightweight telemetry overlay for F1 24 with automatic UDP detection, 14 customizable widgets, and simple one-time setup."
 description: "Free F1 24 telemetry overlay with real-time speed, RPM, inputs, lap times, relative, fuel, G-force, and track map widgets. Enable UDP telemetry and go."
 ogImage: "assets/application-preview.jpg"
 ---
@@ -29,7 +29,7 @@ If Windows Firewall asks to allow RacePulse, click Allow. RacePulse only listens
 
 ## Available Widgets for F1 24
 
-F1 24 supports 13 of the 14 RacePulse widgets:
+F1 24 supports 14 of the 15 RacePulse widgets:
 
 ### Core Widgets
 
@@ -49,6 +49,7 @@ F1 24 supports 13 of the 14 RacePulse widgets:
 - **Relative** — Nearby drivers sorted by gap on track, with car numbers, country flags, and pit/out lap indicators
 - **Standings** — The whole field in six layouts, with gaps, best and last laps, pit stops, positions gained, and each car's tire (beta)
 - **Lap Log** — Every lap you drive with its delta, sectors, and lap validity, under the session best and your best
+- **Flag Panel** — An LED flag box that lights with F1 24's flag: green, yellow (including a local yellow on your part of the track), blue, and SC and VSC under the safety car and virtual safety car. Run a second one with Flag Panel 2.
 
 ### Not Available
 
@@ -93,7 +94,7 @@ RacePulse supports both F1 24 and F1 25 simultaneously. If you have both games i
 - **Single executable** — 20MB `.exe`, no installer needed
 - **Simple setup** — Enable UDP telemetry once in F1 24 and forget about it
 - **Lightweight** — Won't impact your game performance
-- **Multi-sim** — Same app works with iRacing, ACC, Assetto Corsa, Le Mans Ultimate, and F1 25
+- **Multi-sim** — Same app works with iRacing, ACC, Assetto Corsa, Assetto Corsa EVO, Le Mans Ultimate, and F1 25
 
 ---
 

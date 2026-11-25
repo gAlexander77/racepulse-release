@@ -8,7 +8,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white)
 
-RacePulse gives you real-time telemetry overlays for sim racing. Lightweight, modular widgets that float over your game for speed, throttle/brake inputs, lap times, fuel, standings, and more. Auto-detects iRacing, Assetto Corsa Competizione, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24. Single `.exe`, no installer.
+RacePulse gives you real-time telemetry overlays for sim racing. Lightweight, modular widgets that float over your game for speed, throttle/brake inputs, lap times, fuel, standings, and more. Auto-detects iRacing, Assetto Corsa Competizione, Assetto Corsa, Assetto Corsa EVO, Le Mans Ultimate, F1 25, and F1 24. Single `.exe`, no installer.
 
 If RacePulse improves your setup, please consider giving this repo a star. It helps more sim racers discover the project.
 
@@ -20,10 +20,11 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 ## Free Features (Current)
 
-- iRacing, Assetto Corsa Competizione, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24 support with auto-detection
-- 14 overlay widgets
+- iRacing, Assetto Corsa Competizione, Assetto Corsa, Assetto Corsa EVO, Le Mans Ultimate, F1 25, and F1 24 support with auto-detection
+- 15 overlay widgets
   - Basic: Speed, Gear, RPM, Lap Times, Delta, Inputs, Fuel, and G-Force
-  - Advanced: Telemetry Core, Inputs Telemetry, Flat Track Map, Relative, Standings, and Lap Log
+  - Advanced: Telemetry Core, Inputs Telemetry, Flat Track Map, Relative, Standings, Lap Log, and Flag Panel
+- Flag Panel: an LED flag box that lights with the sim's flag, including SC, VSC, and FCY; run two, one on each side of the screen
 - Per-widget customization on a Customize page with a live preview
 - Widget layouts: save the widgets on screen and switch between setups
 - Arrange widgets by dragging them on your monitor, then lock them for racing (click-through)
@@ -37,7 +38,7 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 
 1. Download `RacePulse.exe` from [Releases](../../releases)
 2. Launch it (no install required)
-3. Start your sim (iRacing, ACC, AC, LMU, F1 25, or F1 24) and load into a session. RacePulse auto-connects. LMU and F1 need one in-game setting first; see [Supported Games](#supported-games).
+3. Start your sim (iRacing, ACC, AC, AC EVO, LMU, F1 25, or F1 24) and load into a session. RacePulse auto-connects. LMU and F1 need one in-game setting first; see [Supported Games](#supported-games).
 4. In **All widgets**, turn on the widgets you want, drag them into place, and choose **Lock for racing** in the bottom bar
 
 ## Preview
@@ -57,6 +58,10 @@ If RacePulse improves your setup, please consider giving this repo a star. It he
 **Works across multiple titles (LMU in preview below)**
 
 ![Standings, Flat Map, and Inputs Telemetry widgets active in Le Mans Ultimate at Laguna Seca](site/static/assets/lmu-overlay-preview.gif)
+
+**Assetto Corsa EVO: Inputs Telemetry over the game**
+
+![Inputs Telemetry widget showing throttle, brake, gear, speed, and steering in Assetto Corsa EVO](site/static/assets/assetto-corsa-evo-overlay-preview.gif)
 
 **Use multiple widgets at once. Relative, Standings, Flat Map, and Inputs Telemetry active in iRacing**
 
@@ -95,18 +100,19 @@ RacePulse also updates itself: it checks for new versions when it starts and off
 | **iRacing**                    | Shared memory | No configuration needed. Detected automatically when iRacing is running                                 |
 | **Assetto Corsa Competizione** | Shared memory | No configuration needed. Detected once you load into a session (not from the main menu)                 |
 | **Assetto Corsa**              | Shared memory | No configuration needed. Detected once a session is loaded (the main menu is a separate launcher)        |
+| **Assetto Corsa EVO**          | Shared memory | No configuration needed. Game version 0.6 or newer; detected once a session is loaded                   |
 | **Le Mans Ultimate**           | Shared memory | Enable Plugins in LMU's Gameplay settings; uses the built-in shared memory interface                    |
 | **F1 25**                      | UDP           | Enable UDP telemetry in game settings and set the port to 22025, 22024, 22023, or 20777 (format 2025)   |
 | **F1 24**                      | UDP           | Enable UDP telemetry in game settings and set the port to 22025, 22024, 22023, or 20777 (format 2024)   |
 
 RacePulse automatically detects which game is running and begins capturing telemetry. If F1 doesn't connect, another app may be using that port: pick another of these ports in the game.
 
-Relative, Standings, and Flat Track Map work in iRacing, Le Mans Ultimate, and F1. Delta works in iRacing, Le Mans Ultimate, and ACC. Every other widget works in all six games.
+Relative, Standings, and Flat Track Map work in iRacing, Le Mans Ultimate, and F1. Delta works in iRacing, Le Mans Ultimate, ACC, and Assetto Corsa EVO. Every other widget works in all seven games.
 
 ## Core Features
 
-- Real-time racing telemetry overlays for iRacing, ACC, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24
-- Modular widget system (speed, gear, RPM, delta, inputs, fuel, G-force, relative, standings, lap log, and more)
+- Real-time racing telemetry overlays for iRacing, ACC, Assetto Corsa, Assetto Corsa EVO, Le Mans Ultimate, F1 25, and F1 24
+- Modular widget system (speed, gear, RPM, delta, inputs, fuel, G-force, relative, standings, lap log, flag panel, and more)
 - Per-widget customization with persistent settings
 - Widget layouts that remember their widgets, places, sizes, settings, and monitors
 - Arrange and Lock for racing (click-through), with an Overlay menu for Only show with telemetry, Recenter, and Turn all off
@@ -119,6 +125,7 @@ Relative, Standings, and Flat Track Map work in iRacing, Le Mans Ultimate, and F
 - Graphics driver with desktop composition enabled
 - For F1 games: UDP telemetry enabled in game settings, sent to one of RacePulse's ports
 - For Le Mans Ultimate: Enable Plugins turned on in the game's Gameplay settings
+- For Assetto Corsa EVO: game version 0.6 or newer
 
 ## Documentation
 

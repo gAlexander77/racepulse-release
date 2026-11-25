@@ -2,6 +2,36 @@
 
 All notable changes to RacePulse releases are documented here.
 
+## [v0.4.5] — 2026-11-25
+
+RacePulse 0.4.5 adds Assetto Corsa EVO and the Flag Panel, an LED flag box for your screen, and fixes two confusing connection errors.
+
+### New
+
+- **Assetto Corsa EVO:** RacePulse now reads Assetto Corsa EVO, from game version 0.6. Load into a session and it connects by itself, with nothing to install or turn on in the game. Speed, Gear, RPM, Lap Times, Delta, Inputs, Fuel, G-Force, Telemetry Core, Inputs Telemetry, Lap Log, and the Flag Panel work in EVO, with its live delta to your best lap, lap validity, brake bias, TC and ABS settings, and flags. See the [Assetto Corsa EVO page](https://racepulse.racing/assetto-corsa-evo-overlay/).
+- **Flag Panel:** an LED flag box on your screen that lights with the flag the sim is showing you, in every supported game. Yellow and red flash, blue flashes slower, the checkered flag is a checkerboard, and the safety car, virtual safety car, and full course yellow show as SC, VSC, and FCY. When two flags are out, the more urgent one shows.
+  - **Two panels:** turn on **Flag Panel 2** for a second one with its own place and settings, for example one on each side of the screen.
+  - **Settings:** an 8 × 8, 16 × 8, or 16 × 16 LED grid, round or square LEDs, glow, brightness, flashing speed, whether green, blue, and white flags show, the panel's housing, and the flag's name under it. Green shows for 3 seconds by default, and by default the panel hides while no flag is out.
+  - **Flashing** is never faster than 3 flashes a second, and **Steady** lights every flag without flashing.
+  - **Preview every flag** on its Customize page: pick one from the bar under the preview, or choose **Play all**. Hovering a flag shows which sims send it, and with a sim connected, the flags it doesn't send are dimmed.
+- **Safety car, virtual safety car, and full course yellow:** RacePulse now tells them apart from a plain yellow: the safety car and virtual safety car in F1, the full course yellow in Le Mans Ultimate, and a caution in iRacing.
+
+### Improved
+
+- **iRacing flags:** the meatball (repair) flag and debris now come through, and a waved caution counts as a yellow.
+
+### Fixed
+
+- After you closed Assetto Corsa or ACC, the header could show a red error saying the game wasn't running. It no longer does.
+- When RacePulse found a game but couldn't connect to it, the header showed a technical error. It now says what to do, for example: "Couldn't connect to F1 24/25. Start the game and load into a session, then try again."
+
+### Good to know
+
+- Assetto Corsa EVO doesn't share other drivers' names, laps, or times, so Relative, Standings, and Flat Track Map aren't offered there. It sends no sector times either.
+- Each sim sends its own set of flags. The Flag Panel's Customize page shows which sims send each one.
+
+If something looks wrong in your sim, please [open an issue on GitHub](https://github.com/gAlexander77/racepulse-release/issues) with the sim, the widget, and what you saw.
+
 ## [v0.4.4] — 2026-10-18
 
 RacePulse 0.4.4 adds dashboards for a second screen: Telemetry, Standings, and Relative, in their own windows or in a browser on a phone, tablet, or another screen on your network (experimental).

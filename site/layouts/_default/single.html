@@ -33,7 +33,7 @@
   "description": {{ (.Params.description | default .Params.subtitle) | jsonify | safeJS }},
   "thumbnailUrl": "{{ $thumb }}",
   "contentUrl": "{{ $mp4 }}",
-  "uploadDate": "{{ .Site.Params.videoUploadDate }}",
+  "uploadDate": "{{ .Params.videoUploadDate | default .Site.Params.videoUploadDate }}",
   "publisher": {
     "@type": "Organization",
     "name": "RacePulse",

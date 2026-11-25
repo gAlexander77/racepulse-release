@@ -24,7 +24,7 @@ No setup inside Assetto Corsa or its launcher is required. AC is detected once a
 
 ## Available Widgets for Assetto Corsa
 
-Assetto Corsa supports 10 of the 14 RacePulse widgets:
+Assetto Corsa supports 11 of the 15 RacePulse widgets:
 
 ### Core Widgets
 
@@ -41,6 +41,7 @@ Assetto Corsa supports 10 of the 14 RacePulse widgets:
 - **Telemetry Core** — All-in-one display with rev lights, gear, and readouts you choose, such as speed, RPM, position, track temperature, and lap count. AC doesn't send elapsed session time, so that reading shows a dash.
 - **Inputs Telemetry** — Live scrolling graph of throttle and brake inputs with pedal bars, a steering wheel, gear, and speed
 - **Lap Log** — Every lap you drive with its delta and sectors, under your best lap, with the track's readable name
+- **Flag Panel** — An LED flag box that lights with Assetto Corsa's flag: green, yellow, blue, white, black, the meatball, and checkered. Run a second one with Flag Panel 2.
 
 ### Not Available
 
@@ -77,6 +78,10 @@ Assetto Corsa exposes telemetry through three Windows shared memory buffers:
 
 RacePulse reads these buffers directly. Each widget is a separate transparent, always-on-top, click-through window. There is no performance impact on the game beyond standard shared memory reads.
 
+## Racing in Assetto Corsa EVO?
+
+RacePulse supports Assetto Corsa EVO too. EVO has its own shared memory, separate from the original game's, and RacePulse reads it from game version 0.6. See the [Assetto Corsa EVO overlay page](/assetto-corsa-evo-overlay/) for its setup and widgets.
+
 ## Why RacePulse for Assetto Corsa
 
 - **Free** — No subscription, no paid features
@@ -84,7 +89,7 @@ RacePulse reads these buffers directly. Each widget is a separate transparent, a
 - **VR overlays** — Your widgets in your headset through SteamVR (experimental). See the [VR Guide](/vr/)
 - **No plugin setup** — No launcher apps, no scripts, no dashboards to import
 - **Lightweight** — Minimal resource usage, won't impact your FPS
-- **Multi-sim** — Same overlay app works across iRacing, ACC, Le Mans Ultimate, F1 25, and F1 24
+- **Multi-sim** — Same overlay app works across iRacing, ACC, Assetto Corsa EVO, Le Mans Ultimate, F1 25, and F1 24
 
 ---
 

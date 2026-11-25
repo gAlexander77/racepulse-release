@@ -606,7 +606,7 @@ nav.bar ul a.is-active::after {
 /* ───── SIMS GRID ───── */
 .sims-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   border-bottom: 2px solid var(--black);
   max-width: 1360px;
   margin: 0 auto;
@@ -745,7 +745,7 @@ nav.bar ul a.is-active::after {
 }
 .widgets-grid .cell:nth-child(4n) { border-right: 0; }
 .widgets-grid .cell:nth-last-child(-n+4) { border-bottom: 0; }
-/* 14 cells leave a short last row; no rule beside the empty space. */
+/* 15 cells leave a short last row; no rule beside the empty space. */
 .widgets-grid .cell:last-child { border-right: 0; }
 .widgets-grid .cell .nm {
   font-family: var(--display);
@@ -1433,6 +1433,7 @@ html.js .reveal-stagger:not(.is-visible) > * {
 .reveal-stagger.is-visible > *:nth-child(12) { transition-delay: 0.50s; }
 .reveal-stagger.is-visible > *:nth-child(13) { transition-delay: 0.54s; }
 .reveal-stagger.is-visible > *:nth-child(14) { transition-delay: 0.58s; }
+.reveal-stagger.is-visible > *:nth-child(15) { transition-delay: 0.62s; }
 
 /* ───── HERO LOAD ANIMATION (JS-gated for crawler safety) ───── */
 @keyframes hero-rise {
@@ -1482,13 +1483,16 @@ html.js .hero-meta               { animation-delay: 0.28s; }
     align-self: stretch;
   }
 }
+/* Seven sim cards: four across until there is room for seven. */
+@media (max-width: 1360px) {
+  .sims-grid { grid-template-columns: repeat(4, 1fr); }
+  .sims-grid .sim:nth-child(4n) { border-right: 0; }
+  .sims-grid .sim:nth-child(-n+4) { border-bottom: 1px solid var(--paper-2); }
+}
 @media (max-width: 1080px) {
   .stats { grid-template-columns: repeat(2, 1fr); }
   .stats > div:nth-child(2) { border-right: 0; }
   .stats > div:nth-child(-n+2) { border-bottom: 1px solid var(--paper-2); }
-  .sims-grid { grid-template-columns: repeat(3, 1fr); }
-  .sims-grid .sim:nth-child(3n) { border-right: 0; }
-  .sims-grid .sim:nth-child(-n+3) { border-bottom: 1px solid var(--paper-2); }
   .widgets-grid { grid-template-columns: repeat(2, 1fr); }
   .widgets-grid .cell:nth-child(4n) { border-right: 1px solid var(--paper-2); }
   .widgets-grid .cell:nth-child(2n) { border-right: 0; }
@@ -1530,8 +1534,9 @@ html.js .hero-meta               { animation-delay: 0.28s; }
   .stats > div:last-child { border-bottom: 0; }
   .stats .num { font-size: 72px; }
   .sims-grid { grid-template-columns: 1fr 1fr; }
-  .sims-grid .sim:nth-child(3n) { border-right: 1px solid var(--paper-2); }
+  .sims-grid .sim:nth-child(4n) { border-right: 1px solid var(--paper-2); }
   .sims-grid .sim:nth-child(2n) { border-right: 0; }
+  .sims-grid .sim:nth-child(-n+6) { border-bottom: 1px solid var(--paper-2); }
   .widgets-grid { grid-template-columns: 1fr; }
   .widgets-grid .cell { border-right: 0 !important; }
   .widgets-grid .cell:nth-last-child(2) { border-bottom: 1px solid var(--paper-2); }

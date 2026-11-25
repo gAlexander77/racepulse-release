@@ -1,7 +1,7 @@
 ---
 title: "FAQ"
 subtitle: "Frequently asked questions about RacePulse — setup, supported games, widgets, troubleshooting, and more."
-description: "Answers to common questions about RacePulse: free sim racing telemetry overlay for iRacing, ACC, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24."
+description: "Answers to common questions about RacePulse: free sim racing telemetry overlay for iRacing, ACC, Assetto Corsa, Assetto Corsa EVO, Le Mans Ultimate, F1 25, and F1 24."
 ogImage: "assets/application-preview.jpg"
 ---
 
@@ -23,7 +23,15 @@ ogImage: "assets/application-preview.jpg"
       "name": "What sim racing games does RacePulse support?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "RacePulse supports six games: iRacing, Assetto Corsa Competizione (ACC), Assetto Corsa, Le Mans Ultimate (LMU), F1 25, and F1 24. iRacing, ACC, AC, and LMU use Windows shared memory (LMU needs the Enable Plugins toggle turned on once). F1 25 and F1 24 use UDP telemetry (one-time setting in the game)."
+        "text": "RacePulse supports seven games: iRacing, Assetto Corsa Competizione (ACC), Assetto Corsa, Assetto Corsa EVO, Le Mans Ultimate (LMU), F1 25, and F1 24. iRacing, ACC, AC, AC EVO, and LMU use Windows shared memory (LMU needs the Enable Plugins toggle turned on once, and AC EVO needs game version 0.6 or newer). F1 25 and F1 24 use UDP telemetry (one-time setting in the game)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does RacePulse support Assetto Corsa EVO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, from RacePulse 0.4.5. It reads the shared memory built into Assetto Corsa EVO, from game version 0.6, with nothing to install or turn on in the game. Load into a session and RacePulse connects. 12 of the 15 widgets work in EVO, including Delta, Lap Log, Inputs Telemetry, and the Flag Panel. Relative, Standings, and Flat Track Map need other drivers' data that EVO doesn't share."
       }
     },
     {
@@ -31,7 +39,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "Do I need to install plugins or configure anything?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No plugins to install for any game. For iRacing, ACC, and Assetto Corsa, RacePulse detects the game automatically via shared memory; ACC and Assetto Corsa are detected once you load into a session. For Le Mans Ultimate, turn on Enable Plugins in Settings > Gameplay (one-time). RacePulse reads the shared memory interface built into the game. For F1 25 and F1 24, enable UDP Telemetry in the game's settings and set the UDP port to one RacePulse listens on: 22025, 22024, 22023, or 20777."
+        "text": "No plugins to install for any game. For iRacing, ACC, Assetto Corsa, and Assetto Corsa EVO, RacePulse detects the game automatically via shared memory; ACC, Assetto Corsa, and Assetto Corsa EVO are detected once you load into a session. For Le Mans Ultimate, turn on Enable Plugins in Settings > Gameplay (one-time). RacePulse reads the shared memory interface built into the game. For F1 25 and F1 24, enable UDP Telemetry in the game's settings and set the UDP port to one RacePulse listens on: 22025, 22024, 22023, or 20777."
       }
     },
     {
@@ -47,7 +55,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "How many widgets does RacePulse have?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "RacePulse has 14 overlay widgets: Speed, Gear, RPM, Lap Times, Delta, Inputs, Fuel, G-Force, Telemetry Core (all-in-one display), Inputs Telemetry (scrolling input graph), Flat Track Map (car positions on track), Relative (nearby drivers with gap times), Standings (the whole field by class), and Lap Log (every lap with its delta)."
+        "text": "RacePulse has 15 overlay widgets: Speed, Gear, RPM, Lap Times, Delta, Inputs, Fuel, G-Force, Telemetry Core (all-in-one display), Inputs Telemetry (scrolling input graph), Flat Track Map (car positions on track), Relative (nearby drivers with gap times), Standings (the whole field by class), Lap Log (every lap with its delta), and Flag Panel (an LED flag box; you can run two)."
       }
     },
     {
@@ -63,7 +71,7 @@ ogImage: "assets/application-preview.jpg"
       "name": "What operating system does RacePulse run on?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "RacePulse runs on Windows 10 and Windows 11 (64-bit). iRacing, ACC, Assetto Corsa, and Le Mans Ultimate support is Windows-only because those games use Windows shared memory. F1 25 and F1 24 use UDP which is cross-platform in principle, but the overlay windows currently require Windows."
+        "text": "RacePulse runs on Windows 10 and Windows 11 (64-bit). iRacing, ACC, Assetto Corsa, Assetto Corsa EVO, and Le Mans Ultimate support is Windows-only because those games use Windows shared memory. F1 25 and F1 24 use UDP which is cross-platform in principle, but the overlay windows currently require Windows."
       }
     },
     {
@@ -130,7 +138,7 @@ No. RacePulse is a single portable executable, about 20MB. Download `RacePulse.e
 
 ### What operating system does RacePulse run on?
 
-Windows 10 and Windows 11 (64-bit). iRacing, ACC, Assetto Corsa, and Le Mans Ultimate support is Windows-only because those games use Windows shared memory for telemetry. F1 25 and F1 24 use UDP which is cross-platform in principle, but the overlay windows currently require Windows.
+Windows 10 and Windows 11 (64-bit). iRacing, ACC, Assetto Corsa, Assetto Corsa EVO, and Le Mans Ultimate support is Windows-only because those games use Windows shared memory for telemetry. F1 25 and F1 24 use UDP which is cross-platform in principle, but the overlay windows currently require Windows.
 
 ### How do I update RacePulse?
 
@@ -152,18 +160,23 @@ RacePulse has no installer, so there's no uninstaller either. If you used VR wid
 
 ### What sim racing games does RacePulse support?
 
-RacePulse supports six games:
+RacePulse supports seven games:
 
 - [**iRacing**](/iracing-overlay/) — Windows shared memory, no setup needed
 - [**Assetto Corsa Competizione**](/acc-overlay/) — Windows shared memory, no setup needed; load into a session to be detected
 - [**Assetto Corsa**](/assetto-corsa-overlay/) — Windows shared memory, no setup needed; load into a session to be detected
+- [**Assetto Corsa EVO**](/assetto-corsa-evo-overlay/) — the game's own shared memory, no setup needed; game version 0.6 or newer, load into a session to be detected
 - [**Le Mans Ultimate**](/lmu-overlay/) — built-in shared memory, enable Plugins in LMU settings once
 - [**F1 25**](/f1-25-overlay/) — UDP telemetry, enable in game settings once and pick one of RacePulse's ports
 - [**F1 24**](/f1-24-overlay/) — UDP telemetry, enable in game settings once and pick one of RacePulse's ports
 
+### Does RacePulse support Assetto Corsa EVO?
+
+Yes, from RacePulse 0.4.5. RacePulse reads the shared memory built into Assetto Corsa EVO, from game version 0.6, with nothing to install or turn on in the game. Load into a session and it connects. 12 of the 15 widgets work in EVO, including Delta, Lap Log, Inputs Telemetry, and the Flag Panel. Relative, Standings, and Flat Track Map need other drivers' data that EVO doesn't share. See the [Assetto Corsa EVO page](/assetto-corsa-evo-overlay/).
+
 ### Do I need to install plugins or configure anything?
 
-For **iRacing, ACC, and Assetto Corsa** — no. RacePulse detects these games automatically via shared memory with zero configuration. ACC and Assetto Corsa can't be detected from their main menus, so load into a session first.
+For **iRacing, ACC, Assetto Corsa, and Assetto Corsa EVO** — no. RacePulse detects these games automatically via shared memory with zero configuration. ACC, Assetto Corsa, and Assetto Corsa EVO can't be detected from their main menus, so load into a session first.
 
 For **Le Mans Ultimate** — one-time step: go to **Settings > Gameplay** and turn on **Enable Plugins**. RacePulse reads the shared memory interface built into the game, so there is no plugin DLL to install.
 
@@ -183,19 +196,19 @@ Yes. From version 0.4.1, RacePulse can show its widgets inside your VR headset i
 
 ### How many widgets does RacePulse have?
 
-RacePulse has **14 overlay widgets**:
+RacePulse has **15 overlay widgets**:
 
 - **Core (8):** Speed, Gear, RPM, Lap Times, Delta, Inputs, Fuel, G-Force (listed as Basic in the app)
-- **Advanced (6):** Telemetry Core (all-in-one display), Inputs Telemetry (scrolling input graph), Flat Track Map (car positions), Relative (nearby drivers with gaps), Standings (the whole field by class, in six layouts), Lap Log (every lap with its delta)
+- **Advanced (7):** Telemetry Core (all-in-one display), Inputs Telemetry (scrolling input graph), Flat Track Map (car positions), Relative (nearby drivers with gaps), Standings (the whole field by class, in six layouts), Lap Log (every lap with its delta), Flag Panel (an LED flag box; turn on Flag Panel 2 for a second one)
 
 See the full [features page](/features/) for details on each widget.
 
 ### Do all widgets work with every game?
 
-Most widgets work across all six supported games. The exceptions:
+Most widgets work across all seven supported games. The exceptions:
 
-- **Relative, Standings, and Flat Track Map** — iRacing, Le Mans Ultimate, and F1 (they need data about every car that ACC and Assetto Corsa don't send)
-- **Delta** — iRacing, Le Mans Ultimate, and ACC (F1 and Assetto Corsa don't send a live delta)
+- **Relative, Standings, and Flat Track Map** — iRacing, Le Mans Ultimate, and F1 (they need data about every car that ACC, Assetto Corsa, and Assetto Corsa EVO don't send)
+- **Delta** — iRacing, Le Mans Ultimate, ACC, and Assetto Corsa EVO (F1 and Assetto Corsa don't send a live delta)
 
 Some settings depend on the game too. iRating, license, and who's talking in Relative and Standings are iRacing only, and country flags show in iRacing, F1, and Le Mans Ultimate online servers. The app marks each widget and setting with the sims it works in.
 
@@ -256,7 +269,7 @@ RacePulse does not sell personal data and does not use analytics to collect raci
 ### RacePulse doesn't detect my game
 
 - Make sure you are **in a session** (on track or in replay), not in the main menu — shared memory is only populated while on track
-- For **ACC and Assetto Corsa**: they can't be detected from the main menu, so load into a session first
+- For **ACC, Assetto Corsa, and Assetto Corsa EVO**: they can't be detected from the main menu, so load into a session first. Assetto Corsa EVO needs game version 0.6 or newer.
 - For **Le Mans Ultimate**: verify that **Settings > Gameplay > Enable Plugins** is turned on
 - For **F1 25/F1 24**: verify that **UDP Telemetry** is enabled and the **UDP Port** is 22025, 22024, 22023, or 20777. If it still doesn't connect, another app may be using that port; pick another of these ports in the game, or close the other app.
 - Check the connection pill at the top of RacePulse. It reads **LIVE** when telemetry arrives. If it reads **Not connected**, click it to auto-detect, or open its menu to pick your sim.
