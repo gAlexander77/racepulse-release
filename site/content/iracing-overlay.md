@@ -1,6 +1,6 @@
 ---
 title: "Free iRacing Overlay"
-subtitle: "Lightweight telemetry overlay for iRacing with automatic shared memory detection, 14 customizable widgets, and zero configuration."
+subtitle: "Lightweight telemetry overlay for iRacing with automatic shared memory detection, 15 customizable widgets, and zero configuration."
 description: "Free iRacing telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, relative, standings, and track map widgets. No plugins, no configuration — just download and race."
 ogImage: "assets/iracing-overlay-preview.jpg"
 ---
@@ -31,7 +31,7 @@ That's it. No shared memory plugins to install, no ports to configure, no config
 
 ## Available Widgets for iRacing
 
-iRacing has full support for all 14 RacePulse widgets:
+iRacing has full support for all 15 RacePulse widgets:
 
 ### Core Widgets
 
@@ -52,6 +52,7 @@ iRacing has full support for all 14 RacePulse widgets:
 - **Relative** — Nearby drivers sorted by track proximity with live gap times, iRating, safety rating, license class, country flags, and pit/out lap indicators. Gaps between classes are measured on your class's lap, and a headset marks the driver talking on the radio.
 - **Standings** — The whole field by class in six layouts, with strength of field per class, gaps, best and last laps, pit stops, stints, and positions gained
 - **Lap Log** — Every lap you drive with its delta, under the session best and your best
+- **Flag Panel** — An LED flag box that lights with iRacing's flag: green, yellow, blue, white on the last lap, red, black, the meatball, debris, checkered, and SC during a caution. Run a second one with Flag Panel 2.
 
 > **Note:** iRating, safety rating, license class, and who's talking are iRacing-only parts of Relative and Standings. Country flags come from each driver's profile flair. Projected iRating change is in beta.
 
@@ -86,7 +87,7 @@ Telemetry is captured at up to 60Hz and normalized into a unified format. Each w
 - **VR overlays** — Your widgets in your headset through SteamVR (experimental). See the [VR Guide](/vr/)
 - **Zero configuration** — No plugins to install, no ports to open, no JSON files to edit
 - **Lightweight** — Minimal CPU and memory footprint designed for racing
-- **Multi-sim support** — The same app also works with ACC, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24 if you race across multiple sims
+- **Multi-sim support** — The same app also works with ACC, Assetto Corsa, Assetto Corsa EVO, Le Mans Ultimate, F1 25, and F1 24 if you race across multiple sims
 
 ---
 

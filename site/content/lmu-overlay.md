@@ -1,6 +1,6 @@
 ---
 title: "Free Le Mans Ultimate Overlay"
-subtitle: "Lightweight telemetry overlay for Le Mans Ultimate with automatic shared memory detection, 14 customizable widgets, and zero configuration."
+subtitle: "Lightweight telemetry overlay for Le Mans Ultimate with automatic shared memory detection, 15 customizable widgets, and zero configuration."
 description: "Free Le Mans Ultimate telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, standings, and track map widgets for LMU. No plugins to install."
 ogImage: "assets/lmu-overlay-preview.jpg"
 ---
@@ -31,7 +31,7 @@ That's the whole setup. RacePulse reads the shared memory interface built into L
 
 ## Available Widgets for Le Mans Ultimate
 
-LMU supports all 14 RacePulse widgets:
+LMU supports all 15 RacePulse widgets:
 
 ### Core Widgets
 
@@ -52,6 +52,7 @@ LMU supports all 14 RacePulse widgets:
 - **Relative** — Nearby drivers sorted by gap on track, with class colors, car numbers, country flags, and pit/out lap indicators. From the pits it follows the best-placed car on track until you head out.
 - **Standings** — The field by class in six layouts, with class headers, gaps, laps, and pit stops
 - **Lap Log** — Every lap you drive with its delta and sectors, under the session best and your best
+- **Flag Panel** — An LED flag box that lights with LMU's flag: green, yellow (including a local yellow on your part of the track), blue, checkered, and FCY during a full course yellow. Run a second one with Flag Panel 2.
 
 > **Note:** On LMU online servers, Relative and Standings show each driver's country flag. LMU sends no nationality in single-player sessions, so those show no flags.
 
@@ -94,7 +95,7 @@ Every widget is independently configurable:
 - **VR overlays** — Your widgets in your headset through SteamVR (experimental). See the [VR Guide](/vr/)
 - **One-time setup** — Turn on Enable Plugins in LMU once, then forget about it
 - **Endurance-ready** — Fuel estimation, multi-class standings, and a multi-class track map for long races
-- **Multi-sim** — Same app works with iRacing, ACC, Assetto Corsa, F1 25, and F1 24
+- **Multi-sim** — Same app works with iRacing, ACC, Assetto Corsa, Assetto Corsa EVO, F1 25, and F1 24
 
 ---
 

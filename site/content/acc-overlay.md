@@ -1,6 +1,6 @@
 ---
 title: "Free ACC Overlay"
-subtitle: "Lightweight telemetry overlay for Assetto Corsa Competizione with automatic shared memory detection, 11 customizable widgets, and zero configuration."
+subtitle: "Lightweight telemetry overlay for Assetto Corsa Competizione with automatic shared memory detection, 12 customizable widgets, and zero configuration."
 description: "Free ACC telemetry overlay with real-time speed, RPM, inputs, lap times, delta, fuel, G-force, and lap log widgets for Assetto Corsa Competizione. No plugins needed."
 ogImage: "assets/application-preview.jpg"
 ---
@@ -24,7 +24,7 @@ No plugins to enable, no ports to configure. ACC can't be detected from the main
 
 ## Available Widgets for ACC
 
-ACC supports 11 of the 14 RacePulse widgets:
+ACC supports 12 of the 15 RacePulse widgets:
 
 ### Core Widgets
 
@@ -42,6 +42,7 @@ ACC supports 11 of the 14 RacePulse widgets:
 - **Telemetry Core** — Combined display with rev lights, gear, and readouts you choose, such as speed, RPM, position, track temperature, and lap count. ACC doesn't send elapsed session time, so that reading shows a dash.
 - **Inputs Telemetry** — Scrolling input graph with pedal bars, a steering wheel, gear, and speed. ABS can color the brake line.
 - **Lap Log** — Every lap you drive with its delta, sectors, and lap validity, under your best lap
+- **Flag Panel** — An LED flag box that lights with ACC's flag: green, yellow, blue, white, red, black, the meatball, and checkered. Run a second one with Flag Panel 2.
 
 ### Partial Support
 
@@ -90,7 +91,7 @@ RacePulse reads these buffers directly using Windows API calls. The connection i
 - **VR overlays** — Your widgets in your headset through SteamVR (experimental). See the [VR Guide](/vr/)
 - **Zero configuration** — No imports, no plugin setup, no dashboard files
 - **Lightweight** — Designed to run alongside demanding sims without impacting FPS
-- **Multi-sim support** — The same app works with iRacing, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24
+- **Multi-sim support** — The same app works with iRacing, Assetto Corsa, Assetto Corsa EVO, Le Mans Ultimate, F1 25, and F1 24
 
 ---
 

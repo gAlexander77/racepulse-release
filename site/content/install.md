@@ -1,7 +1,7 @@
 ---
 title: "Installation"
-subtitle: "Download, launch, and configure RacePulse in under a minute. Setup guides for iRacing, ACC, Assetto Corsa, Le Mans Ultimate, F1 25, and F1 24."
-description: "Install RacePulse in under a minute with step-by-step setup for iRacing, ACC, Assetto Corsa, and Le Mans Ultimate shared memory and F1 25/F1 24 UDP telemetry."
+subtitle: "Download, launch, and configure RacePulse in under a minute. Setup guides for iRacing, ACC, Assetto Corsa, Assetto Corsa EVO, Le Mans Ultimate, F1 25, and F1 24."
+description: "Install RacePulse in under a minute with step-by-step setup for iRacing, ACC, Assetto Corsa, Assetto Corsa EVO, and Le Mans Ultimate shared memory and F1 25/F1 24 UDP telemetry."
 ogImage: "assets/application-preview.jpg"
 ---
 
@@ -30,6 +30,10 @@ No configuration needed. RacePulse reads ACC's shared memory, but ACC can't be d
 ### Assetto Corsa
 
 No configuration needed. Assetto Corsa is detected once a session is loaded. Its main menu runs in a separate launcher, so RacePulse can't see the game there.
+
+### Assetto Corsa EVO
+
+No configuration needed. RacePulse reads the shared memory built into Assetto Corsa EVO, from game version 0.6. Load into a session and RacePulse detects it; the game shares its telemetry only once a session is loaded, not in the main menu.
 
 ### Le Mans Ultimate
 
@@ -107,11 +111,12 @@ Your widget settings, positions, and layouts are stored separately in `%USERPROF
 - If it still doesn't connect, another app may be using that port. Pick another of these ports in the game, or close the other app.
 - Allow RacePulse through Windows Firewall if prompted
 
-### No telemetry data (iRacing / ACC / Assetto Corsa / Le Mans Ultimate)
+### No telemetry data (iRacing / ACC / Assetto Corsa / Assetto Corsa EVO / Le Mans Ultimate)
 
 - Ensure the sim is running and you are in a session (not the main menu)
 - Shared memory is only available while on track or in replay
-- **ACC and Assetto Corsa:** these are only detected once a session is loaded
+- **ACC, Assetto Corsa, and Assetto Corsa EVO:** these are only detected once a session is loaded
+- **Assetto Corsa EVO:** needs game version 0.6 or newer
 - **LMU only:** verify **Settings > Gameplay > Enable Plugins** is turned on
 
 ### App won't start or crashes
